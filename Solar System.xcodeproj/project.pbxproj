@@ -14,6 +14,7 @@
 		C82558EF1F732931002ABE6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C82558ED1F732931002ABE6F /* Main.storyboard */; };
 		C82558F11F732931002ABE6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C82558F01F732931002ABE6F /* Assets.xcassets */; };
 		C82558F41F732931002ABE6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C82558F21F732931002ABE6F /* LaunchScreen.storyboard */; };
+		C82D57E81F742DE200F3F238 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82D57E71F742DE200F3F238 /* ImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		C82558F01F732931002ABE6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C82558F31F732931002ABE6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C82558F51F732931002ABE6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C82D57E71F742DE200F3F238 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				C82558F01F732931002ABE6F /* Assets.xcassets */,
 				C82558F21F732931002ABE6F /* LaunchScreen.storyboard */,
 				C82558F51F732931002ABE6F /* Info.plist */,
+				C82D57E71F742DE200F3F238 /* ImageViewController.swift */,
 			);
 			path = "Solar System";
 			sourceTree = "<group>";
@@ -170,10 +173,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Solar System/Pods-Solar System-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/Floaty/Floaty.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Floaty.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C82558EC1F732931002ABE6F /* ViewController.swift in Sources */,
+				C82D57E81F742DE200F3F238 /* ImageViewController.swift in Sources */,
 				C82558E81F732931002ABE6F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

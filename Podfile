@@ -7,4 +7,5 @@ target 'Solar System' do
 
   # Pods for Solar System
   pod "Floaty", "~> 3.0.0"
+  pod 'ChameleonFramework/Swift'
 end
