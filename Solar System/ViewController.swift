@@ -9,9 +9,9 @@
 import UIKit
 import SceneKit
 import ARKit
-import Floaty
+import ExpandingMenu
 
-class ViewController: UIViewController, ARSCNViewDelegate,FloatyDelegate {
+class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet weak var xStepper: UIStepper!
     
@@ -21,14 +21,53 @@ class ViewController: UIViewController, ARSCNViewDelegate,FloatyDelegate {
     @IBOutlet weak var bottomToolbar: UIToolbar!
     
     var sun:SCNNode = SCNNode()
-    var floaty = Floaty()
     var animating:Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         sceneView.delegate = self
-        createPlanetView(x: -400, y: 300, z: -900)
+        createPlanetView(x: -400, y: -300, z: -900)
         bottomToolbar.isHidden = true
+        addButtons()
+    }
+    
+    func addButtons(){
+            
+        let menuButtonSize: CGSize = CGSize(width: 64.0, height: 64.0)
+        let menuButton = ExpandingMenuButton(frame: CGRect(origin: CGPoint.zero, size: menuButtonSize), centerImage: UIImage(named: "chooser-button-tab")!, centerHighlightedImage: UIImage(named: "chooser-button-tab-highlighted")!)
+        menuButton.center = CGPoint(x: self.view.bounds.width - 32.0, y: self.view.bounds.height - 72.0)
+        self.view.addSubview(menuButton)
+            
+        let item1 = ExpandingMenuItem(size: menuButtonSize, title: "Take a tour", image: UIImage(named: "chooser-moment-icon-music")!, highlightedImage: UIImage(named: "chooser-moment-icon-place-highlighted")!, backgroundImage: UIImage(named: "chooser-moment-button"), backgroundHighlightedImage: UIImage(named: "chooser-moment-button-highlighted")) { () -> Void in
+                self.takeATour()
+            }
+            
+            let item2 = ExpandingMenuItem(size: menuButtonSize, title: "Place", image: UIImage(named: "chooser-moment-icon-place")!, highlightedImage: UIImage(named: "chooser-moment-icon-place-highlighted")!, backgroundImage: UIImage(named: "chooser-moment-button"), backgroundHighlightedImage: UIImage(named: "chooser-moment-button-highlighted")) { () -> Void in
+//                showAlert("Place")
+            }
+            
+            let item3 = ExpandingMenuItem(size: menuButtonSize, title: "Camera", image: UIImage(named: "chooser-moment-icon-camera")!, highlightedImage: UIImage(named: "chooser-moment-icon-camera-highlighted")!, backgroundImage: UIImage(named: "chooser-moment-button"), backgroundHighlightedImage: UIImage(named: "chooser-moment-button-highlighted")) { () -> Void in
+//                showAlert("Camera")
+            }
+            
+            let item4 = ExpandingMenuItem(size: menuButtonSize, title: "Thought", image: UIImage(named: "chooser-moment-icon-thought")!, highlightedImage: UIImage(named: "chooser-moment-icon-thought-highlighted")!, backgroundImage: UIImage(named: "chooser-moment-button"), backgroundHighlightedImage: UIImage(named: "chooser-moment-button-highlighted")) { () -> Void in
+//                showAlert("Thought")
+                
+            }
+            
+            let item5 = ExpandingMenuItem(size: menuButtonSize, title: "Sleep", image: UIImage(named: "chooser-moment-icon-sleep")!, highlightedImage: UIImage(named: "chooser-moment-icon-sleep-highlighted")!, backgroundImage: UIImage(named: "chooser-moment-button"), backgroundHighlightedImage: UIImage(named: "chooser-moment-button-highlighted")) { () -> Void in
+//                showAlert("Sleep")
+            }
+            
+            menuButton.addMenuItems([item1, item2, item3, item4, item5])
+            
+            menuButton.willPresentMenuItems = { (menu) -> Void in
+                print("MenuItems will present.")
+            }
+            
+            menuButton.didDismissMenuItems = { (menu) -> Void in
+                print("MenuItems dismissed.")
+            }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,7 +96,7 @@ class ViewController: UIViewController, ARSCNViewDelegate,FloatyDelegate {
         light.type = .ambient
         light.castsShadow = true
         sun.light = light
-        
+            
         sceneView.scene.rootNode.addChildNode(sun)
         let mercury = createANode(radius: 3, image: #imageLiteral(resourceName: "mercury"), x: 236, y: 0, z: 0, name: "MERCURY")
         mercury.name = "mercury"
@@ -232,6 +271,18 @@ class ViewController: UIViewController, ARSCNViewDelegate,FloatyDelegate {
             animating = false
             resetScene()
         }
+    }
+    
+    //MARK: - Button Functionalities
+    
+    func takeATour(){
+        resetScene()
+        let action1 = SCNAction.moveBy(x: 0, y: -100, z: 0, duration: 5)
+        let action2 = SCNAction.moveBy(x: -1050, y: 0, z: 0, duration: 10)
+        let action3 = SCNAction.moveBy(x: 1050, y: -100, z: 0, duration: 10)
+        let action4 = SCNAction.moveBy(x: 100, y: 0, z: 0, duration: 10)
+        let sequence = SCNAction.sequence([action1, action2, action3,action4])
+        sun.runAction(sequence, completionHandler:nil)
     }
     
 }

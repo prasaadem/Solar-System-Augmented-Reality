@@ -6,6 +6,6 @@ target 'Solar System' do
   use_frameworks!
 
   # Pods for Solar System
-  pod "Floaty", "~> 3.0.0"
+  pod 'ExpandingMenu', '~> 0.3'
   pod 'ChameleonFramework/Swift'
 end
