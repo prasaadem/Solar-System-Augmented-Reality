@@ -22,7 +22,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         sceneView.delegate = self
-        createPlanetView(x: -400, y: 300, z: -1000)
+        createPlanetView(x: -400, y: 300, z: -900)
         
     }
     
