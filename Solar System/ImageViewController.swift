@@ -21,6 +21,7 @@ class ImageViewController: UIViewController {
         imageView.image = image
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveImage))
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,20 +30,15 @@ class ImageViewController: UIViewController {
     }
     
     @objc func saveImage(sender:UIBarButtonItem){
-        PHPhotoLibrary.shared().performChanges({
-            PHAssetChangeRequest.creationRequestForAsset(from: self.imageView.image!)
-        }, completionHandler: { success, error in
-            if success {
-                // Saved successfully!
-            }
-            else if let error = error {
-                // Save photo failed with error
-            }
-            else {
-                // Save photo failed with no error
-            }
-        })
-//        UIImageWriteToSavedPhotosAlbum(imageView.image!, nil, nil, nil);
+        UIImageWriteToSavedPhotosAlbum(imageView.image!, nil, nil, nil)
+        savedImageAlert()
+    }
+    func savedImageAlert()
+    {
+        let alertController:UIAlertController = UIAlertController(title: "Saved!", message: "Your picture was saved to Photos Album", preferredStyle: .actionSheet)
+        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(defaultAction)
+        present(alertController, animated: true, completion: nil)
     }
     
 

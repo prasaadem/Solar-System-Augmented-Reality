@@ -82,6 +82,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="bottomToolbar" destination="ZAa-XB-wjO" id="Ytx-rI-CUZ"/>
                         <outlet property="sceneView" destination="jWj-aT-0OZ" id="UmP-y6-thK"/>
                         <outlet property="xStepper" destination="OrQ-qE-AGV" id="GkM-la-7Fv"/>
                         <outlet property="yStepper" destination="ouQ-lt-71e" id="9Jd-DX-YFy"/>

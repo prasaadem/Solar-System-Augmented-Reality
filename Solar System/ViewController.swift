@@ -18,6 +18,7 @@ class ViewController: UIViewController, ARSCNViewDelegate,FloatyDelegate {
     @IBOutlet weak var zStepper: UIStepper!
     @IBOutlet weak var yStepper: UIStepper!
     @IBOutlet var sceneView: ARSCNView!
+    @IBOutlet weak var bottomToolbar: UIToolbar!
     
     var sun:SCNNode = SCNNode()
     var floaty = Floaty()
@@ -27,6 +28,7 @@ class ViewController: UIViewController, ARSCNViewDelegate,FloatyDelegate {
         super.viewDidLoad()
         sceneView.delegate = self
         createPlanetView(x: -400, y: 300, z: -900)
+        bottomToolbar.isHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -210,6 +212,7 @@ class ViewController: UIViewController, ARSCNViewDelegate,FloatyDelegate {
     }
     
     @IBAction func animationControl(_ sender: UIBarButtonItem) {
+        bottomToolbar.isHidden = false
         animating = !animating
         resetScene()
     }
