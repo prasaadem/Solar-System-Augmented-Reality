@@ -11,7 +11,7 @@ import SceneKit
 import ARKit
 import ExpandingMenu
 
-class ViewController: UIViewController, ARSCNViewDelegate {
+class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDelegate {
 
     @IBOutlet weak var xStepper: UIStepper!
     
@@ -22,11 +22,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     var sun:SCNNode = SCNNode()
     var animating:Bool = false
+    var planetName:String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         sceneView.delegate = self
-        createPlanetView(x: -400, y: -300, z: -900)
+//        sceneView.scene.background.contents = #imageLiteral(resourceName: "milkyway")
+        createPlanetView(x: -400, y: -200, z: -900)
         bottomToolbar.isHidden = true
         addButtons()
     }
@@ -42,12 +44,12 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 self.takeATour()
             }
             
-            let item2 = ExpandingMenuItem(size: menuButtonSize, title: "Place", image: UIImage(named: "chooser-moment-icon-place")!, highlightedImage: UIImage(named: "chooser-moment-icon-place-highlighted")!, backgroundImage: UIImage(named: "chooser-moment-button"), backgroundHighlightedImage: UIImage(named: "chooser-moment-button-highlighted")) { () -> Void in
-//                showAlert("Place")
+            let item2 = ExpandingMenuItem(size: menuButtonSize, title: "Go to Earth", image: UIImage(named: "chooser-moment-icon-place")!, highlightedImage: UIImage(named: "chooser-moment-icon-place-highlighted")!, backgroundImage: UIImage(named: "chooser-moment-button"), backgroundHighlightedImage: UIImage(named: "chooser-moment-button-highlighted")) { () -> Void in
+                self.goToEarth()
             }
             
             let item3 = ExpandingMenuItem(size: menuButtonSize, title: "Camera", image: UIImage(named: "chooser-moment-icon-camera")!, highlightedImage: UIImage(named: "chooser-moment-icon-camera-highlighted")!, backgroundImage: UIImage(named: "chooser-moment-button"), backgroundHighlightedImage: UIImage(named: "chooser-moment-button-highlighted")) { () -> Void in
-//                showAlert("Camera")
+                self.goToHome()
             }
             
             let item4 = ExpandingMenuItem(size: menuButtonSize, title: "Thought", image: UIImage(named: "chooser-moment-icon-thought")!, highlightedImage: UIImage(named: "chooser-moment-icon-thought-highlighted")!, backgroundImage: UIImage(named: "chooser-moment-button"), backgroundHighlightedImage: UIImage(named: "chooser-moment-button-highlighted")) { () -> Void in
@@ -62,11 +64,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             menuButton.addMenuItems([item1, item2, item3, item4, item5])
             
             menuButton.willPresentMenuItems = { (menu) -> Void in
-                print("MenuItems will present.")
             }
             
             menuButton.didDismissMenuItems = { (menu) -> Void in
-                print("MenuItems dismissed.")
             }
     }
     
@@ -91,9 +91,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.scene.rootNode.addChildNode(cameraNode)
         
         sun = createANode(radius: 200, image: #imageLiteral(resourceName: "sun"), x: x, y: y, z: z,name: "SUN")
-        sun.name = "sun"
+
         let light = SCNLight()
         light.type = .ambient
+        light.spotInnerAngle = 30.0
+        light.spotOuterAngle = 80.0
         light.castsShadow = true
         sun.light = light
             
@@ -109,7 +111,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         let earth:SCNNode = createANode(radius: 8, image: #imageLiteral(resourceName: "earth"), x: 293.0, y: 0, z: 0,name: "EARTH")
         addPath(radius: 93)
-        earth.name = "earth"
         addChildNodeToParentNode(parentNode: sun, childNode:earth, duration: 10.0)
         
         let mars = createANode(radius: 4, image: #imageLiteral(resourceName: "mars"), x: 341, y: 0, z: 0,name: "MARS")
@@ -135,6 +136,31 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let moon = createANode(radius:1, image: #imageLiteral(resourceName: "moon"), x: 0, y: -15, z:0, name: "MOON")
         addChildNodeToParentNode(parentNode: earth, childNode: moon, duration: 1.0)
         
+        let ringMaterial = SCNMaterial()
+        ringMaterial.diffuse.contents = UIColor.flatGray()
+        
+        var rings = SCNTube(innerRadius: 80, outerRadius: 82, height: 1)
+        rings.materials = [ringMaterial]
+        
+        var ringsNode = SCNNode(geometry: rings)
+        ringsNode.position = SCNVector3Make(0, 0, 0)
+        saturn.addChildNode(ringsNode)
+        
+        rings = SCNTube(innerRadius: 85, outerRadius: 87, height: 1)
+        rings.materials = [ringMaterial]
+        
+        ringsNode = SCNNode(geometry: rings)
+        ringsNode.position = SCNVector3Make(0, 0, 0)
+        saturn.addChildNode(ringsNode)
+        
+        rings = SCNTube(innerRadius: 89, outerRadius: 95, height: 1)
+        rings.materials = [ringMaterial]
+        
+        ringsNode = SCNNode(geometry: rings)
+        ringsNode.position = SCNVector3Make(0, 0, 0)
+        saturn.addChildNode(ringsNode)
+        
+        
         sceneView.allowsCameraControl = false
         sceneView.autoenablesDefaultLighting = true
         sceneView.scene.rootNode.camera?.automaticallyAdjustsZRange = true
@@ -154,6 +180,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let node = SCNNode()
         node.position = SCNVector3Make(x,y,z)
         node.geometry = createSphere(radius: radius, image: image)
+        node.name = name
         
         let text = SCNText(string: name, extrusionDepth: 4)
         let textNode:SCNNode = SCNNode()
@@ -246,8 +273,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             let imageViewController:ImageViewController = segue.destination as! ImageViewController
             let image = self.sceneView.snapshot()
             imageViewController.image = image
-            
+        }else if segue.identifier == "planetDetails"{
+            let planetViewController:PlanetViewController = segue.destination as! PlanetViewController
+            planetViewController.planetName = planetName
         }
+        
     }
     
     @IBAction func animationControl(_ sender: UIBarButtonItem) {
@@ -285,4 +315,28 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sun.runAction(sequence, completionHandler:nil)
     }
     
+    func goToEarth(){
+        resetScene()
+        let action1 = SCNAction.moveBy(x: -300, y: -25, z: 520, duration: 5)
+        sun.runAction(action1)
+    }
+    
+    func goToHome(){
+        resetScene()
+    }
+    
+    @IBAction func tapScreen(sender: UITapGestureRecognizer) {
+        guard sender.state == .ended else { return }
+        
+        let location = sender.location(in: sceneView)
+        let hitResults = sceneView.hitTest(location, options: nil)
+        if hitResults.count > 0 {
+            let result = hitResults[0]
+            let node = result.node
+            if node.name != nil{
+                planetName = node.name!
+                performSegue(withIdentifier: "planetDetails", sender: self)
+            }
+        }
+    }
 }

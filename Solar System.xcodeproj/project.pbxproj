@@ -15,6 +15,7 @@
 		C82558F11F732931002ABE6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C82558F01F732931002ABE6F /* Assets.xcassets */; };
 		C82558F41F732931002ABE6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C82558F21F732931002ABE6F /* LaunchScreen.storyboard */; };
 		C82D57E81F742DE200F3F238 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82D57E71F742DE200F3F238 /* ImageViewController.swift */; };
+		C83601701F74996800D2477D /* PlanetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C836016F1F74996800D2477D /* PlanetViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		C82558F31F732931002ABE6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C82558F51F732931002ABE6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C82D57E71F742DE200F3F238 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		C836016F1F74996800D2477D /* PlanetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				C82558F21F732931002ABE6F /* LaunchScreen.storyboard */,
 				C82558F51F732931002ABE6F /* Info.plist */,
 				C82D57E71F742DE200F3F238 /* ImageViewController.swift */,
+				C836016F1F74996800D2477D /* PlanetViewController.swift */,
 			);
 			path = "Solar System";
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C83601701F74996800D2477D /* PlanetViewController.swift in Sources */,
 				C82558EC1F732931002ABE6F /* ViewController.swift in Sources */,
 				C82D57E81F742DE200F3F238 /* ImageViewController.swift in Sources */,
 				C82558E81F732931002ABE6F /* AppDelegate.swift in Sources */,

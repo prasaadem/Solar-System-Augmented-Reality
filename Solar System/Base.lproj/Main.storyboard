@@ -18,8 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jWj-aT-0OZ">
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="scaleToFill" autoenablesDefaultLighting="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jWj-aT-0OZ">
                                 <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="1VV-wP-Ni0" appends="YES" id="UfO-S1-ZXg"/>
+                                </connections>
                             </arscnView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZAa-XB-wjO">
                                 <rect key="frame" x="0.0" y="692" width="414" height="44"/>
@@ -90,9 +94,16 @@
                         <outlet property="xStepper" destination="OrQ-qE-AGV" id="GkM-la-7Fv"/>
                         <outlet property="yStepper" destination="ouQ-lt-71e" id="9Jd-DX-YFy"/>
                         <outlet property="zStepper" destination="VrU-pn-cnU" id="I1R-r0-AJb"/>
+                        <segue destination="5wQ-lt-TtQ" kind="show" identifier="planetDetails" id="ycm-C0-6qS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NoJ-hg-bDu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="1VV-wP-Ni0">
+                    <connections>
+                        <action selector="tapScreenWithSender:" destination="Il1-tZ-yHc" id="qVz-pM-C4B"/>
+                        <outlet property="delegate" destination="Il1-tZ-yHc" id="ddY-6o-Vg3"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1335" y="140"/>
         </scene>
@@ -124,6 +135,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P5J-7V-rVb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2173" y="138"/>
+        </scene>
+        <!--Planet-->
+        <scene sceneID="agZ-34-ZME">
+            <objects>
+                <viewController title="Planet" id="5wQ-lt-TtQ" customClass="PlanetViewController" customModule="Solar_System" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZOh-eW-MOT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" allowsBackForwardNavigationGestures="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oy8-G0-fwF">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration" allowsInlineMediaPlayback="YES">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" audio="YES" video="YES"/>
+                                    <wkPreferences key="preferences" minimumFontSize="6"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Oy8-G0-fwF" secondAttribute="trailing" id="PVD-oY-hpY"/>
+                            <constraint firstItem="Oy8-G0-fwF" firstAttribute="leading" secondItem="s9j-Za-1MX" secondAttribute="leading" id="pcu-1R-fSJ"/>
+                            <constraint firstItem="Oy8-G0-fwF" firstAttribute="top" secondItem="s9j-Za-1MX" secondAttribute="top" id="uUN-1k-M0a"/>
+                            <constraint firstItem="s9j-Za-1MX" firstAttribute="bottom" secondItem="Oy8-G0-fwF" secondAttribute="bottom" id="xN7-h2-Ejg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="s9j-Za-1MX"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="Oy8-G0-fwF" id="rXm-yL-0EE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iAS-in-z3F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2922" y="135"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cMy-Fe-gRM">
