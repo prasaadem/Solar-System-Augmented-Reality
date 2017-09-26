@@ -9,65 +9,47 @@
 import UIKit
 import SceneKit
 import ARKit
-import ExpandingMenu
+import Floaty
+import Toast_Swift
 
 class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDelegate {
 
     @IBOutlet weak var xStepper: UIStepper!
-    
     @IBOutlet weak var zStepper: UIStepper!
     @IBOutlet weak var yStepper: UIStepper!
     @IBOutlet var sceneView: ARSCNView!
-    @IBOutlet weak var bottomToolbar: UIToolbar!
+
+    @IBOutlet weak var currentXPosition: UILabel!
+    @IBOutlet weak var currentZPosition: UILabel!
+    @IBOutlet weak var currentYPosition: UILabel!
+    @IBOutlet weak var axisView: UIStackView!
     
     var sun:SCNNode = SCNNode()
-    var animating:Bool = false
+    var mercury:SCNNode = SCNNode()
+    var venus:SCNNode = SCNNode()
+    var earth:SCNNode = SCNNode()
+    var mars:SCNNode = SCNNode()
+    var jupiter:SCNNode = SCNNode()
+    var saturn:SCNNode = SCNNode()
+    var uranus:SCNNode = SCNNode()
+    var neptune:SCNNode = SCNNode()
+    
+    var rotating:Bool = true
+    var revolving:Bool = false
     var planetName:String = ""
+    
+    let xPosition:Float = -100.0
+    let yPosition:Float = 0.0
+    let zPosition:Float = -800.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         sceneView.delegate = self
-//        sceneView.scene.background.contents = #imageLiteral(resourceName: "milkyway")
-        createPlanetView(x: -400, y: -200, z: -900)
-        bottomToolbar.isHidden = true
+        axisView.isHidden = true
+        createPlanetView(x: xPosition, y: yPosition, z: zPosition)
+        updateCurrentPosition()
         addButtons()
-    }
-    
-    func addButtons(){
-            
-        let menuButtonSize: CGSize = CGSize(width: 64.0, height: 64.0)
-        let menuButton = ExpandingMenuButton(frame: CGRect(origin: CGPoint.zero, size: menuButtonSize), centerImage: UIImage(named: "chooser-button-tab")!, centerHighlightedImage: UIImage(named: "chooser-button-tab-highlighted")!)
-        menuButton.center = CGPoint(x: self.view.bounds.width - 32.0, y: self.view.bounds.height - 72.0)
-        self.view.addSubview(menuButton)
-            
-        let item1 = ExpandingMenuItem(size: menuButtonSize, title: "Take a tour", image: UIImage(named: "chooser-moment-icon-music")!, highlightedImage: UIImage(named: "chooser-moment-icon-place-highlighted")!, backgroundImage: UIImage(named: "chooser-moment-button"), backgroundHighlightedImage: UIImage(named: "chooser-moment-button-highlighted")) { () -> Void in
-                self.takeATour()
-            }
-            
-            let item2 = ExpandingMenuItem(size: menuButtonSize, title: "Go to Earth", image: UIImage(named: "chooser-moment-icon-place")!, highlightedImage: UIImage(named: "chooser-moment-icon-place-highlighted")!, backgroundImage: UIImage(named: "chooser-moment-button"), backgroundHighlightedImage: UIImage(named: "chooser-moment-button-highlighted")) { () -> Void in
-                self.goToEarth()
-            }
-            
-            let item3 = ExpandingMenuItem(size: menuButtonSize, title: "Camera", image: UIImage(named: "chooser-moment-icon-camera")!, highlightedImage: UIImage(named: "chooser-moment-icon-camera-highlighted")!, backgroundImage: UIImage(named: "chooser-moment-button"), backgroundHighlightedImage: UIImage(named: "chooser-moment-button-highlighted")) { () -> Void in
-                self.goToHome()
-            }
-            
-            let item4 = ExpandingMenuItem(size: menuButtonSize, title: "Thought", image: UIImage(named: "chooser-moment-icon-thought")!, highlightedImage: UIImage(named: "chooser-moment-icon-thought-highlighted")!, backgroundImage: UIImage(named: "chooser-moment-button"), backgroundHighlightedImage: UIImage(named: "chooser-moment-button-highlighted")) { () -> Void in
-//                showAlert("Thought")
-                
-            }
-            
-            let item5 = ExpandingMenuItem(size: menuButtonSize, title: "Sleep", image: UIImage(named: "chooser-moment-icon-sleep")!, highlightedImage: UIImage(named: "chooser-moment-icon-sleep-highlighted")!, backgroundImage: UIImage(named: "chooser-moment-button"), backgroundHighlightedImage: UIImage(named: "chooser-moment-button-highlighted")) { () -> Void in
-//                showAlert("Sleep")
-            }
-            
-            menuButton.addMenuItems([item1, item2, item3, item4, item5])
-            
-            menuButton.willPresentMenuItems = { (menu) -> Void in
-            }
-            
-            menuButton.didDismissMenuItems = { (menu) -> Void in
-            }
+        takeATour()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -91,7 +73,9 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
         sceneView.scene.rootNode.addChildNode(cameraNode)
         
         sun = createANode(radius: 200, image: #imageLiteral(resourceName: "sun"), x: x, y: y, z: z,name: "SUN")
-
+//        let trail = SCNParticleSystem(named: "art.scnassets/fire.scnp", inDirectory: nil)!
+//        sun.addParticleSystem(trail)
+        
         let light = SCNLight()
         light.type = .ambient
         light.spotInnerAngle = 30.0
@@ -100,36 +84,36 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
         sun.light = light
             
         sceneView.scene.rootNode.addChildNode(sun)
-        let mercury = createANode(radius: 3, image: #imageLiteral(resourceName: "mercury"), x: 236, y: 0, z: 0, name: "MERCURY")
+        mercury = createANode(radius: 3, image: #imageLiteral(resourceName: "mercury"), x: 236, y: 0, z: 0, name: "MERCURY")
         mercury.name = "mercury"
-        addPath(radius: 36)
+        addPath(radius: 236)
         addChildNodeToParentNode(parentNode: sun, childNode: mercury, duration: 12.0)
         
-        let venus:SCNNode = createANode(radius: 7, image: #imageLiteral(resourceName: "venus"), x: 268, y: 0, z: 0, name: "VENUS")
-        addPath(radius: 68)
+        venus = createANode(radius: 7, image: #imageLiteral(resourceName: "venus"), x: 268, y: 0, z: 0, name: "VENUS")
+        addPath(radius: 268)
         addChildNodeToParentNode(parentNode: sun, childNode: venus, duration: 12.0)
         
-        let earth:SCNNode = createANode(radius: 8, image: #imageLiteral(resourceName: "earth"), x: 293.0, y: 0, z: 0,name: "EARTH")
-        addPath(radius: 93)
+        earth = createANode(radius: 8, image: #imageLiteral(resourceName: "earth"), x: 293.0, y: 0, z: 0,name: "EARTH")
+        addPath(radius: 293)
         addChildNodeToParentNode(parentNode: sun, childNode:earth, duration: 10.0)
         
-        let mars = createANode(radius: 4, image: #imageLiteral(resourceName: "mars"), x: 341, y: 0, z: 0,name: "MARS")
+        mars = createANode(radius: 4, image: #imageLiteral(resourceName: "mars"), x: 341, y: 0, z: 0,name: "MARS")
         addPath(radius: 341)
         addChildNodeToParentNode(parentNode: sun, childNode: mars, duration: 12.0)
         
-        let jupiter = createANode(radius: 88, image: #imageLiteral(resourceName: "jupiter"), x: 500, y: 0, z: 0, name: "JUPITER")
+        jupiter = createANode(radius: 88, image: #imageLiteral(resourceName: "jupiter"), x: 500, y: 0, z: 0, name: "JUPITER")
         addPath(radius: 500)
         addChildNodeToParentNode(parentNode: sun, childNode: jupiter, duration: 12.0)
         
-        let saturn = createANode(radius: 74, image: #imageLiteral(resourceName: "saturn"), x: 700, y: 0, z: 0, name: "SATURN")
+        saturn = createANode(radius: 74, image: #imageLiteral(resourceName: "saturn"), x: 700, y: 0, z: 0, name: "SATURN")
         addPath(radius: 700)
         addChildNodeToParentNode(parentNode: sun, childNode: saturn, duration: 12.0)
         
-        let uranus = createANode(radius: 32, image: #imageLiteral(resourceName: "uranus"), x: 850, y: 0, z: 0, name: "URANUS")
+        uranus = createANode(radius: 32, image: #imageLiteral(resourceName: "uranus"), x: 850, y: 0, z: 0, name: "URANUS")
         addPath(radius: 850)
         addChildNodeToParentNode(parentNode: sun, childNode: uranus, duration: 12.0)
         
-        let neptune = createANode(radius: 30, image: #imageLiteral(resourceName: "neptune"), x: 950, y: 0, z: 0, name: "NEPTUNE")
+        neptune = createANode(radius: 30, image: #imageLiteral(resourceName: "neptune"), x: 950, y: 0, z: 0, name: "NEPTUNE")
         addPath(radius: 950)
         addChildNodeToParentNode(parentNode: sun, childNode: neptune, duration: 12.0)
         
@@ -137,7 +121,7 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
         addChildNodeToParentNode(parentNode: earth, childNode: moon, duration: 1.0)
         
         let ringMaterial = SCNMaterial()
-        ringMaterial.diffuse.contents = UIColor.flatGray()
+        ringMaterial.diffuse.contents = UIColor.gray
         
         var rings = SCNTube(innerRadius: 80, outerRadius: 82, height: 1)
         rings.materials = [ringMaterial]
@@ -167,9 +151,7 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
     }
     
     func createSphere(radius: CGFloat,image:UIImage) -> SCNSphere {
-        
         let sphere = SCNSphere(radius: radius)
-        
         let material = SCNMaterial()
         material.diffuse.contents = image
         sphere.materials = [material]
@@ -182,13 +164,13 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
         node.geometry = createSphere(radius: radius, image: image)
         node.name = name
         
-        let text = SCNText(string: name, extrusionDepth: 4)
-        let textNode:SCNNode = SCNNode()
-        textNode.geometry = text
-        textNode.position = SCNVector3Make(0 , Float(radius), 0)
-        node.addChildNode(textNode)
-        text.alignmentMode = kCAAlignmentCenter
-        text.font = UIFont(name: "Helvatica", size: 30)
+//        let text = SCNText(string: name, extrusionDepth: 1)
+//        let textNode:SCNNode = SCNNode()
+//        textNode.geometry = text
+//        textNode.position = SCNVector3Make(0 , Float(radius), 0)
+//        node.addChildNode(textNode)
+//        text.alignmentMode = kCAAlignmentCenter
+//        text.font = UIFont(name: "Helvatica", size: 4)
         
         return node
     }
@@ -206,7 +188,7 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
     }
     
     func addChildNodeToParentNode(parentNode: SCNNode,childNode:SCNNode,duration:Double){
-        if animating {
+        if rotating {
             childNode.pivot = SCNMatrix4MakeRotation(Float(CGFloat(Double.pi/2)), 1, 0, 0)
             let spin = CABasicAnimation(keyPath: "rotation")
             spin.fromValue = NSValue(scnVector4: SCNVector4(x: 1, y: 1, z: 0, w: 0))
@@ -219,16 +201,20 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
         let holdingNode = SCNNode()
         holdingNode.position = SCNVector3Make(0,0,0)
         holdingNode.addChildNode(childNode)
-        if animating {
+        if revolving {
             holdingNode .runAction(revolveNode(x: 0,y: 3,z: 0,duration: duration))
         }
         
         parentNode.addChildNode(holdingNode)
     }
     
+    func updateCurrentPosition(){
+        currentXPosition.text = String(sceneView.scene.rootNode.childNodes[1].position.x)
+        currentYPosition.text = String(sceneView.scene.rootNode.childNodes[1].position.y)
+        currentZPosition.text = String(sceneView.scene.rootNode.childNodes[1].position.z)
+    }
+    
     @IBAction func stepperChanged(_ sender: UIStepper) {
-        print(sceneView.scene.rootNode.childNodes[0].position)
-//        stopAnimation()
         let value:Float = Float(100*sender.value)
         switch sender.tag {
         case 0:
@@ -246,12 +232,13 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
         case 2:
             SCNTransaction.begin()
             SCNTransaction.animationDuration = 0.5
-            sceneView.scene.rootNode.childNodes[1].position.z += value
+            sceneView.scene.rootNode.childNodes[1].position.z -= value
             SCNTransaction.commit()
             zStepper.value = 0
         default:
             break
         }
+        updateCurrentPosition()
     }
     
     // MARK: - ARSCNViewDelegate
@@ -280,12 +267,6 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
         
     }
     
-    @IBAction func animationControl(_ sender: UIBarButtonItem) {
-        bottomToolbar.isHidden = false
-        animating = !animating
-        resetScene()
-    }
-    
     func resetScene(){
         sceneView.session.pause()
         sceneView.scene.rootNode.enumerateChildNodes { (node, stop) in
@@ -294,40 +275,97 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
         
         let configuration = ARWorldTrackingConfiguration()
         sceneView.session.run(configuration)
-        createPlanetView(x: 0, y: 0, z: -600)
-    }
-    func stopAnimation(){
-        if animating{
-            animating = false
-            resetScene()
-        }
+        createPlanetView(x: xPosition, y: yPosition, z: zPosition)
+        updateCurrentPosition()
     }
     
-    //MARK: - Button Functionalities
+    func animation(){
+        sceneView.makeToast("Animating Solar System",duration: 5.0, position: .top)
+        revolving = !revolving
+        resetScene()
+    }
+    
+    //MARK: - Floaty Button Functionalities
+    
+    func addButtons(){
+        let floaty = Floaty()
+        floaty.buttonColor = UIColor.orange
+        floaty.openAnimationType = .slideUp
+        floaty.addItem("Tour", icon: UIImage(named: "tour")!, handler: { item in
+            self.takeATour()
+        })
+        floaty.addItem("Visit Earth", icon: UIImage(named: "earthSmall")!, handler: { item in
+            self.goToEarth()
+        })
+        floaty.addItem("Home", icon: UIImage(named: "home")!, handler: { item in
+            self.goToHome()
+        })
+        floaty.addItem("Animation", icon: UIImage(named: "animate")!, handler: { item in
+            self.animation()
+        })
+        floaty.addItem("Capture", icon: UIImage(named: "capture")!, handler: { item in
+            self.captureView()
+        })
+        self.view.addSubview(floaty)
+    }
     
     func takeATour(){
-        resetScene()
-        let action1 = SCNAction.moveBy(x: 0, y: -100, z: 0, duration: 5)
-        let action2 = SCNAction.moveBy(x: -1050, y: 0, z: 0, duration: 10)
-        let action3 = SCNAction.moveBy(x: 1050, y: -100, z: 0, duration: 10)
-        let action4 = SCNAction.moveBy(x: 100, y: 0, z: 0, duration: 10)
-        let sequence = SCNAction.sequence([action1, action2, action3,action4])
-        sun.runAction(sequence, completionHandler:nil)
+        axisView.isHidden = true
+        sceneView.makeToast("We will take you for a tour of Solar system...",duration: 5.0, position: .top)
+        let action0 = SCNAction.moveBy(x: 0, y: -100, z: 0, duration: 5)
+        
+        var position = mercury.position
+        let action1 = SCNAction.move(to:SCNVector3Make(-position.x, position.y, position.z - 50) , duration: 5)
+
+        position = venus.position
+        let action2 = SCNAction.move(to:SCNVector3Make(-position.x, position.y, position.z - 50) , duration: 5)
+
+        position = earth.position
+        let action3 = SCNAction.move(to:SCNVector3Make(-position.x, position.y, position.z - 50) , duration: 5)
+
+        position = mars.position
+        let action4 = SCNAction.move(to:SCNVector3Make(-position.x, position.y, position.z - 50) , duration: 5)
+
+        position = jupiter.position
+        let action5 = SCNAction.move(to:SCNVector3Make(-position.x-100, position.y-50, position.z - 300) , duration: 5)
+
+        position = saturn.position
+        let action6 = SCNAction.move(to:SCNVector3Make(-position.x, position.y, position.z - 200) , duration: 5)
+
+        position = uranus.position
+        let action7 = SCNAction.move(to:SCNVector3Make(-position.x, position.y, position.z - 100) , duration: 5)
+
+        position = neptune.position
+        let action8 = SCNAction.move(to:SCNVector3Make(-position.x, position.y, position.z - 100) , duration: 5)
+        
+        position = sun.position
+        let action9 = SCNAction.move(to:SCNVector3Make(-position.x, position.y, position.z) , duration: 5)
+
+        let sequence = SCNAction.sequence([action0,action1,action2,action3,action4,action5,action6,action7,action8,action9])
+        sun.runAction(sequence)
+        self.axisView.isHidden = false
     }
     
     func goToEarth(){
-        resetScene()
-        let action1 = SCNAction.moveBy(x: -300, y: -25, z: 520, duration: 5)
+        sceneView.makeToast("Navigating to Earth",duration: 5.0, position: .top)
+        let position = earth.position
+        let action1 = SCNAction.move(to:SCNVector3Make(-position.x, position.y, position.z - 50) , duration: 5)
         sun.runAction(action1)
     }
     
     func goToHome(){
-        resetScene()
+        sceneView.makeToast("Navigating to Home",duration: 5.0, position: .top)
+        let position = sun.position
+        let action = SCNAction.move(to:SCNVector3Make(-position.x, position.y, position.z) , duration: 5)
+        sun.runAction(action)
+    }
+    
+    func captureView(){
+        performSegue(withIdentifier: "showImage", sender: self)
     }
     
     @IBAction func tapScreen(sender: UITapGestureRecognizer) {
         guard sender.state == .ended else { return }
-        
         let location = sender.location(in: sceneView)
         let hitResults = sceneView.hitTest(location, options: nil)
         if hitResults.count > 0 {

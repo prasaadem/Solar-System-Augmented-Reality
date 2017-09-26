@@ -19,9 +19,7 @@ class ImageViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         imageView.image = image
-        
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveImage))
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,6 +31,7 @@ class ImageViewController: UIViewController {
         UIImageWriteToSavedPhotosAlbum(imageView.image!, nil, nil, nil)
         savedImageAlert()
     }
+    
     func savedImageAlert()
     {
         let alertController:UIAlertController = UIAlertController(title: "Saved!", message: "Your picture was saved to Photos Album", preferredStyle: .actionSheet)
@@ -40,5 +39,8 @@ class ImageViewController: UIViewController {
         alertController.addAction(defaultAction)
         present(alertController, animated: true, completion: nil)
     }
-
+    @IBAction func closeAction(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 }

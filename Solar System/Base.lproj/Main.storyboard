@@ -5,12 +5,16 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
-        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AmericanTypewriter.ttc">
+            <string>AmericanTypewriter-Semibold</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--Solar System-->
+        <!--SOLAR SYSTEM-->
         <scene sceneID="N8a-db-xsJ">
             <objects>
                 <viewController id="Il1-tZ-yHc" customClass="ViewController" customModule="Solar_System" customModuleProvider="target" sceneMemberID="viewController">
@@ -25,76 +29,114 @@
                                     <outletCollection property="gestureRecognizers" destination="1VV-wP-Ni0" appends="YES" id="UfO-S1-ZXg"/>
                                 </connections>
                             </arscnView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZAa-XB-wjO">
-                                <rect key="frame" x="0.0" y="692" width="414" height="44"/>
-                                <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="tFU-bI-aRD"/>
-                                    <barButtonItem style="plain" id="8D2-3O-xuR">
-                                        <stepper key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" minimumValue="-1" maximumValue="100" id="OrQ-qE-AGV">
-                                            <rect key="frame" x="43" y="7.6666666666666288" width="94" height="29"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <connections>
-                                                <action selector="stepperChanged:" destination="Il1-tZ-yHc" eventType="valueChanged" id="058-gw-dxT"/>
-                                            </connections>
-                                        </stepper>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="8Ze-Xw-wBZ"/>
-                                    <barButtonItem style="plain" id="qIk-KB-HEP">
-                                        <stepper key="customView" opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" minimumValue="-1" maximumValue="100" id="ouQ-lt-71e">
-                                            <rect key="frame" x="160" y="7.6666666666666288" width="94" height="29"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <connections>
-                                                <action selector="stepperChanged:" destination="Il1-tZ-yHc" eventType="valueChanged" id="LBV-vF-bpU"/>
-                                            </connections>
-                                        </stepper>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="1s5-mP-Un4"/>
-                                    <barButtonItem style="plain" id="dxX-c6-YGk">
-                                        <stepper key="customView" opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" minimumValue="-1" maximumValue="100" id="VrU-pn-cnU">
-                                            <rect key="frame" x="277" y="7.6666666666666288" width="94" height="29"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <connections>
-                                                <action selector="stepperChanged:" destination="Il1-tZ-yHc" eventType="valueChanged" id="I6S-v8-WkI"/>
-                                            </connections>
-                                        </stepper>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="iIv-Oz-coX"/>
-                                </items>
-                            </toolbar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9ov-1N-yWk">
+                                <rect key="frame" x="8" y="625" width="248" height="103"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HMK-kV-1Hn">
+                                        <rect key="frame" x="0.0" y="0.0" width="248" height="29"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X Position:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tG3-uE-iyB">
+                                                <rect key="frame" x="0.0" y="0.0" width="88" height="29"/>
+                                                <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-1000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSJ-PK-bXR">
+                                                <rect key="frame" x="96" y="0.0" width="50" height="29"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="Jfi-M3-UWh"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" minimumValue="-1" maximumValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="IGv-9K-3yC">
+                                                <rect key="frame" x="154" y="0.0" width="94" height="29"/>
+                                                <connections>
+                                                    <action selector="stepperChanged:" destination="Il1-tZ-yHc" eventType="valueChanged" id="R3V-z4-3VE"/>
+                                                </connections>
+                                            </stepper>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qKu-oU-E2q">
+                                        <rect key="frame" x="0.0" y="37" width="247" height="29"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Y Position:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rAq-GN-CbF">
+                                                <rect key="frame" x="0.0" y="0.0" width="87" height="29"/>
+                                                <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-1000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VSa-iF-3TN">
+                                                <rect key="frame" x="95" y="0.0" width="50" height="29"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="ysn-iX-Ury"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stepper opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" minimumValue="-1" maximumValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gad-k6-dqP">
+                                                <rect key="frame" x="153" y="0.0" width="94" height="29"/>
+                                                <connections>
+                                                    <action selector="stepperChanged:" destination="Il1-tZ-yHc" eventType="valueChanged" id="tkF-Qb-Cns"/>
+                                                </connections>
+                                            </stepper>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FfM-On-Kaw">
+                                        <rect key="frame" x="0.0" y="74" width="245.33333333333334" height="29"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Z Position:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOJ-cJ-A9Q">
+                                                <rect key="frame" x="0.0" y="0.0" width="85.333333333333329" height="29"/>
+                                                <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-1000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jdz-SE-zUn">
+                                                <rect key="frame" x="93.333333333333343" y="0.0" width="50.000000000000028" height="29"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="fab-Zd-CvK"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stepper opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" minimumValue="-1" maximumValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9fX-YN-Gya">
+                                                <rect key="frame" x="151.33333333333334" y="0.0" width="94" height="29"/>
+                                                <connections>
+                                                    <action selector="stepperChanged:" destination="Il1-tZ-yHc" eventType="valueChanged" id="EoK-Xg-vol"/>
+                                                </connections>
+                                            </stepper>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.58893296634507775" green="0.58893296634507775" blue="0.58893296634507775" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jWj-aT-0OZ" firstAttribute="trailing" secondItem="myf-lZ-YnF" secondAttribute="trailing" id="EzD-41-ZgM"/>
-                            <constraint firstItem="ZAa-XB-wjO" firstAttribute="bottom" secondItem="myf-lZ-YnF" secondAttribute="bottom" id="PFy-eL-B18"/>
                             <constraint firstItem="jWj-aT-0OZ" firstAttribute="top" secondItem="myf-lZ-YnF" secondAttribute="top" id="UaM-SB-q0o"/>
-                            <constraint firstItem="ZAa-XB-wjO" firstAttribute="leading" secondItem="myf-lZ-YnF" secondAttribute="leading" id="VM1-q8-tEv"/>
                             <constraint firstItem="jWj-aT-0OZ" firstAttribute="leading" secondItem="myf-lZ-YnF" secondAttribute="leading" id="fR0-kr-v5L"/>
                             <constraint firstItem="jWj-aT-0OZ" firstAttribute="bottom" secondItem="myf-lZ-YnF" secondAttribute="bottom" id="iXl-Hn-b6h"/>
-                            <constraint firstItem="ZAa-XB-wjO" firstAttribute="trailing" secondItem="myf-lZ-YnF" secondAttribute="trailing" id="pSr-3E-64q"/>
+                            <constraint firstItem="myf-lZ-YnF" firstAttribute="bottom" secondItem="9ov-1N-yWk" secondAttribute="bottom" constant="8" id="odg-r3-IXU"/>
+                            <constraint firstItem="9ov-1N-yWk" firstAttribute="leading" secondItem="myf-lZ-YnF" secondAttribute="leading" constant="8" id="xFD-Yb-tRZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="myf-lZ-YnF"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Solar System" id="KiI-MA-VJx">
-                        <rightBarButtonItems>
-                            <barButtonItem systemItem="camera" id="jeG-bQ-NbR">
-                                <connections>
-                                    <segue destination="YYI-kb-v10" kind="show" identifier="showImage" id="sLB-7F-fl3"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem systemItem="play" id="3w3-kL-yND">
-                                <connections>
-                                    <action selector="animationControl:" destination="Il1-tZ-yHc" id="ecu-Ft-SlI"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="SOLAR SYSTEM" id="KiI-MA-VJx"/>
                     <connections>
-                        <outlet property="bottomToolbar" destination="ZAa-XB-wjO" id="Ytx-rI-CUZ"/>
+                        <outlet property="axisView" destination="9ov-1N-yWk" id="pW7-wG-diM"/>
+                        <outlet property="currentXPosition" destination="ZSJ-PK-bXR" id="LGJ-60-83a"/>
+                        <outlet property="currentYPosition" destination="VSa-iF-3TN" id="tcj-j3-UF4"/>
+                        <outlet property="currentZPosition" destination="Jdz-SE-zUn" id="WSl-sE-wgv"/>
                         <outlet property="sceneView" destination="jWj-aT-0OZ" id="UmP-y6-thK"/>
-                        <outlet property="xStepper" destination="OrQ-qE-AGV" id="GkM-la-7Fv"/>
-                        <outlet property="yStepper" destination="ouQ-lt-71e" id="9Jd-DX-YFy"/>
-                        <outlet property="zStepper" destination="VrU-pn-cnU" id="I1R-r0-AJb"/>
+                        <outlet property="xStepper" destination="IGv-9K-3yC" id="QyU-sT-hBK"/>
+                        <outlet property="yStepper" destination="gad-k6-dqP" id="wRR-eN-Yg1"/>
+                        <outlet property="zStepper" destination="9fX-YN-Gya" id="X2E-W1-lOt"/>
                         <segue destination="5wQ-lt-TtQ" kind="show" identifier="planetDetails" id="ycm-C0-6qS"/>
+                        <segue destination="YYI-kb-v10" kind="show" identifier="showImage" id="Wh8-0t-GUe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NoJ-hg-bDu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -105,12 +147,12 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1335" y="140"/>
+            <point key="canvasLocation" x="1334.7826086956522" y="139.4021739130435"/>
         </scene>
-        <!--Image View-->
+        <!--IMAGE VIEW-->
         <scene sceneID="DBF-Vs-BUi">
             <objects>
-                <viewController title="Image View" id="YYI-kb-v10" customClass="ImageViewController" customModule="Solar_System" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="IMAGE VIEW" id="YYI-kb-v10" customClass="ImageViewController" customModule="Solar_System" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dlj-tZ-PQB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -136,10 +178,10 @@
             </objects>
             <point key="canvasLocation" x="2173" y="138"/>
         </scene>
-        <!--Planet-->
+        <!--PLANET-->
         <scene sceneID="agZ-34-ZME">
             <objects>
-                <viewController title="Planet" id="5wQ-lt-TtQ" customClass="PlanetViewController" customModule="Solar_System" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="PLANET" id="5wQ-lt-TtQ" customClass="PlanetViewController" customModule="Solar_System" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZOh-eW-MOT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

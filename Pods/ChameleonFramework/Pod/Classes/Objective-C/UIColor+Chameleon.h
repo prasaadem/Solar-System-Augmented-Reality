@@ -457,7 +457,7 @@ typedef NS_ENUM (NSInteger, UIShadeStyle) {
  *
  *  Returns a randomly generated flat color object NOT found in the specified array.
  *
- *  @param colors specifying which colors NOT to return.
+ *
  *
  *  @return A flat @c UIColor object in the HSB colorspace.
  *
@@ -557,12 +557,19 @@ typedef NS_ENUM (NSInteger, UIShadeStyle) {
 
 /**
  *  Creates and returns either a black or white color object depending on which contrasts more with a specified color.
+ *
+ *
+ *
+ *  @return A UIColor object in the HSB colorspace.
+ *
+ *  @since 1.0
  */
 
 + (UIColor *)colorWithContrastingBlackOrWhiteColorOn:(UIColor *)backgroundColor isFlat:(BOOL)flat;
 
 /**
  *  Creates and returns either a black or white color object depending on which contrasts more with a specified color.
+ *
  *
  *  @param alpha The opacity.
  *
