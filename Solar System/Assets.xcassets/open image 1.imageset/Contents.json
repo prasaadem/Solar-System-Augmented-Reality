@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "2818891443_d4c8e2b37c_b.jpg",
+      "filename" : "launch circle.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "launch circle-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "launch circle-2.png",
       "scale" : "3x"
     }
   ],

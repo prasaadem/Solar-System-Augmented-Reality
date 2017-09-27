@@ -73,9 +73,6 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
         sceneView.scene.rootNode.addChildNode(cameraNode)
         
         sun = createANode(radius: 200, image: #imageLiteral(resourceName: "sun"), x: x, y: y, z: z,name: "SUN")
-//        let trail = SCNParticleSystem(named: "art.scnassets/fire.scnp", inDirectory: nil)!
-//        sun.addParticleSystem(trail)
-        
         let light = SCNLight()
         light.type = .ambient
         light.spotInnerAngle = 30.0
@@ -347,6 +344,8 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
     }
     
     func goToEarth(){
+        sun.removeAllActions()
+        sun.position = SCNVector3Make(xPosition, yPosition, zPosition)
         sceneView.makeToast("Navigating to Earth",duration: 5.0, position: .top)
         let position = earth.position
         let action1 = SCNAction.move(to:SCNVector3Make(-position.x, position.y, position.z - 50) , duration: 5)
@@ -354,9 +353,10 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
     }
     
     func goToHome(){
+        sun.removeAllActions()
+        sun.position = SCNVector3Make(xPosition, yPosition, zPosition)
         sceneView.makeToast("Navigating to Home",duration: 5.0, position: .top)
-        let position = sun.position
-        let action = SCNAction.move(to:SCNVector3Make(-position.x, position.y, position.z) , duration: 5)
+        let action = SCNAction.move(to:SCNVector3Make(xPosition,yPosition,zPosition) , duration: 5)
         sun.runAction(action)
     }
     

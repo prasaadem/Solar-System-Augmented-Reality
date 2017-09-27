@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jSS-bL-Opy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2yB-Aq-ypa">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -212,6 +212,44 @@
             </objects>
             <point key="canvasLocation" x="2922" y="135"/>
         </scene>
+        <!--Launch View Controller-->
+        <scene sceneID="JVA-vg-e20">
+            <objects>
+                <viewController id="2yB-Aq-ypa" customClass="LaunchViewController" customModule="Solar_System" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gpK-c1-XYp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="open image 1" translatesAutoresizingMaskIntoConstraints="NO" id="dXy-bk-6ks">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="open image 2" translatesAutoresizingMaskIntoConstraints="NO" id="QW4-N3-RXh">
+                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="uuV-MC-PAP" firstAttribute="bottom" secondItem="dXy-bk-6ks" secondAttribute="bottom" id="64P-RL-i2a"/>
+                            <constraint firstItem="QW4-N3-RXh" firstAttribute="top" secondItem="uuV-MC-PAP" secondAttribute="top" id="Etz-eS-k98"/>
+                            <constraint firstItem="uuV-MC-PAP" firstAttribute="trailing" secondItem="dXy-bk-6ks" secondAttribute="trailing" id="LJ2-Ie-pww"/>
+                            <constraint firstItem="QW4-N3-RXh" firstAttribute="leading" secondItem="uuV-MC-PAP" secondAttribute="leading" id="bh3-ia-VDr"/>
+                            <constraint firstItem="uuV-MC-PAP" firstAttribute="bottom" secondItem="QW4-N3-RXh" secondAttribute="bottom" id="bwP-yC-ykD"/>
+                            <constraint firstItem="dXy-bk-6ks" firstAttribute="top" secondItem="gpK-c1-XYp" secondAttribute="top" id="oaJ-dM-DIi"/>
+                            <constraint firstItem="uuV-MC-PAP" firstAttribute="trailing" secondItem="QW4-N3-RXh" secondAttribute="trailing" id="wNj-k9-Uwd"/>
+                            <constraint firstItem="dXy-bk-6ks" firstAttribute="leading" secondItem="uuV-MC-PAP" secondAttribute="leading" id="xlB-qF-LND"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uuV-MC-PAP"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageCircleView" destination="dXy-bk-6ks" id="tb5-Na-pVY"/>
+                        <outlet property="imageRayView" destination="QW4-N3-RXh" id="MjT-rM-sGl"/>
+                        <segue destination="jSS-bL-Opy" kind="showDetail" identifier="mainApp" id="Mcj-oP-ygd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pAa-Kx-ogf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-271" y="139"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="cMy-Fe-gRM">
             <objects>
@@ -231,4 +269,8 @@
             <point key="canvasLocation" x="551" y="140"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="open image 1" width="341" height="341"/>
+        <image name="open image 2" width="341" height="341"/>
+    </resources>
 </document>

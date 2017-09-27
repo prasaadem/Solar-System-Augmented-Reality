@@ -16,6 +16,7 @@
 		C82558F41F732931002ABE6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C82558F21F732931002ABE6F /* LaunchScreen.storyboard */; };
 		C82D57E81F742DE200F3F238 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82D57E71F742DE200F3F238 /* ImageViewController.swift */; };
 		C83601701F74996800D2477D /* PlanetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C836016F1F74996800D2477D /* PlanetViewController.swift */; };
+		C8FA14881F7B0E670052F2B8 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FA14871F7B0E660052F2B8 /* LaunchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		C82558F51F732931002ABE6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C82D57E71F742DE200F3F238 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		C836016F1F74996800D2477D /* PlanetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetViewController.swift; sourceTree = "<group>"; };
+		C8FA14871F7B0E660052F2B8 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,17 +78,34 @@
 		C82558E61F732931002ABE6F /* Solar System */ = {
 			isa = PBXGroup;
 			children = (
-				C82558E71F732931002ABE6F /* AppDelegate.swift */,
+				C861B4611F7A1C5800402520 /* view */,
+				C861B4601F7A1C3600402520 /* controllers */,
 				C82558E91F732931002ABE6F /* art.scnassets */,
-				C82558EB1F732931002ABE6F /* ViewController.swift */,
-				C82558ED1F732931002ABE6F /* Main.storyboard */,
 				C82558F01F732931002ABE6F /* Assets.xcassets */,
-				C82558F21F732931002ABE6F /* LaunchScreen.storyboard */,
 				C82558F51F732931002ABE6F /* Info.plist */,
-				C82D57E71F742DE200F3F238 /* ImageViewController.swift */,
-				C836016F1F74996800D2477D /* PlanetViewController.swift */,
 			);
 			path = "Solar System";
+			sourceTree = "<group>";
+		};
+		C861B4601F7A1C3600402520 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C836016F1F74996800D2477D /* PlanetViewController.swift */,
+				C82D57E71F742DE200F3F238 /* ImageViewController.swift */,
+				C82558EB1F732931002ABE6F /* ViewController.swift */,
+				C82558E71F732931002ABE6F /* AppDelegate.swift */,
+				C8FA14871F7B0E660052F2B8 /* LaunchViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		C861B4611F7A1C5800402520 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				C82558ED1F732931002ABE6F /* Main.storyboard */,
+				C82558F21F732931002ABE6F /* LaunchScreen.storyboard */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		DC4CCDE962332D3D59C5B6C2 /* Frameworks */ = {
@@ -232,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C83601701F74996800D2477D /* PlanetViewController.swift in Sources */,
+				C8FA14881F7B0E670052F2B8 /* LaunchViewController.swift in Sources */,
 				C82558EC1F732931002ABE6F /* ViewController.swift in Sources */,
 				C82D57E81F742DE200F3F238 /* ImageViewController.swift in Sources */,
 				C82558E81F732931002ABE6F /* AppDelegate.swift in Sources */,
