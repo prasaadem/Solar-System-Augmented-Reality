@@ -5,17 +5,17 @@
   },
   "images" : [
     {
-      "filename" : "icons8-Screenshot Filled-50~universal@1x.png",
+      "filename" : "animation~universal@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "icons8-Screenshot Filled-50~universal@2x.png",
+      "filename" : "animation~universal@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "icons8-Screenshot Filled-50~universal@3x.png",
+      "filename" : "animation~universal@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

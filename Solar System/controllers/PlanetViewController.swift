@@ -18,12 +18,20 @@ class PlanetViewController: UIViewController,WKNavigationDelegate {
 
         // Do any additional setup after loading the view.
         webView.navigationDelegate = self
+        if planetName == ""{
+            let url = NSURL(string:"https:prasaadem.github.io")
+            let request = NSURLRequest(url:url! as URL)
+            webView.load(request as URLRequest)
+            
+            self.title = "Website"
+        }else{
+            let url = NSURL(string:"https://en.wikipedia.org/wiki/Special:Search/"+planetName)
+            let request = NSURLRequest(url:url! as URL)
+            webView.load(request as URLRequest)
+            
+            self.title = planetName
+        }
         
-        let url = NSURL(string:"https://en.wikipedia.org/wiki/Special:Search/"+planetName)
-        let request = NSURLRequest(url:url! as URL)
-        webView.load(request as URLRequest)
-        
-        self.title = planetName
     }
 
     func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {

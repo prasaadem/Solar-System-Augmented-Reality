@@ -35,7 +35,7 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
     var neptune:SCNNode = SCNNode()
     
     var rotating:Bool = true
-    var revolving:Bool = false
+    var revolving:Bool = true
     var planetName:String = ""
     
     let xPosition:Float = -100.0
@@ -45,11 +45,10 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         sceneView.delegate = self
-        axisView.isHidden = true
         createPlanetView(x: xPosition, y: yPosition, z: zPosition)
         updateCurrentPosition()
         addButtons()
-        takeATour()
+//        takeATour()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -199,7 +198,7 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
         holdingNode.position = SCNVector3Make(0,0,0)
         holdingNode.addChildNode(childNode)
         if revolving {
-            holdingNode .runAction(revolveNode(x: 0,y: 3,z: 0,duration: duration))
+            holdingNode .runAction(revolveNode(x: 0,y: -3,z: 0,duration: duration))
         }
         
         parentNode.addChildNode(holdingNode)
@@ -229,7 +228,7 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
         case 2:
             SCNTransaction.begin()
             SCNTransaction.animationDuration = 0.5
-            sceneView.scene.rootNode.childNodes[1].position.z -= value
+            sceneView.scene.rootNode.childNodes[1].position.z += value
             SCNTransaction.commit()
             zStepper.value = 0
         default:
@@ -277,7 +276,7 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
     }
     
     func animation(){
-        sceneView.makeToast("Animating Solar System",duration: 5.0, position: .top)
+        sceneView.makeToast("Animating Solar System",duration: 2.0, position: .top)
         revolving = !revolving
         resetScene()
     }
@@ -286,7 +285,7 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
     
     func addButtons(){
         let floaty = Floaty()
-        floaty.buttonColor = UIColor.orange
+        floaty.buttonColor = UIColor(red:0.86, green:0.33, blue:0.17, alpha:1.0)
         floaty.openAnimationType = .slideUp
         floaty.addItem("Tour", icon: UIImage(named: "tour")!, handler: { item in
             self.takeATour()
@@ -297,19 +296,19 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
         floaty.addItem("Home", icon: UIImage(named: "home")!, handler: { item in
             self.goToHome()
         })
-        floaty.addItem("Animation", icon: UIImage(named: "animate")!, handler: { item in
+        floaty.addItem("Animation", icon: UIImage(named: "animation")!, handler: { item in
             self.animation()
         })
-        floaty.addItem("Capture", icon: UIImage(named: "capture")!, handler: { item in
+        floaty.addItem("Capture", icon: UIImage(named: "camera")!, handler: { item in
             self.captureView()
         })
         self.view.addSubview(floaty)
     }
     
     func takeATour(){
-        axisView.isHidden = true
-        sceneView.makeToast("We will take you for a tour of Solar system...",duration: 5.0, position: .top)
-        let action0 = SCNAction.moveBy(x: 0, y: -100, z: 0, duration: 5)
+//        axisView.isHidden = true
+        sceneView.makeToast("We will take you for a tour of Solar system...",duration: 2.0, position: .top)
+//        let action0 = SCNAction.moveBy(x: 0, y: -100, z: 0, duration: 5)
         
         var position = mercury.position
         let action1 = SCNAction.move(to:SCNVector3Make(-position.x, position.y, position.z - 50) , duration: 5)
@@ -338,15 +337,14 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
         position = sun.position
         let action9 = SCNAction.move(to:SCNVector3Make(-position.x, position.y, position.z) , duration: 5)
 
-        let sequence = SCNAction.sequence([action0,action1,action2,action3,action4,action5,action6,action7,action8,action9])
+        let sequence = SCNAction.sequence([action1,action2,action3,action4,action5,action6,action7,action8,action9])
         sun.runAction(sequence)
-        self.axisView.isHidden = false
     }
     
     func goToEarth(){
         sun.removeAllActions()
         sun.position = SCNVector3Make(xPosition, yPosition, zPosition)
-        sceneView.makeToast("Navigating to Earth",duration: 5.0, position: .top)
+        sceneView.makeToast("Navigating to Earth",duration: 2.0, position: .top)
         let position = earth.position
         let action1 = SCNAction.move(to:SCNVector3Make(-position.x, position.y, position.z - 50) , duration: 5)
         sun.runAction(action1)
@@ -355,7 +353,7 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
     func goToHome(){
         sun.removeAllActions()
         sun.position = SCNVector3Make(xPosition, yPosition, zPosition)
-        sceneView.makeToast("Navigating to Home",duration: 5.0, position: .top)
+        sceneView.makeToast("Navigating to Home",duration: 2.0, position: .top)
         let action = SCNAction.move(to:SCNVector3Make(xPosition,yPosition,zPosition) , duration: 5)
         sun.runAction(action)
     }

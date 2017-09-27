@@ -17,10 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        Chameleon.setGlobalThemeUsingPrimaryColor(FlatWhiteDark(), with: .contrast)
+        Chameleon.setGlobalThemeUsingPrimaryColor(UIColor(red:0.25, green:0.29, blue:0.41, alpha:1.0), with: .light)
         UIButton.appearance(whenContainedInInstancesOf: [ViewController.self]).backgroundColor = UIColor.clear
         if let font = UIFont(name: "AppleSDGothicNeo-Light", size: 20) {
-            UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.font: font]
+            let navigationBarAppearace = UINavigationBar.appearance()
+            navigationBarAppearace.titleTextAttributes = [NSAttributedStringKey.font:font]
+            navigationBarAppearace.tintColor = UIColor(red:0.74, green:0.89, blue:0.96, alpha:1.0)
         }
         return true
     }
