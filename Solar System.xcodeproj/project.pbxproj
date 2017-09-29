@@ -19,6 +19,7 @@
 		C827C6881F7C2CC200F7A60A /* AcknowledgementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C827C6871F7C2CC200F7A60A /* AcknowledgementsViewController.swift */; };
 		C82D57E81F742DE200F3F238 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82D57E71F742DE200F3F238 /* ImageViewController.swift */; };
 		C83601701F74996800D2477D /* PlanetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C836016F1F74996800D2477D /* PlanetViewController.swift */; };
+		C89252681F7E2C1000BB0756 /* solarsystem.plist in Resources */ = {isa = PBXBuildFile; fileRef = C89252671F7E2C1000BB0756 /* solarsystem.plist */; };
 		C8FA14881F7B0E670052F2B8 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FA14871F7B0E660052F2B8 /* LaunchViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		C827C6871F7C2CC200F7A60A /* AcknowledgementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementsViewController.swift; sourceTree = "<group>"; };
 		C82D57E71F742DE200F3F238 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		C836016F1F74996800D2477D /* PlanetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetViewController.swift; sourceTree = "<group>"; };
+		C89252671F7E2C1000BB0756 /* solarsystem.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = solarsystem.plist; sourceTree = "<group>"; };
 		C8FA14871F7B0E660052F2B8 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +86,8 @@
 		C82558E61F732931002ABE6F /* Solar System */ = {
 			isa = PBXGroup;
 			children = (
+				C89252671F7E2C1000BB0756 /* solarsystem.plist */,
+				C89252661F7E26F500BB0756 /* Model */,
 				C861B4611F7A1C5800402520 /* view */,
 				C861B4601F7A1C3600402520 /* controllers */,
 				C82558E91F732931002ABE6F /* art.scnassets */,
@@ -115,6 +119,13 @@
 				C82558F21F732931002ABE6F /* LaunchScreen.storyboard */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		C89252661F7E26F500BB0756 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		DC4CCDE962332D3D59C5B6C2 /* Frameworks */ = {
@@ -190,6 +201,7 @@
 				C82558EA1F732931002ABE6F /* art.scnassets in Resources */,
 				C82558F41F732931002ABE6F /* LaunchScreen.storyboard in Resources */,
 				C82558F11F732931002ABE6F /* Assets.xcassets in Resources */,
+				C89252681F7E2C1000BB0756 /* solarsystem.plist in Resources */,
 				C82558EF1F732931002ABE6F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,11 +416,12 @@
 			baseConfigurationReference = 7A9C7636EAC7A01CC0132EA7 /* Pods-Solar System.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D27V92ZH34;
 				INFOPLIST_FILE = "Solar System/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.augmented.reality.Solar-System";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.littleapps.Solar-System";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -420,11 +433,12 @@
 			baseConfigurationReference = 0646DB93BF8CE035B6AEF756 /* Pods-Solar System.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D27V92ZH34;
 				INFOPLIST_FILE = "Solar System/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.augmented.reality.Solar-System";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.littleapps.Solar-System";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

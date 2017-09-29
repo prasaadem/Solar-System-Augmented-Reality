@@ -9,7 +9,7 @@
 import UIKit
 
 class SettingsTableViewController: UITableViewController {
-    let dataArray:NSArray = ["Visit Us","Acknowledgements","Share us"]
+    let dataArray:NSArray = ["Acknowledgements","Share us"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,11 +41,9 @@ class SettingsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
-        case 1:
-            self.performSegue(withIdentifier: "ack", sender: self)
         case 0:
-            self.performSegue(withIdentifier: "website", sender: self)
-        case 2:
+            self.performSegue(withIdentifier: "ack", sender: self)
+        case 1:
             actionPressed()
         default:
             print("default")

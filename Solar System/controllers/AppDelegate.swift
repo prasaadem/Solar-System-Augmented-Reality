@@ -9,11 +9,12 @@
 import UIKit
 import ChameleonFramework
 
+var solarSystem:[String:Any] = [:]
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -24,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             navigationBarAppearace.titleTextAttributes = [NSAttributedStringKey.font:font]
             navigationBarAppearace.tintColor = UIColor(red:0.74, green:0.89, blue:0.96, alpha:1.0)
         }
+        getDataFromPlistFile()
         return true
     }
 
@@ -48,7 +50,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    func getDataFromPlistFile(){
+        if let path = Bundle.main.path(forResource: "solarsystem", ofType: "plist") {
+            if let dic = NSDictionary(contentsOfFile: path) as? [String: Any] {
+                solarSystem = dic
+            }
+        }
+    }
 
+    
 
 }
 

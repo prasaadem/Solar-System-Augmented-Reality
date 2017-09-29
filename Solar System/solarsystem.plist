@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>sun</key>
+	<dict>
+		<key>Namesake</key>
+		<string>Earth&apos;s closest star</string>
+		<key>Type of Star</key>
+		<string>G2V</string>
+		<key>Age</key>
+		<string>4.6 Billion Years</string>
+		<key>Radius</key>
+		<string>695,500 in kilometers or 432,200 in miles</string>
+		<key>Mass</key>
+		<string>1.989 × 10^30 Kilograms</string>
+		<key>Density</key>
+		<string>1.409 grams/cc</string>
+		<key>Composition</key>
+		<string>92.1% hydrogen, 7.8% helium</string>
+		<key>Surface Temperature</key>
+		<string>5,500 deg C or 10,000 deg F</string>
+	</dict>
+	<key>mercury</key>
+	<dict>
+		<key>Namesake</key>
+		<string>Messenger of the Roman gods</string>
+		<key>Distance from the Sun</key>
+		<string>57.91 million km (35.98 million mi)</string>
+		<key>Orbit Period</key>
+		<string>87.97 Earth days</string>
+		<key>Rotation Period</key>
+		<string>58.65 Earth days</string>
+		<key>Equatorial Radius</key>
+		<string>2,440 km (1,516 mi)</string>
+		<key>Mass</key>
+		<string>0.055 of Earth’s</string>
+		<key>Density</key>
+		<string>5.43 g/cm3</string>
+		<key>Gravity</key>
+		<string>0.38 of Earth’s</string>
+	</dict>
+	<key>venus</key>
+	<dict>
+		<key>Namesake</key>
+		<string>Roman goddess of love and beauty</string>
+		<key>Distance from the Sun</key>
+		<string>108.21 million km (67.24 million mi)</string>
+		<key>Orbit Period</key>
+		<string>224.70 Earth days</string>
+		<key>Rotation Period</key>
+		<string>243.02 Earth days</string>
+		<key>Equatorial Radius</key>
+		<string>6,052 km (3,760 mi)</string>
+		<key>Mass</key>
+		<string>0.815 of Earth’s</string>
+		<key>Density</key>
+		<string>5.24 g/cm3</string>
+		<key>Gravity</key>
+		<string>0.91 of Earth’s</string>
+	</dict>
+	<key>earth</key>
+	<dict>
+		<key>Namesake</key>
+		<string>The blue planet</string>
+		<key>Distance from the Sun</key>
+		<string>149.60 million km (92.96 million mi)</string>
+		<key>Orbit Period</key>
+		<string>365.26 days</string>
+		<key>Rotation Period</key>
+		<string>23.93 hr</string>
+		<key>Equatorial Radius</key>
+		<string>6,378 km (3,963 mi)</string>
+		<key>Mass</key>
+		<string>5.9737 × 1024 kg</string>
+		<key>Density</key>
+		<string>5.515 g/cm3</string>
+		<key>Gravity</key>
+		<string>9.8 m/sec2</string>
+	</dict>
+	<key>moon</key>
+	<dict>
+		<key>Namesake</key>
+		<string>Ares - Greek</string>
+		<key>Distance from the Earth</key>
+		<string>384,400 km (238,855 mi)</string>
+		<key>Orbit Period</key>
+		<string>27.32 Earth days</string>
+		<key>Rotation Period</key>
+		<string>27.32 Earth days</string>
+		<key>Equatorial Radius</key>
+		<string>1,737.4 km (1,079.6 mi)</string>
+		<key>Mass</key>
+		<string>0.0123 of Earth’s</string>
+		<key>Density</key>
+		<string>3.341 g/cm3</string>
+		<key>Gravity</key>
+		<string>0.166 of Earth’s</string>
+	</dict>
+	<key>mars</key>
+	<dict>
+		<key>Namesake</key>
+		<string>Roman god of war</string>
+		<key>Distance from the Sun</key>
+		<string>227.94 million km (141.63 million mi)</string>
+		<key>Orbit Period</key>
+		<string>1.8807 Earth years (686.98 Earth days)</string>
+		<key>Rotation Period</key>
+		<string>24.62 hr</string>
+		<key>Equatorial Radius</key>
+		<string>3,397 km (2,111 mi)</string>
+		<key>Mass</key>
+		<string>0.10744 of Earth’s</string>
+		<key>Density</key>
+		<string>3.934 g/cm3</string>
+		<key>Gravity</key>
+		<string>0.38 of Earth’s</string>
+	</dict>
+	<key>jupiter</key>
+	<dict>
+		<key>Namesake</key>
+		<string>King of the Roman gods</string>
+		<key>Distance from the Sun</key>
+		<string>778.41 million km (483.68 million mi)</string>
+		<key>Orbit Period</key>
+		<string>11.8565 Earth years (4,330.6 Earth days)</string>
+		<key>Rotation Period</key>
+		<string>9.92 hr</string>
+		<key>Equatorial Radius</key>
+		<string>71,492 km (44,423 mi)</string>
+		<key>Mass</key>
+		<string>317.82 of Earth’s</string>
+		<key>Density</key>
+		<string>1.33 g/cm3</string>
+		<key>Gravity</key>
+		<string>20.87 m/sec2</string>
+	</dict>
+	<key>saturn</key>
+	<dict>
+		<key>Namesake</key>
+		<string>Roman god of agriculture</string>
+		<key>Distance from the Sun</key>
+		<string>1,426.666 million km (886,489 million mi)</string>
+		<key>Orbit Period</key>
+		<string>29.4 Earth years</string>
+		<key>Rotation Period</key>
+		<string>10.656 hours</string>
+		<key>Equatorial Radius</key>
+		<string>60,268 km (37,449 mi)</string>
+		<key>Mass</key>
+		<string>95.16 of Earth’s</string>
+		<key>Density</key>
+		<string>0.70 g/cm3</string>
+		<key>Gravity</key>
+		<string>7.207 m/sec2</string>
+	</dict>
+	<key>uranus</key>
+	<dict>
+		<key>Namesake</key>
+		<string>Greek God of the heavens</string>
+		<key>Distance from the Sun</key>
+		<string>2,870.97 million km (1,783.94 million mi)</string>
+		<key>Orbit Period</key>
+		<string>84.02 Earth years</string>
+		<key>Rotation Period</key>
+		<string>17.24 hours</string>
+		<key>Equatorial Radius</key>
+		<string>25,559 km (15,882 mi)</string>
+		<key>Mass</key>
+		<string>14.371 of Earth’s</string>
+		<key>Density</key>
+		<string>1.32 g/cm3</string>
+		<key>Gravity</key>
+		<string>8.43 m/sec2</string>
+	</dict>
+	<key>neptune</key>
+	<dict>
+		<key>Namesake</key>
+		<string>Roman god of the sea</string>
+		<key>Distance from the Sun</key>
+		<string>4,498.25 million km (2,795.08 million mi)</string>
+		<key>Orbit Period</key>
+		<string>164.79 Earth years</string>
+		<key>Rotation Period</key>
+		<string>16.11 hours</string>
+		<key>Equatorial Radius</key>
+		<string>24,764 km (15,388 mi)</string>
+		<key>Mass</key>
+		<string>17.147 of Earth’s</string>
+		<key>Density</key>
+		<string>1.64 g/cm3</string>
+		<key>Gravity</key>
+		<string>10.71 m/sec2</string>
+	</dict>
+</dict>
+</plist>

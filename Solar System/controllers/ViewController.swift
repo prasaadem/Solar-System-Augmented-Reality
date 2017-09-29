@@ -71,7 +71,7 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
         cameraNode.position = SCNVector3Make(0.0, 0.0, 0.0)
         sceneView.scene.rootNode.addChildNode(cameraNode)
         
-        sun = createANode(radius: 200, image: #imageLiteral(resourceName: "sun"), x: x, y: y, z: z,name: "SUN")
+        sun = createANode(radius: 200, image: #imageLiteral(resourceName: "sun"), x: x, y: y, z: z,name: "sun")
         let light = SCNLight()
         light.type = .ambient
         light.spotInnerAngle = 30.0
@@ -80,40 +80,40 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
         sun.light = light
             
         sceneView.scene.rootNode.addChildNode(sun)
-        mercury = createANode(radius: 3, image: #imageLiteral(resourceName: "mercury"), x: 236, y: 0, z: 0, name: "MERCURY")
+        mercury = createANode(radius: 3, image: #imageLiteral(resourceName: "mercury"), x: 236, y: 0, z: 0, name: "mercury")
         mercury.name = "mercury"
         addPath(radius: 236)
         addChildNodeToParentNode(parentNode: sun, childNode: mercury, duration: 12.0)
         
-        venus = createANode(radius: 7, image: #imageLiteral(resourceName: "venus"), x: 268, y: 0, z: 0, name: "VENUS")
+        venus = createANode(radius: 7, image: #imageLiteral(resourceName: "venus"), x: 268, y: 0, z: 0, name: "venus")
         addPath(radius: 268)
         addChildNodeToParentNode(parentNode: sun, childNode: venus, duration: 12.0)
         
-        earth = createANode(radius: 8, image: #imageLiteral(resourceName: "earth"), x: 293.0, y: 0, z: 0,name: "EARTH")
+        earth = createANode(radius: 8, image: #imageLiteral(resourceName: "earth"), x: 293.0, y: 0, z: 0,name: "earth")
         addPath(radius: 293)
         addChildNodeToParentNode(parentNode: sun, childNode:earth, duration: 10.0)
         
-        mars = createANode(radius: 4, image: #imageLiteral(resourceName: "mars"), x: 341, y: 0, z: 0,name: "MARS")
+        mars = createANode(radius: 4, image: #imageLiteral(resourceName: "mars"), x: 341, y: 0, z: 0,name: "mars")
         addPath(radius: 341)
         addChildNodeToParentNode(parentNode: sun, childNode: mars, duration: 12.0)
         
-        jupiter = createANode(radius: 88, image: #imageLiteral(resourceName: "jupiter"), x: 500, y: 0, z: 0, name: "JUPITER")
+        jupiter = createANode(radius: 88, image: #imageLiteral(resourceName: "jupiter"), x: 500, y: 0, z: 0, name: "jupiter")
         addPath(radius: 500)
         addChildNodeToParentNode(parentNode: sun, childNode: jupiter, duration: 12.0)
         
-        saturn = createANode(radius: 74, image: #imageLiteral(resourceName: "saturn"), x: 700, y: 0, z: 0, name: "SATURN")
+        saturn = createANode(radius: 74, image: #imageLiteral(resourceName: "saturn"), x: 700, y: 0, z: 0, name: "saturn")
         addPath(radius: 700)
         addChildNodeToParentNode(parentNode: sun, childNode: saturn, duration: 12.0)
         
-        uranus = createANode(radius: 32, image: #imageLiteral(resourceName: "uranus"), x: 850, y: 0, z: 0, name: "URANUS")
+        uranus = createANode(radius: 32, image: #imageLiteral(resourceName: "uranus"), x: 850, y: 0, z: 0, name: "uranus")
         addPath(radius: 850)
         addChildNodeToParentNode(parentNode: sun, childNode: uranus, duration: 12.0)
         
-        neptune = createANode(radius: 30, image: #imageLiteral(resourceName: "neptune"), x: 950, y: 0, z: 0, name: "NEPTUNE")
+        neptune = createANode(radius: 30, image: #imageLiteral(resourceName: "neptune"), x: 950, y: 0, z: 0, name: "neptune")
         addPath(radius: 950)
         addChildNodeToParentNode(parentNode: sun, childNode: neptune, duration: 12.0)
         
-        let moon = createANode(radius:1, image: #imageLiteral(resourceName: "moon"), x: 0, y: -15, z:0, name: "MOON")
+        let moon = createANode(radius:1, image: #imageLiteral(resourceName: "moon"), x: 0, y: -15, z:0, name: "moon")
         addChildNodeToParentNode(parentNode: earth, childNode: moon, duration: 1.0)
         
         let ringMaterial = SCNMaterial()
