@@ -7,250 +7,79 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03DCD393DF69EE6DE4AD424B1192DD02 /* UIViewController+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = C52CA710A0D717359225D5C16C0BAE42 /* UIViewController+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0A113A2FC5F91269AB55DF9FA683015F /* Floaty.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE0F2C7FA5BC7EDC5D6A739B296A077 /* Floaty.swift */; };
-		0B1AC034C71F18A2E6D92A7B5E1C8735 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECAEE709EAEB38AC51FD5590F2FB132 /* Toast.swift */; };
-		0D01C6FCA34D5BEBE03A41E0AE425214 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5F748DA8F98E61F788C3488D6BA25DD /* QuartzCore.framework */; };
-		0D7F425CFB628271BFB6FCFF8201BF4F /* UIButton+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = A01B715B5A9AE5F53FE7E6A2C690820C /* UIButton+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		11EB940B5AD91D0FB1E7EFCAC846B435 /* Pods-Solar System-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 02628D8CF736AC793378CC9A77B6D85E /* Pods-Solar System-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		139A9CEDE5163F58CBB1A3A135DAD6A3 /* UIImage+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FB4117FD60B3DCEFCF362DC2E45A70 /* UIImage+ChameleonPrivate.m */; };
-		1982E7ED9231E948A558799362FEA8B3 /* Floaty-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C70BC7D7801E407A21FC833311D62D6 /* Floaty-dummy.m */; };
-		1B704F3C816C4532F9B7FDFE0625732E /* ChameleonFramework-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E7AC09117F35D457F10CFCEA3752A060 /* ChameleonFramework-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1E8D9E9C05EE9201E584D1EB3DF26E5B /* Toast-Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A60A38B1326F67705C0F8B1147F772C /* Toast-Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		210A0A266FD13257D74F56214D26362C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB56A22A987E846FF65248DA108CAD2 /* Foundation.framework */; };
-		29F74E8A334254C68C6720E3B247CE32 /* NSArray+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BF541A1658216C6854B982ECAF50B1E /* NSArray+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2DDDE2C06FB4DCC639CFD100F224D6FD /* UIColor+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 15ADF9934067B223CA4223B4F6590EC6 /* UIColor+Chameleon.m */; };
-		2F30735E6BB3BB6DD455904BE0452769 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB56A22A987E846FF65248DA108CAD2 /* Foundation.framework */; };
-		31DEB9C293D974C0014F52E7853C3E0B /* FloatyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0682A60B95A041863F4EA7F59E24BE /* FloatyItem.swift */; };
-		34D751AECD252A6F375328CB8BB48D4B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5F748DA8F98E61F788C3488D6BA25DD /* QuartzCore.framework */; };
-		3D08C4F4E2E65D192D317AED0A8237B3 /* UIColor+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = CFCDA8E573BDF00C6AC34F45789442A1 /* UIColor+ChameleonPrivate.m */; };
-		44117424757A5E62D87B8BF4B41A4207 /* UIColor+ChameleonPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = E8E26F93BDB48B3EB2C90CB6119F48DD /* UIColor+ChameleonPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		459048ECD9FAA42B77566EC56ECAD793 /* UINavigationController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = FE78C4C51F4C45CFD1379ED2B75F4C64 /* UINavigationController+Chameleon.m */; };
-		530356FC11C4F4A1F641A30F65C5684F /* FloatyWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED48F7643B317238518020C5074598C /* FloatyWindow.swift */; };
-		5EA9F0ED011B06DEFA8542EEE72508C3 /* UIViewController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C91D5466BB2F1CF08CD2D10B9F3A0E1 /* UIViewController+Chameleon.m */; };
-		604286A8F8A2ACB063BDF97B09D4987C /* UILabel+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = C2790BB00006CB68F74FB1BFCFFB3647 /* UILabel+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6712100A2CCB9B987281A02F6778473C /* NSArray+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F32D1984AA1C8845F44B09F7019B71 /* NSArray+Chameleon.m */; };
-		6D9F0C77C6996D7FBC0F03AF8E706276 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDBA94A94B982885ECCA1662BE8CD7CF /* UIKit.framework */; };
-		702D06F74E455491B251635B771A94F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB56A22A987E846FF65248DA108CAD2 /* Foundation.framework */; };
-		7060C75B128119AE663619DCED898CF8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDBA94A94B982885ECCA1662BE8CD7CF /* UIKit.framework */; };
-		7067387FF3974A5BA87F204F718C33F5 /* Floaty-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E590776A94D66A0DE0BDAAE2D9D48846 /* Floaty-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		78281D8673FC507089FCFDC439DEDC16 /* Chameleon_.h in Headers */ = {isa = PBXBuildFile; fileRef = 64097E488AA9C6AC6B1497DCD5C8F749 /* Chameleon_.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		833F15A28A0D562548517BCA8EAF23B6 /* ChameleonShorthand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A684E0665B4B981E370911326D2175 /* ChameleonShorthand.swift */; };
-		83CFC8F573AD5B75191E162E64C7D039 /* UIButton+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD149BCED13C10AAF09CB021459BB96 /* UIButton+Chameleon.m */; };
-		86F7D970F220974A0E26C3B632C5C74F /* UIImage+ChameleonPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = C5AB318AD4D276B40B86E8420FD3B347 /* UIImage+ChameleonPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8E96697B51D3FD3DB5EB1BE3EF02B411 /* FloatyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01C21B2CFF84E40A5D6C21C95FC3425 /* FloatyManager.swift */; };
-		8ECF929AC5E737EBEB542283886D5E07 /* UIView+ChameleonPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B09A706402FC4A794E88A89DA74E7B0 /* UIView+ChameleonPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9054A1CA64F47D0BEE3744D146CD26A2 /* FloatyDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BA258F25AA9201B9DC8BF3FA3FBFA6 /* FloatyDelegate.swift */; };
-		9274EDE359A02C3CF7B3731E931EF9C3 /* Toast-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 73ACCE50F7A555A33B624651B90AC982 /* Toast-Swift-dummy.m */; };
-		95E542740750F827BE2EBE3DE6F62D0E /* ChameleonFramework-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BCFEDE535DD537A1AA2EF1454CB447 /* ChameleonFramework-dummy.m */; };
-		9A3EAF15D3C58FD56A552FD703A9154C /* ChameleonConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 76AE4CD105E9D936C33553131917B822 /* ChameleonConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9B6AD39C81FAF37861FC0FEC41022146 /* UIAppearance+Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = A65B42FFB9319A991A2335905A4859A5 /* UIAppearance+Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A664D0A12D5F3DBD08A7E8DFE3AE83E2 /* UIView+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7430761358AB46FD3DAC7052C08DD2 /* UIView+ChameleonPrivate.m */; };
-		B26038F91C7C4CC322D7F25C5D16FE9E /* ChameleonConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 950842756A1CC4B74329C635CF8D8026 /* ChameleonConstants.m */; };
-		B4EA53699AA19822E674188743266B2B /* ChameleonMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 171461FB6DB6528DC6DC13D83D0C7EC4 /* ChameleonMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BFA97401155C4E14893D9AA1E0D1EC80 /* UINavigationController+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = DA190DFF206EC7990C2896143C6B8A0B /* UINavigationController+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C3C8BB46937DD0BBC7FBE25E298052F8 /* UIAppearance+Swift.m in Sources */ = {isa = PBXBuildFile; fileRef = 6036AA667C059A500D309D41BA002361 /* UIAppearance+Swift.m */; };
-		CA5420F7510DD2FFFE8785E59CCDAC9A /* Pods-Solar System-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E83AE7BE9679E8C8B8597BE07D7421 /* Pods-Solar System-dummy.m */; };
-		DB5FB611FB6EBF2F2BA7B78FE0CED535 /* UIColor+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 44B1C6470405F1837668BC8B9C4EBEAE /* UIColor+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E7FA38FEAF957D69E92153FBAFB3DB40 /* Chameleon_.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE5E1602019CB7ADC9BEE2700411D25 /* Chameleon_.m */; };
-		E87D2FB41E6EB857013EB020297C08DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB56A22A987E846FF65248DA108CAD2 /* Foundation.framework */; };
-		E91202612969D2BDB5A801F81AE96FFB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3292CC8DBF6352C2BF2B949CB548248F /* CoreGraphics.framework */; };
-		EC786817C5CEBCD51A4C9EC9B883ED6F /* ChameleonEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = CFC0AA49CEE6039FA57C093FAEDDFF9D /* ChameleonEnums.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ED4DBD1E13182AA813DC1237FA6E3A42 /* Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = A5B98B72D86CE16286B5058F37F2AA07 /* Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F5B4C3EE44C285ACF24E077895435175 /* FloatyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693F65C2B34623F43C678375BE32939F /* FloatyViewController.swift */; };
-		FB82C1293D7DDE0D3E2E6D68CDD5852C /* UILabel+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B436EE15B654E154C53D756303EA831 /* UILabel+Chameleon.m */; };
+		032C5B24BB17ABEA7883027742CFF862 /* Toast-Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4BC48D47B7FA52A3DEA297512CE2C5 /* Toast-Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C0C33EDDC44ECED67575BEF4E37FD9E /* Pods-Solar System-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E83AE7BE9679E8C8B8597BE07D7421 /* Pods-Solar System-dummy.m */; };
+		3018AB2E50C308EFF01D8F5D9FC0A4C8 /* Pods-Solar System-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 02628D8CF736AC793378CC9A77B6D85E /* Pods-Solar System-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4850465BB484EB255DA54568FA8D4971 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6068E46F837C6016823EBEE5392A58 /* Toast.swift */; };
+		94282A0F9ED3D931E64204D63409D18E /* Toast-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E05B778E1B37985EBC078D0C5BA74992 /* Toast-Swift-dummy.m */; };
+		D3B79A29407D0E65445620D0B5FD58C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */; };
+		E9852470507BD44810A203763282254E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2770B482BFE91273C8560623F1422C /* QuartzCore.framework */; };
+		EA925372BAAAA37EA30B1F9EB2CBDB56 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		302B7FA4E1706D8087F8A8E89529931D /* PBXContainerItemProxy */ = {
+		FFB5F0BA7D7E9354767A816FA79D9702 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5C123A74CD9D6CDA27160800BA68B01A;
-			remoteInfo = Floaty;
-		};
-		AF87A10963BE8AF4EF397E7E4227729D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7D19BF5DD539427C3322546F6C47D220;
+			remoteGlobalIDString = 7D8C37A1CF5686F833D59EADD9F791C2;
 			remoteInfo = "Toast-Swift";
-		};
-		C7E2E7E0522C94D0C3C72EBF29DF92FF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 76BD4592010354D6C23D6ECCA20D83A8;
-			remoteInfo = ChameleonFramework;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		02628D8CF736AC793378CC9A77B6D85E /* Pods-Solar System-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Solar System-umbrella.h"; sourceTree = "<group>"; };
-		05A684E0665B4B981E370911326D2175 /* ChameleonShorthand.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChameleonShorthand.swift; path = Pod/Classes/Swift/ChameleonShorthand.swift; sourceTree = "<group>"; };
-		07FB4117FD60B3DCEFCF362DC2E45A70 /* UIImage+ChameleonPrivate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ChameleonPrivate.m"; path = "Pod/Classes/Objective-C/UIImage+ChameleonPrivate.m"; sourceTree = "<group>"; };
-		096EFA80A8D1617EB3DF15AF49CCB9F6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0A60A38B1326F67705C0F8B1147F772C /* Toast-Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toast-Swift-umbrella.h"; sourceTree = "<group>"; };
-		0C91D5466BB2F1CF08CD2D10B9F3A0E1 /* UIViewController+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Chameleon.m"; path = "Pod/Classes/Objective-C/UIViewController+Chameleon.m"; sourceTree = "<group>"; };
-		0DA0B615E02BA00B92F78C5C7555F6C8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		10442738703911AFB77EE4914957B1AF /* Floaty-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Floaty-prefix.pch"; sourceTree = "<group>"; };
-		14A31320F5D1F78358E502EB9E03B586 /* Toast-Swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Toast-Swift.xcconfig"; sourceTree = "<group>"; };
-		15ADF9934067B223CA4223B4F6590EC6 /* UIColor+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Chameleon.m"; path = "Pod/Classes/Objective-C/UIColor+Chameleon.m"; sourceTree = "<group>"; };
-		171461FB6DB6528DC6DC13D83D0C7EC4 /* ChameleonMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ChameleonMacros.h; path = "Pod/Classes/Objective-C/ChameleonMacros.h"; sourceTree = "<group>"; };
-		193049729B4B581BC67BD7CD762EC051 /* Toast_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Toast_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1ED48F7643B317238518020C5074598C /* FloatyWindow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatyWindow.swift; path = Sources/FloatyWindow.swift; sourceTree = "<group>"; };
-		20BA258F25AA9201B9DC8BF3FA3FBFA6 /* FloatyDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatyDelegate.swift; path = Sources/FloatyDelegate.swift; sourceTree = "<group>"; };
-		21EEB69C4B72AF455FCD5BF9C3426D3C /* Floaty.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Floaty.xcconfig; sourceTree = "<group>"; };
-		27A2961194E9C923F203F788DFB7DD2A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		28013E959D2FFF856B2F4FD249325522 /* ChameleonFramework.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ChameleonFramework.xcconfig; sourceTree = "<group>"; };
-		2B09A706402FC4A794E88A89DA74E7B0 /* UIView+ChameleonPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+ChameleonPrivate.h"; path = "Pod/Classes/Objective-C/UIView+ChameleonPrivate.h"; sourceTree = "<group>"; };
-		2CE5E1602019CB7ADC9BEE2700411D25 /* Chameleon_.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Chameleon_.m; path = "Pod/Classes/Objective-C/Chameleon_.m"; sourceTree = "<group>"; };
-		3292CC8DBF6352C2BF2B949CB548248F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		15EC844F56AE6D1162860137427903BE /* Pods_Solar_System.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Solar_System.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C351EC4595F0FF8000E8C4AE95288EE /* Toast_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Toast_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3837E241C8511AD088258CEBCBEAF189 /* Pods-Solar System-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Solar System-resources.sh"; sourceTree = "<group>"; };
-		44B1C6470405F1837668BC8B9C4EBEAE /* UIColor+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+Chameleon.h"; path = "Pod/Classes/Objective-C/UIColor+Chameleon.h"; sourceTree = "<group>"; };
-		4C70BC7D7801E407A21FC833311D62D6 /* Floaty-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Floaty-dummy.m"; sourceTree = "<group>"; };
 		52E1406E1C652E3E458044062BD8C570 /* Pods-Solar System.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Solar System.debug.xcconfig"; sourceTree = "<group>"; };
+		54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		59F74EF12F040CA11D6386A685685C98 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6036AA667C059A500D309D41BA002361 /* UIAppearance+Swift.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIAppearance+Swift.m"; path = "Pod/Classes/Objective-C/UIAppearance+Swift.m"; sourceTree = "<group>"; };
-		624F9416B2FD4090740AF47DE9AB3B61 /* Toast-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Toast-Swift.modulemap"; sourceTree = "<group>"; };
-		64097E488AA9C6AC6B1497DCD5C8F749 /* Chameleon_.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Chameleon_.h; path = "Pod/Classes/Objective-C/Chameleon_.h"; sourceTree = "<group>"; };
-		693F65C2B34623F43C678375BE32939F /* FloatyViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatyViewController.swift; path = Sources/FloatyViewController.swift; sourceTree = "<group>"; };
-		6ECAEE709EAEB38AC51FD5590F2FB132 /* Toast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Toast.swift; path = Toast/Toast.swift; sourceTree = "<group>"; };
-		73ACCE50F7A555A33B624651B90AC982 /* Toast-Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Toast-Swift-dummy.m"; sourceTree = "<group>"; };
-		76AE4CD105E9D936C33553131917B822 /* ChameleonConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ChameleonConstants.h; path = "Pod/Classes/Objective-C/ChameleonConstants.h"; sourceTree = "<group>"; };
-		7BF4A775A0429D27F3285C61A8447983 /* ChameleonFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChameleonFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D3524C550BC0E93B3F04B0B1226A2D1 /* ChameleonFramework-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ChameleonFramework-prefix.pch"; sourceTree = "<group>"; };
-		823CE384510CEE305320FF0F08149485 /* Toast-Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toast-Swift-prefix.pch"; sourceTree = "<group>"; };
-		8B436EE15B654E154C53D756303EA831 /* UILabel+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UILabel+Chameleon.m"; path = "Pod/Classes/Objective-C/UILabel+Chameleon.m"; sourceTree = "<group>"; };
-		90BCFEDE535DD537A1AA2EF1454CB447 /* ChameleonFramework-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ChameleonFramework-dummy.m"; sourceTree = "<group>"; };
 		92DB14DE18489195FACB5EB8422D71D6 /* Pods-Solar System-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Solar System-frameworks.sh"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		950842756A1CC4B74329C635CF8D8026 /* ChameleonConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ChameleonConstants.m; path = "Pod/Classes/Objective-C/ChameleonConstants.m"; sourceTree = "<group>"; };
-		9B02937F448F39982D7C884B0A2507CF /* Floaty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Floaty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9BF541A1658216C6854B982ECAF50B1E /* NSArray+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+Chameleon.h"; path = "Pod/Classes/Objective-C/NSArray+Chameleon.h"; sourceTree = "<group>"; };
-		9F0682A60B95A041863F4EA7F59E24BE /* FloatyItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatyItem.swift; path = Sources/FloatyItem.swift; sourceTree = "<group>"; };
-		A01B715B5A9AE5F53FE7E6A2C690820C /* UIButton+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+Chameleon.h"; path = "Pod/Classes/Objective-C/UIButton+Chameleon.h"; sourceTree = "<group>"; };
-		A01C21B2CFF84E40A5D6C21C95FC3425 /* FloatyManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatyManager.swift; path = Sources/FloatyManager.swift; sourceTree = "<group>"; };
+		9F6068E46F837C6016823EBEE5392A58 /* Toast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Toast.swift; path = Toast/Toast.swift; sourceTree = "<group>"; };
 		A130A3F222932B54400BCED379984D3C /* Pods-Solar System-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Solar System-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A24F4E0238B87E849BFBC9176092FBD6 /* Pods-Solar System-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Solar System-acknowledgements.plist"; sourceTree = "<group>"; };
-		A5B98B72D86CE16286B5058F37F2AA07 /* Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Chameleon.h; path = "Pod/Classes/Objective-C/Chameleon.h"; sourceTree = "<group>"; };
-		A65B42FFB9319A991A2335905A4859A5 /* UIAppearance+Swift.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIAppearance+Swift.h"; path = "Pod/Classes/Objective-C/UIAppearance+Swift.h"; sourceTree = "<group>"; };
-		BE7430761358AB46FD3DAC7052C08DD2 /* UIView+ChameleonPrivate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+ChameleonPrivate.m"; path = "Pod/Classes/Objective-C/UIView+ChameleonPrivate.m"; sourceTree = "<group>"; };
-		BFE0F2C7FA5BC7EDC5D6A739B296A077 /* Floaty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Floaty.swift; path = Sources/Floaty.swift; sourceTree = "<group>"; };
-		C2790BB00006CB68F74FB1BFCFFB3647 /* UILabel+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UILabel+Chameleon.h"; path = "Pod/Classes/Objective-C/UILabel+Chameleon.h"; sourceTree = "<group>"; };
-		C52CA710A0D717359225D5C16C0BAE42 /* UIViewController+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+Chameleon.h"; path = "Pod/Classes/Objective-C/UIViewController+Chameleon.h"; sourceTree = "<group>"; };
-		C5AB318AD4D276B40B86E8420FD3B347 /* UIImage+ChameleonPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ChameleonPrivate.h"; path = "Pod/Classes/Objective-C/UIImage+ChameleonPrivate.h"; sourceTree = "<group>"; };
-		CFC0AA49CEE6039FA57C093FAEDDFF9D /* ChameleonEnums.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ChameleonEnums.h; path = "Pod/Classes/Objective-C/ChameleonEnums.h"; sourceTree = "<group>"; };
-		CFCDA8E573BDF00C6AC34F45789442A1 /* UIColor+ChameleonPrivate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+ChameleonPrivate.m"; path = "Pod/Classes/Objective-C/UIColor+ChameleonPrivate.m"; sourceTree = "<group>"; };
-		D49AE3FE34DFBADF0D7A86F8B6966BDB /* Floaty.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Floaty.modulemap; sourceTree = "<group>"; };
-		D89377344BA69F112A1BD9FCB74C235C /* Pods_Solar_System.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Solar_System.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA190DFF206EC7990C2896143C6B8A0B /* UINavigationController+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+Chameleon.h"; path = "Pod/Classes/Objective-C/UINavigationController+Chameleon.h"; sourceTree = "<group>"; };
-		DBD149BCED13C10AAF09CB021459BB96 /* UIButton+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Chameleon.m"; path = "Pod/Classes/Objective-C/UIButton+Chameleon.m"; sourceTree = "<group>"; };
+		AC21E042593269EBEF50C9C60FC9B024 /* Toast-Swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Toast-Swift.xcconfig"; sourceTree = "<group>"; };
+		CBAA452DC428152CC82DD57E67113031 /* Toast-Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toast-Swift-prefix.pch"; sourceTree = "<group>"; };
+		CE4BC48D47B7FA52A3DEA297512CE2C5 /* Toast-Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toast-Swift-umbrella.h"; sourceTree = "<group>"; };
+		D31E09673E88729EE06D49BF4000B63E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E05B778E1B37985EBC078D0C5BA74992 /* Toast-Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Toast-Swift-dummy.m"; sourceTree = "<group>"; };
 		E1018BDA019005F19F0520F6CB50271E /* Pods-Solar System.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Solar System.modulemap"; sourceTree = "<group>"; };
-		E590776A94D66A0DE0BDAAE2D9D48846 /* Floaty-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Floaty-umbrella.h"; sourceTree = "<group>"; };
-		E5F748DA8F98E61F788C3488D6BA25DD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		E7AC09117F35D457F10CFCEA3752A060 /* ChameleonFramework-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ChameleonFramework-umbrella.h"; sourceTree = "<group>"; };
-		E8E26F93BDB48B3EB2C90CB6119F48DD /* UIColor+ChameleonPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+ChameleonPrivate.h"; path = "Pod/Classes/Objective-C/UIColor+ChameleonPrivate.h"; sourceTree = "<group>"; };
-		ECB56A22A987E846FF65248DA108CAD2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		F16A94AE7EB91C32E7FA7750CA008B3A /* ChameleonFramework.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ChameleonFramework.modulemap; sourceTree = "<group>"; };
-		F1F32D1984AA1C8845F44B09F7019B71 /* NSArray+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Chameleon.m"; path = "Pod/Classes/Objective-C/NSArray+Chameleon.m"; sourceTree = "<group>"; };
+		EE18B53B4D5DBDC5263EE6262E2583DD /* Toast-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Toast-Swift.modulemap"; sourceTree = "<group>"; };
 		F5E83AE7BE9679E8C8B8597BE07D7421 /* Pods-Solar System-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Solar System-dummy.m"; sourceTree = "<group>"; };
-		FDBA94A94B982885ECCA1662BE8CD7CF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		FC2770B482BFE91273C8560623F1422C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		FDC63487FEFA24F0AD4346E6E05A8C2F /* Pods-Solar System.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Solar System.release.xcconfig"; sourceTree = "<group>"; };
-		FE78C4C51F4C45CFD1379ED2B75F4C64 /* UINavigationController+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+Chameleon.m"; path = "Pod/Classes/Objective-C/UINavigationController+Chameleon.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1C56C707F45A2AD4D831BE952BE94EBB /* Frameworks */ = {
+		3EDA46D9B903702BB52363970A737CFD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				210A0A266FD13257D74F56214D26362C /* Foundation.framework in Frameworks */,
-				0D01C6FCA34D5BEBE03A41E0AE425214 /* QuartzCore.framework in Frameworks */,
+				D3B79A29407D0E65445620D0B5FD58C2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BCDB19C2638680E4A0565F7D01B0B24C /* Frameworks */ = {
+		801ED52C4A72A7460A43DE925916DA0F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				702D06F74E455491B251635B771A94F2 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E3FD70AC579E74592E2EAC475ADFB8D9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E91202612969D2BDB5A801F81AE96FFB /* CoreGraphics.framework in Frameworks */,
-				E87D2FB41E6EB857013EB020297C08DF /* Foundation.framework in Frameworks */,
-				34D751AECD252A6F375328CB8BB48D4B /* QuartzCore.framework in Frameworks */,
-				6D9F0C77C6996D7FBC0F03AF8E706276 /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E91D449C74F3A7565170694D645F1052 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2F30735E6BB3BB6DD455904BE0452769 /* Foundation.framework in Frameworks */,
-				7060C75B128119AE663619DCED898CF8 /* UIKit.framework in Frameworks */,
+				EA925372BAAAA37EA30B1F9EB2CBDB56 /* Foundation.framework in Frameworks */,
+				E9852470507BD44810A203763282254E /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0AE314A140397DF26955EFB1ACB07C1E /* Pods */ = {
+		1CC7CB9B2C9AE97AB1B25B9DC56A545D /* Toast-Swift */ = {
 			isa = PBXGroup;
 			children = (
-				40DBBDEAF4D544A88B95AC39FFE5C45F /* ChameleonFramework */,
-				D03F300A681576638B20134EC0E57585 /* Floaty */,
-				ACC23065C086F0577DA9F2B9E75CFA9B /* Toast-Swift */,
+				9F6068E46F837C6016823EBEE5392A58 /* Toast.swift */,
+				91FFC9D276F2D51EC5F3FF59947B6F5A /* Support Files */,
 			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				8F8FEF3140598EAB2B3D56BB84B5389A /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		1E8D9E71BBC777EE14DB1A475073D55F /* Default */ = {
-			isa = PBXGroup;
-			children = (
-				A5B98B72D86CE16286B5058F37F2AA07 /* Chameleon.h */,
-				64097E488AA9C6AC6B1497DCD5C8F749 /* Chameleon_.h */,
-				2CE5E1602019CB7ADC9BEE2700411D25 /* Chameleon_.m */,
-				76AE4CD105E9D936C33553131917B822 /* ChameleonConstants.h */,
-				950842756A1CC4B74329C635CF8D8026 /* ChameleonConstants.m */,
-				CFC0AA49CEE6039FA57C093FAEDDFF9D /* ChameleonEnums.h */,
-				171461FB6DB6528DC6DC13D83D0C7EC4 /* ChameleonMacros.h */,
-				9BF541A1658216C6854B982ECAF50B1E /* NSArray+Chameleon.h */,
-				F1F32D1984AA1C8845F44B09F7019B71 /* NSArray+Chameleon.m */,
-				A65B42FFB9319A991A2335905A4859A5 /* UIAppearance+Swift.h */,
-				6036AA667C059A500D309D41BA002361 /* UIAppearance+Swift.m */,
-				A01B715B5A9AE5F53FE7E6A2C690820C /* UIButton+Chameleon.h */,
-				DBD149BCED13C10AAF09CB021459BB96 /* UIButton+Chameleon.m */,
-				44B1C6470405F1837668BC8B9C4EBEAE /* UIColor+Chameleon.h */,
-				15ADF9934067B223CA4223B4F6590EC6 /* UIColor+Chameleon.m */,
-				E8E26F93BDB48B3EB2C90CB6119F48DD /* UIColor+ChameleonPrivate.h */,
-				CFCDA8E573BDF00C6AC34F45789442A1 /* UIColor+ChameleonPrivate.m */,
-				C5AB318AD4D276B40B86E8420FD3B347 /* UIImage+ChameleonPrivate.h */,
-				07FB4117FD60B3DCEFCF362DC2E45A70 /* UIImage+ChameleonPrivate.m */,
-				C2790BB00006CB68F74FB1BFCFFB3647 /* UILabel+Chameleon.h */,
-				8B436EE15B654E154C53D756303EA831 /* UILabel+Chameleon.m */,
-				DA190DFF206EC7990C2896143C6B8A0B /* UINavigationController+Chameleon.h */,
-				FE78C4C51F4C45CFD1379ED2B75F4C64 /* UINavigationController+Chameleon.m */,
-				2B09A706402FC4A794E88A89DA74E7B0 /* UIView+ChameleonPrivate.h */,
-				BE7430761358AB46FD3DAC7052C08DD2 /* UIView+ChameleonPrivate.m */,
-				C52CA710A0D717359225D5C16C0BAE42 /* UIViewController+Chameleon.h */,
-				0C91D5466BB2F1CF08CD2D10B9F3A0E1 /* UIViewController+Chameleon.m */,
-			);
-			name = Default;
+			path = "Toast-Swift";
 			sourceTree = "<group>";
 		};
 		3F870D5212157401103847DB47BF0D3C /* Pods-Solar System */ = {
@@ -271,23 +100,19 @@
 			path = "Target Support Files/Pods-Solar System";
 			sourceTree = "<group>";
 		};
-		40DBBDEAF4D544A88B95AC39FFE5C45F /* ChameleonFramework */ = {
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1E8D9E71BBC777EE14DB1A475073D55F /* Default */,
-				E6227B14FEECF209E4876A5CB5B8E4B4 /* Support Files */,
-				BF424732E760D4AB2DDB48585B701CF8 /* Swift */,
+				978007DCB56F415BE390E0F949D4D4E5 /* iOS */,
 			);
-			path = ChameleonFramework;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		418477717A4F47F4DDE779F2132236CF /* Products */ = {
+		55E4F22BAAB53C07E67D49CB2775E6E9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7BF4A775A0429D27F3285C61A8447983 /* ChameleonFramework.framework */,
-				9B02937F448F39982D7C884B0A2507CF /* Floaty.framework */,
-				D89377344BA69F112A1BD9FCB74C235C /* Pods_Solar_System.framework */,
-				193049729B4B581BC67BD7CD762EC051 /* Toast_Swift.framework */,
+				15EC844F56AE6D1162860137427903BE /* Pods_Solar_System.framework */,
+				1C351EC4595F0FF8000E8C4AE95288EE /* Toast_Swift.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -296,9 +121,9 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
-				0AE314A140397DF26955EFB1ACB07C1E /* Pods */,
-				418477717A4F47F4DDE779F2132236CF /* Products */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				EC8D67C4274D7B80A0E45DB6A06B96F9 /* Pods */,
+				55E4F22BAAB53C07E67D49CB2775E6E9 /* Products */,
 				8F3EE8C1D1E7FD6F4D1C054C7015D1C8 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -311,204 +136,66 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		8F8FEF3140598EAB2B3D56BB84B5389A /* iOS */ = {
+		91FFC9D276F2D51EC5F3FF59947B6F5A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				3292CC8DBF6352C2BF2B949CB548248F /* CoreGraphics.framework */,
-				ECB56A22A987E846FF65248DA108CAD2 /* Foundation.framework */,
-				E5F748DA8F98E61F788C3488D6BA25DD /* QuartzCore.framework */,
-				FDBA94A94B982885ECCA1662BE8CD7CF /* UIKit.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		A0D9DFA60722A7E64C60D2BF8B1D1DAF /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				D49AE3FE34DFBADF0D7A86F8B6966BDB /* Floaty.modulemap */,
-				21EEB69C4B72AF455FCD5BF9C3426D3C /* Floaty.xcconfig */,
-				4C70BC7D7801E407A21FC833311D62D6 /* Floaty-dummy.m */,
-				10442738703911AFB77EE4914957B1AF /* Floaty-prefix.pch */,
-				E590776A94D66A0DE0BDAAE2D9D48846 /* Floaty-umbrella.h */,
-				27A2961194E9C923F203F788DFB7DD2A /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Floaty";
-			sourceTree = "<group>";
-		};
-		ACC23065C086F0577DA9F2B9E75CFA9B /* Toast-Swift */ = {
-			isa = PBXGroup;
-			children = (
-				6ECAEE709EAEB38AC51FD5590F2FB132 /* Toast.swift */,
-				F14D6A667971FEB2455A7B50425EDDB9 /* Support Files */,
-			);
-			path = "Toast-Swift";
-			sourceTree = "<group>";
-		};
-		BF424732E760D4AB2DDB48585B701CF8 /* Swift */ = {
-			isa = PBXGroup;
-			children = (
-				05A684E0665B4B981E370911326D2175 /* ChameleonShorthand.swift */,
-			);
-			name = Swift;
-			sourceTree = "<group>";
-		};
-		D03F300A681576638B20134EC0E57585 /* Floaty */ = {
-			isa = PBXGroup;
-			children = (
-				BFE0F2C7FA5BC7EDC5D6A739B296A077 /* Floaty.swift */,
-				20BA258F25AA9201B9DC8BF3FA3FBFA6 /* FloatyDelegate.swift */,
-				9F0682A60B95A041863F4EA7F59E24BE /* FloatyItem.swift */,
-				A01C21B2CFF84E40A5D6C21C95FC3425 /* FloatyManager.swift */,
-				693F65C2B34623F43C678375BE32939F /* FloatyViewController.swift */,
-				1ED48F7643B317238518020C5074598C /* FloatyWindow.swift */,
-				A0D9DFA60722A7E64C60D2BF8B1D1DAF /* Support Files */,
-			);
-			path = Floaty;
-			sourceTree = "<group>";
-		};
-		E6227B14FEECF209E4876A5CB5B8E4B4 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				F16A94AE7EB91C32E7FA7750CA008B3A /* ChameleonFramework.modulemap */,
-				28013E959D2FFF856B2F4FD249325522 /* ChameleonFramework.xcconfig */,
-				90BCFEDE535DD537A1AA2EF1454CB447 /* ChameleonFramework-dummy.m */,
-				7D3524C550BC0E93B3F04B0B1226A2D1 /* ChameleonFramework-prefix.pch */,
-				E7AC09117F35D457F10CFCEA3752A060 /* ChameleonFramework-umbrella.h */,
-				0DA0B615E02BA00B92F78C5C7555F6C8 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/ChameleonFramework";
-			sourceTree = "<group>";
-		};
-		F14D6A667971FEB2455A7B50425EDDB9 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				096EFA80A8D1617EB3DF15AF49CCB9F6 /* Info.plist */,
-				624F9416B2FD4090740AF47DE9AB3B61 /* Toast-Swift.modulemap */,
-				14A31320F5D1F78358E502EB9E03B586 /* Toast-Swift.xcconfig */,
-				73ACCE50F7A555A33B624651B90AC982 /* Toast-Swift-dummy.m */,
-				823CE384510CEE305320FF0F08149485 /* Toast-Swift-prefix.pch */,
-				0A60A38B1326F67705C0F8B1147F772C /* Toast-Swift-umbrella.h */,
+				D31E09673E88729EE06D49BF4000B63E /* Info.plist */,
+				EE18B53B4D5DBDC5263EE6262E2583DD /* Toast-Swift.modulemap */,
+				AC21E042593269EBEF50C9C60FC9B024 /* Toast-Swift.xcconfig */,
+				E05B778E1B37985EBC078D0C5BA74992 /* Toast-Swift-dummy.m */,
+				CBAA452DC428152CC82DD57E67113031 /* Toast-Swift-prefix.pch */,
+				CE4BC48D47B7FA52A3DEA297512CE2C5 /* Toast-Swift-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Toast-Swift";
 			sourceTree = "<group>";
 		};
+		978007DCB56F415BE390E0F949D4D4E5 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */,
+				FC2770B482BFE91273C8560623F1422C /* QuartzCore.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		EC8D67C4274D7B80A0E45DB6A06B96F9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1CC7CB9B2C9AE97AB1B25B9DC56A545D /* Toast-Swift */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		4B7CC324903B6F635F61FFD3D6641CD4 /* Headers */ = {
+		40222947CCBC7907E06B389DCF41B37A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E8D9E9C05EE9201E584D1EB3DF26E5B /* Toast-Swift-umbrella.h in Headers */,
+				032C5B24BB17ABEA7883027742CFF862 /* Toast-Swift-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8D4457F7F2F28A0B99FF8F1B98219F8E /* Headers */ = {
+		99BABA224AE005489A2D43F7EE09729A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED4DBD1E13182AA813DC1237FA6E3A42 /* Chameleon.h in Headers */,
-				78281D8673FC507089FCFDC439DEDC16 /* Chameleon_.h in Headers */,
-				9A3EAF15D3C58FD56A552FD703A9154C /* ChameleonConstants.h in Headers */,
-				EC786817C5CEBCD51A4C9EC9B883ED6F /* ChameleonEnums.h in Headers */,
-				1B704F3C816C4532F9B7FDFE0625732E /* ChameleonFramework-umbrella.h in Headers */,
-				B4EA53699AA19822E674188743266B2B /* ChameleonMacros.h in Headers */,
-				29F74E8A334254C68C6720E3B247CE32 /* NSArray+Chameleon.h in Headers */,
-				9B6AD39C81FAF37861FC0FEC41022146 /* UIAppearance+Swift.h in Headers */,
-				0D7F425CFB628271BFB6FCFF8201BF4F /* UIButton+Chameleon.h in Headers */,
-				DB5FB611FB6EBF2F2BA7B78FE0CED535 /* UIColor+Chameleon.h in Headers */,
-				44117424757A5E62D87B8BF4B41A4207 /* UIColor+ChameleonPrivate.h in Headers */,
-				86F7D970F220974A0E26C3B632C5C74F /* UIImage+ChameleonPrivate.h in Headers */,
-				604286A8F8A2ACB063BDF97B09D4987C /* UILabel+Chameleon.h in Headers */,
-				BFA97401155C4E14893D9AA1E0D1EC80 /* UINavigationController+Chameleon.h in Headers */,
-				8ECF929AC5E737EBEB542283886D5E07 /* UIView+ChameleonPrivate.h in Headers */,
-				03DCD393DF69EE6DE4AD424B1192DD02 /* UIViewController+Chameleon.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DC4B55F79F7EDF7665C0699A20731DE3 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7067387FF3974A5BA87F204F718C33F5 /* Floaty-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F4ABB4E29129B82F8D69B1E33CEB9B9E /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				11EB940B5AD91D0FB1E7EFCAC846B435 /* Pods-Solar System-umbrella.h in Headers */,
+				3018AB2E50C308EFF01D8F5D9FC0A4C8 /* Pods-Solar System-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		5C123A74CD9D6CDA27160800BA68B01A /* Floaty */ = {
+		7D8C37A1CF5686F833D59EADD9F791C2 /* Toast-Swift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 11DD83B99F71D3E302573ED38372EA3B /* Build configuration list for PBXNativeTarget "Floaty" */;
+			buildConfigurationList = 04D0768FDBA590782B845CA45DBFD88A /* Build configuration list for PBXNativeTarget "Toast-Swift" */;
 			buildPhases = (
-				58D385880A221FD41E30877A347BC358 /* Sources */,
-				E91D449C74F3A7565170694D645F1052 /* Frameworks */,
-				DC4B55F79F7EDF7665C0699A20731DE3 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Floaty;
-			productName = Floaty;
-			productReference = 9B02937F448F39982D7C884B0A2507CF /* Floaty.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		609741E29D4B24D0BCBCDBE61AC98601 /* Pods-Solar System */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9C2455344971FAB13429FAA736D6D787 /* Build configuration list for PBXNativeTarget "Pods-Solar System" */;
-			buildPhases = (
-				605675C365ED122408B4E52A101F72A8 /* Sources */,
-				BCDB19C2638680E4A0565F7D01B0B24C /* Frameworks */,
-				F4ABB4E29129B82F8D69B1E33CEB9B9E /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D3EDB029AD47DDAA4BA93F2899D9AABA /* PBXTargetDependency */,
-				82E903376D15C7CB9DB72400931008D0 /* PBXTargetDependency */,
-				9318BA7F0508F8D07681C6599E6ADF1D /* PBXTargetDependency */,
-			);
-			name = "Pods-Solar System";
-			productName = "Pods-Solar System";
-			productReference = D89377344BA69F112A1BD9FCB74C235C /* Pods_Solar_System.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		76BD4592010354D6C23D6ECCA20D83A8 /* ChameleonFramework */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 07398A672F3D6D682C4B2E94C83E2A0D /* Build configuration list for PBXNativeTarget "ChameleonFramework" */;
-			buildPhases = (
-				FA68695022B7C8DC3A47D6DF81079652 /* Sources */,
-				E3FD70AC579E74592E2EAC475ADFB8D9 /* Frameworks */,
-				8D4457F7F2F28A0B99FF8F1B98219F8E /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ChameleonFramework;
-			productName = ChameleonFramework;
-			productReference = 7BF4A775A0429D27F3285C61A8447983 /* ChameleonFramework.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		7D19BF5DD539427C3322546F6C47D220 /* Toast-Swift */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4C858B67E412B5B5B99D23D3F5364136 /* Build configuration list for PBXNativeTarget "Toast-Swift" */;
-			buildPhases = (
-				7459BC9D9D19C08C8091010EE00798BE /* Sources */,
-				1C56C707F45A2AD4D831BE952BE94EBB /* Frameworks */,
-				4B7CC324903B6F635F61FFD3D6641CD4 /* Headers */,
+				36AFFBB513B68D7135410E046A1D4C08 /* Sources */,
+				801ED52C4A72A7460A43DE925916DA0F /* Frameworks */,
+				40222947CCBC7907E06B389DCF41B37A /* Headers */,
 			);
 			buildRules = (
 			);
@@ -516,7 +203,25 @@
 			);
 			name = "Toast-Swift";
 			productName = "Toast-Swift";
-			productReference = 193049729B4B581BC67BD7CD762EC051 /* Toast_Swift.framework */;
+			productReference = 1C351EC4595F0FF8000E8C4AE95288EE /* Toast_Swift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C6F9960BC7EB2DF7E6D622F54B0A9165 /* Pods-Solar System */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D47EA01C89D642C127E12428B35ED66 /* Build configuration list for PBXNativeTarget "Pods-Solar System" */;
+			buildPhases = (
+				4135235288D8404E522F8DD1317535C9 /* Sources */,
+				3EDA46D9B903702BB52363970A737CFD /* Frameworks */,
+				99BABA224AE005489A2D43F7EE09729A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CF4883DDE1BF7763E6A89566DCD8745 /* PBXTargetDependency */,
+			);
+			name = "Pods-Solar System";
+			productName = "Pods-Solar System";
+			productReference = 15EC844F56AE6D1162860137427903BE /* Pods_Solar_System.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -526,7 +231,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0910;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -536,130 +241,46 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 418477717A4F47F4DDE779F2132236CF /* Products */;
+			productRefGroup = 55E4F22BAAB53C07E67D49CB2775E6E9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				76BD4592010354D6C23D6ECCA20D83A8 /* ChameleonFramework */,
-				5C123A74CD9D6CDA27160800BA68B01A /* Floaty */,
-				609741E29D4B24D0BCBCDBE61AC98601 /* Pods-Solar System */,
-				7D19BF5DD539427C3322546F6C47D220 /* Toast-Swift */,
+				C6F9960BC7EB2DF7E6D622F54B0A9165 /* Pods-Solar System */,
+				7D8C37A1CF5686F833D59EADD9F791C2 /* Toast-Swift */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		58D385880A221FD41E30877A347BC358 /* Sources */ = {
+		36AFFBB513B68D7135410E046A1D4C08 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1982E7ED9231E948A558799362FEA8B3 /* Floaty-dummy.m in Sources */,
-				0A113A2FC5F91269AB55DF9FA683015F /* Floaty.swift in Sources */,
-				9054A1CA64F47D0BEE3744D146CD26A2 /* FloatyDelegate.swift in Sources */,
-				31DEB9C293D974C0014F52E7853C3E0B /* FloatyItem.swift in Sources */,
-				8E96697B51D3FD3DB5EB1BE3EF02B411 /* FloatyManager.swift in Sources */,
-				F5B4C3EE44C285ACF24E077895435175 /* FloatyViewController.swift in Sources */,
-				530356FC11C4F4A1F641A30F65C5684F /* FloatyWindow.swift in Sources */,
+				94282A0F9ED3D931E64204D63409D18E /* Toast-Swift-dummy.m in Sources */,
+				4850465BB484EB255DA54568FA8D4971 /* Toast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		605675C365ED122408B4E52A101F72A8 /* Sources */ = {
+		4135235288D8404E522F8DD1317535C9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA5420F7510DD2FFFE8785E59CCDAC9A /* Pods-Solar System-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7459BC9D9D19C08C8091010EE00798BE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9274EDE359A02C3CF7B3731E931EF9C3 /* Toast-Swift-dummy.m in Sources */,
-				0B1AC034C71F18A2E6D92A7B5E1C8735 /* Toast.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FA68695022B7C8DC3A47D6DF81079652 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E7FA38FEAF957D69E92153FBAFB3DB40 /* Chameleon_.m in Sources */,
-				B26038F91C7C4CC322D7F25C5D16FE9E /* ChameleonConstants.m in Sources */,
-				95E542740750F827BE2EBE3DE6F62D0E /* ChameleonFramework-dummy.m in Sources */,
-				833F15A28A0D562548517BCA8EAF23B6 /* ChameleonShorthand.swift in Sources */,
-				6712100A2CCB9B987281A02F6778473C /* NSArray+Chameleon.m in Sources */,
-				C3C8BB46937DD0BBC7FBE25E298052F8 /* UIAppearance+Swift.m in Sources */,
-				83CFC8F573AD5B75191E162E64C7D039 /* UIButton+Chameleon.m in Sources */,
-				2DDDE2C06FB4DCC639CFD100F224D6FD /* UIColor+Chameleon.m in Sources */,
-				3D08C4F4E2E65D192D317AED0A8237B3 /* UIColor+ChameleonPrivate.m in Sources */,
-				139A9CEDE5163F58CBB1A3A135DAD6A3 /* UIImage+ChameleonPrivate.m in Sources */,
-				FB82C1293D7DDE0D3E2E6D68CDD5852C /* UILabel+Chameleon.m in Sources */,
-				459048ECD9FAA42B77566EC56ECAD793 /* UINavigationController+Chameleon.m in Sources */,
-				A664D0A12D5F3DBD08A7E8DFE3AE83E2 /* UIView+ChameleonPrivate.m in Sources */,
-				5EA9F0ED011B06DEFA8542EEE72508C3 /* UIViewController+Chameleon.m in Sources */,
+				1C0C33EDDC44ECED67575BEF4E37FD9E /* Pods-Solar System-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		82E903376D15C7CB9DB72400931008D0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Floaty;
-			target = 5C123A74CD9D6CDA27160800BA68B01A /* Floaty */;
-			targetProxy = 302B7FA4E1706D8087F8A8E89529931D /* PBXContainerItemProxy */;
-		};
-		9318BA7F0508F8D07681C6599E6ADF1D /* PBXTargetDependency */ = {
+		2CF4883DDE1BF7763E6A89566DCD8745 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Toast-Swift";
-			target = 7D19BF5DD539427C3322546F6C47D220 /* Toast-Swift */;
-			targetProxy = AF87A10963BE8AF4EF397E7E4227729D /* PBXContainerItemProxy */;
-		};
-		D3EDB029AD47DDAA4BA93F2899D9AABA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ChameleonFramework;
-			target = 76BD4592010354D6C23D6ECCA20D83A8 /* ChameleonFramework */;
-			targetProxy = C7E2E7E0522C94D0C3C72EBF29DF92FF /* PBXContainerItemProxy */;
+			target = 7D8C37A1CF5686F833D59EADD9F791C2 /* Toast-Swift */;
+			targetProxy = FFB5F0BA7D7E9354767A816FA79D9702 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		176C6DC77A4B4A0BA89E229E2E7CD5A6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 28013E959D2FFF856B2F4FD249325522 /* ChameleonFramework.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ChameleonFramework/ChameleonFramework-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ChameleonFramework/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ChameleonFramework/ChameleonFramework.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = ChameleonFramework;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		1A41B15D3AA834993ADDD808FA9D8764 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -712,112 +333,7 @@
 			};
 			name = Release;
 		};
-		45AF3D6B9B83CFBFD7F1F830BDDF200A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 14A31320F5D1F78358E502EB9E03B586 /* Toast-Swift.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Toast-Swift/Toast-Swift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Toast-Swift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Toast-Swift/Toast-Swift.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Toast_Swift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		4E047DAC4D7443444D374242A40B2496 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 14A31320F5D1F78358E502EB9E03B586 /* Toast-Swift.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Toast-Swift/Toast-Swift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Toast-Swift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Toast-Swift/Toast-Swift.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Toast_Swift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		64085F598BAFF763D5BE03F8A502FB3E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 21EEB69C4B72AF455FCD5BF9C3426D3C /* Floaty.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Floaty/Floaty-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Floaty/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Floaty/Floaty.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Floaty;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		9E105A141C1A803D206D3DD110ED3A51 /* Release */ = {
+		25A0A28A13119FC02DA2E0613E397D5B /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FDC63487FEFA24F0AD4346E6E05A8C2F /* Pods-Solar System.release.xcconfig */;
 			buildSettings = {
@@ -854,6 +370,45 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		69258DCA1C7729C7B42A12DDDD02D576 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52E1406E1C652E3E458044062BD8C570 /* Pods-Solar System.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Solar System/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Solar System/Pods-Solar System.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Solar_System;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		BC80BBB5C066539FFFC0B2127CA5D3C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -912,83 +467,44 @@
 			};
 			name = Debug;
 		};
-		E66640278247F6901C0588EB5CA73E20 /* Debug */ = {
+		F6C1D607448B98376442E6016FA867EA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 52E1406E1C652E3E458044062BD8C570 /* Pods-Solar System.debug.xcconfig */;
+			baseConfigurationReference = AC21E042593269EBEF50C9C60FC9B024 /* Toast-Swift.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Solar System/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Solar System/Pods-Solar System.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Solar_System;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		F15DDF9D534505A7A0377A2335D2E056 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 21EEB69C4B72AF455FCD5BF9C3426D3C /* Floaty.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Floaty/Floaty-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Floaty/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Toast-Swift/Toast-Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Toast-Swift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Floaty/Floaty.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Floaty;
+				MODULEMAP_FILE = "Target Support Files/Toast-Swift/Toast-Swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Toast_Swift;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		FBA0CA72F62E8A7E7A194F7940B2CF0E /* Debug */ = {
+		F9B202E57C7573C6354339879D0571C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 28013E959D2FFF856B2F4FD249325522 /* ChameleonFramework.xcconfig */;
+			baseConfigurationReference = AC21E042593269EBEF50C9C60FC9B024 /* Toast-Swift.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1002,14 +518,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ChameleonFramework/ChameleonFramework-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ChameleonFramework/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Toast-Swift/Toast-Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Toast-Swift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ChameleonFramework/ChameleonFramework.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Toast-Swift/Toast-Swift.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = ChameleonFramework;
+				PRODUCT_NAME = Toast_Swift;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -1024,20 +540,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		07398A672F3D6D682C4B2E94C83E2A0D /* Build configuration list for PBXNativeTarget "ChameleonFramework" */ = {
+		04D0768FDBA590782B845CA45DBFD88A /* Build configuration list for PBXNativeTarget "Toast-Swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FBA0CA72F62E8A7E7A194F7940B2CF0E /* Debug */,
-				176C6DC77A4B4A0BA89E229E2E7CD5A6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		11DD83B99F71D3E302573ED38372EA3B /* Build configuration list for PBXNativeTarget "Floaty" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F15DDF9D534505A7A0377A2335D2E056 /* Debug */,
-				64085F598BAFF763D5BE03F8A502FB3E /* Release */,
+				F9B202E57C7573C6354339879D0571C3 /* Debug */,
+				F6C1D607448B98376442E6016FA867EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1051,20 +558,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4C858B67E412B5B5B99D23D3F5364136 /* Build configuration list for PBXNativeTarget "Toast-Swift" */ = {
+		8D47EA01C89D642C127E12428B35ED66 /* Build configuration list for PBXNativeTarget "Pods-Solar System" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4E047DAC4D7443444D374242A40B2496 /* Debug */,
-				45AF3D6B9B83CFBFD7F1F830BDDF200A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9C2455344971FAB13429FAA736D6D787 /* Build configuration list for PBXNativeTarget "Pods-Solar System" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E66640278247F6901C0588EB5CA73E20 /* Debug */,
-				9E105A141C1A803D206D3DD110ED3A51 /* Release */,
+				69258DCA1C7729C7B42A12DDDD02D576 /* Debug */,
+				25A0A28A13119FC02DA2E0613E397D5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

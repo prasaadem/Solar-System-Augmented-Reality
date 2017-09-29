@@ -6,7 +6,5 @@ target 'Solar System' do
   use_frameworks!
 
   # Pods for Solar System
-  pod "Floaty", "~> 3.0.0"
-  pod 'ChameleonFramework/Swift'
   pod 'Toast-Swift', '~> 2.0.0'
 end

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import ChameleonFramework
 
 var solarSystem:[String:Any] = [:]
 

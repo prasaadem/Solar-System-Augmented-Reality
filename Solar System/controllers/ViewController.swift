@@ -9,58 +9,48 @@
 import UIKit
 import SceneKit
 import ARKit
-import Floaty
 import Toast_Swift
 
-class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDelegate,UICollectionViewDelegate,UICollectionViewDataSource {
+class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDelegate,UICollectionViewDelegate,UICollectionViewDataSource,ARSessionDelegate {
     
-    @IBOutlet weak var xStepper: UIStepper!
-    @IBOutlet weak var zStepper: UIStepper!
-    @IBOutlet weak var yStepper: UIStepper!
     @IBOutlet var sceneView: ARSCNView!
-
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var currentXPosition: UILabel!
-    @IBOutlet weak var currentZPosition: UILabel!
-    @IBOutlet weak var currentYPosition: UILabel!
-    @IBOutlet weak var axisView: UIStackView!
-    
     @IBOutlet weak var collectionViewHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var bottomButton: UIButton!
+    @IBOutlet weak var button1: UIButton!
     
-    var sun:SCNNode = SCNNode()
-    var mercury:SCNNode = SCNNode()
-    var venus:SCNNode = SCNNode()
-    var earth:SCNNode = SCNNode()
-    var mars:SCNNode = SCNNode()
-    var jupiter:SCNNode = SCNNode()
-    var saturn:SCNNode = SCNNode()
-    var uranus:SCNNode = SCNNode()
-    var neptune:SCNNode = SCNNode()
+    var sun:BasePlanetNode = BasePlanetNode()
+    var mercury:BasePlanetNode = BasePlanetNode()
+    var venus:BasePlanetNode = BasePlanetNode()
+    var earth:BasePlanetNode = BasePlanetNode()
+    var mars:BasePlanetNode = BasePlanetNode()
+    var jupiter:BasePlanetNode = BasePlanetNode()
+    var saturn:BasePlanetNode = BasePlanetNode()
+    var uranus:BasePlanetNode = BasePlanetNode()
+    var neptune:BasePlanetNode = BasePlanetNode()
     
-    var rotating:Bool = true
-    var revolving:Bool = true
+    var moon:BasePlanetNode = BasePlanetNode()
+    
+    var isRotating:Bool = false
+    var isRevolving:Bool = false
     var planetName:String = ""
     var isExpanded:Bool = false
     
-    let xPosition:Float = -100.0
-    let yPosition:Float = 0.0
-    let zPosition:Float = -800.0
+    let xPosition:Float = -50
+    let yPosition:Float = -50
+    let zPosition:Float = -400.0
     
     let planets = Array(solarSystem.keys)
-    let functions = ["Capture","Tour","Home","Animation","Rotation"]
+    let functions = ["Capture","Animation","Rotation"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        sceneView.delegate = self
         createPlanetView(x: xPosition, y: yPosition, z: zPosition)
-//        addButtons()
-//        takeATour()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let configuration = ARWorldTrackingConfiguration()
+        sceneView.session.delegate = self
         sceneView.session.run(configuration)
     }
     
@@ -72,160 +62,60 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
     // MARK: - Node Creation and Rotation
     
     func createPlanetView(x:Float,y:Float,z:Float){
-        let camera = SCNCamera()
-        let cameraNode = SCNNode()
-        cameraNode.camera = camera
-        cameraNode.position = SCNVector3Make(0.0, 0.0, 0.0)
-        sceneView.scene.rootNode.addChildNode(cameraNode)
+        let scene = SCNScene()
         
-        sun = createANode(radius: 200, image: #imageLiteral(resourceName: "sun"), x: x, y: y, z: z,name: "sun")
-        let light = SCNLight()
-        light.type = .ambient
-        light.spotInnerAngle = 30.0
-        light.spotOuterAngle = 80.0
-        light.castsShadow = true
-        sun.light = light
-            
-        sceneView.scene.rootNode.addChildNode(sun)
-        mercury = createANode(radius: 3, image: #imageLiteral(resourceName: "mercury"), x: 236, y: 0, z: 0, name: "mercury")
-        mercury.name = "mercury"
-        addPath(radius: 236)
-        addChildNodeToParentNode(parentNode: sun, childNode: mercury, duration: 12.0)
-        
-        venus = createANode(radius: 7, image: #imageLiteral(resourceName: "venus"), x: 268, y: 0, z: 0, name: "venus")
-        addPath(radius: 268)
-        addChildNodeToParentNode(parentNode: sun, childNode: venus, duration: 12.0)
-        
-        earth = createANode(radius: 8, image: #imageLiteral(resourceName: "earth"), x: 293.0, y: 0, z: 0,name: "earth")
-        addPath(radius: 293)
-        addChildNodeToParentNode(parentNode: sun, childNode:earth, duration: 10.0)
-        
-        mars = createANode(radius: 4, image: #imageLiteral(resourceName: "mars"), x: 341, y: 0, z: 0,name: "mars")
-        addPath(radius: 341)
-        addChildNodeToParentNode(parentNode: sun, childNode: mars, duration: 12.0)
-        
-        jupiter = createANode(radius: 88, image: #imageLiteral(resourceName: "jupiter"), x: 500, y: 0, z: 0, name: "jupiter")
-        addPath(radius: 500)
-        addChildNodeToParentNode(parentNode: sun, childNode: jupiter, duration: 12.0)
-        
-        saturn = createANode(radius: 74, image: #imageLiteral(resourceName: "saturn"), x: 700, y: 0, z: 0, name: "saturn")
-        addPath(radius: 700)
-        addChildNodeToParentNode(parentNode: sun, childNode: saturn, duration: 12.0)
-        
-        uranus = createANode(radius: 32, image: #imageLiteral(resourceName: "uranus"), x: 850, y: 0, z: 0, name: "uranus")
-        addPath(radius: 850)
-        addChildNodeToParentNode(parentNode: sun, childNode: uranus, duration: 12.0)
-        
-        neptune = createANode(radius: 30, image: #imageLiteral(resourceName: "neptune"), x: 950, y: 0, z: 0, name: "neptune")
-        addPath(radius: 950)
-        addChildNodeToParentNode(parentNode: sun, childNode: neptune, duration: 12.0)
-        
-        let moon = createANode(radius:1, image: #imageLiteral(resourceName: "moon"), x: 0, y: -15, z:0, name: "moon")
-        addChildNodeToParentNode(parentNode: earth, childNode: moon, duration: 1.0)
-        
-        let ringMaterial = SCNMaterial()
-        ringMaterial.diffuse.contents = UIColor.gray
-        
-        var rings = SCNTube(innerRadius: 80, outerRadius: 82, height: 1)
-        rings.materials = [ringMaterial]
-        
-        var ringsNode = SCNNode(geometry: rings)
-        ringsNode.position = SCNVector3Make(0, 0, 0)
-        saturn.addChildNode(ringsNode)
-        
-        rings = SCNTube(innerRadius: 85, outerRadius: 87, height: 1)
-        rings.materials = [ringMaterial]
-        
-        ringsNode = SCNNode(geometry: rings)
-        ringsNode.position = SCNVector3Make(0, 0, 0)
-        saturn.addChildNode(ringsNode)
-        
-        rings = SCNTube(innerRadius: 89, outerRadius: 95, height: 1)
-        rings.materials = [ringMaterial]
-        
-        ringsNode = SCNNode(geometry: rings)
-        ringsNode.position = SCNVector3Make(0, 0, 0)
-        saturn.addChildNode(ringsNode)
+        sun.createANode(radius: 100, image: #imageLiteral(resourceName: "sun"), x: x, y: y, z: z,name: "sun")
+        sun.addLight()
+        sun.addPath(radius: 136) //Mercury
+        sun.addPath(radius: 168) //Venus
+        sun.addPath(radius: 193) //Earth
+        sun.addPath(radius: 241) //Mars
+        sun.addPath(radius: 300) //Jupiter
+        sun.addPath(radius: 380) //Saturn
+        sun.addPath(radius: 440) //Uranus
+        sun.addPath(radius: 480) //Neptune
         
         
-        sceneView.allowsCameraControl = false
+        
+        mercury.createANode(radius: 3, image: #imageLiteral(resourceName: "mercury"), x: 136, y: 0, z: 0, name: "mercury")
+        mercury.addChildNodeToParentNode(parentNode: sun, childNode: mercury, duration: 12.0)
+        
+        venus.createANode(radius: 7, image: #imageLiteral(resourceName: "venus"), x: 168, y: 0, z: 0, name: "venus")
+        venus.addChildNodeToParentNode(parentNode: sun, childNode: venus, duration: 12.0)
+        
+        earth.createANode(radius: 8, image: #imageLiteral(resourceName: "earth"), x: 193.0, y: 0, z: 0,name: "earth")
+        earth.addChildNodeToParentNode(parentNode: sun, childNode:earth, duration: 10.0)
+        
+        mars.createANode(radius: 4, image: #imageLiteral(resourceName: "mars"), x: 241, y: 0, z: 0,name: "mars")
+        mars.addChildNodeToParentNode(parentNode: sun, childNode: mars, duration: 12.0)
+        
+        jupiter.createANode(radius: 30, image: #imageLiteral(resourceName: "jupiter"), x: 300, y: 0, z: 0, name: "jupiter")
+        jupiter.addChildNodeToParentNode(parentNode: sun, childNode: jupiter, duration: 12.0)
+        
+        saturn.createANode(radius: 24, image: #imageLiteral(resourceName: "saturn"), x: 380, y: 0, z: 0, name: "saturn")
+        saturn.addChildNodeToParentNode(parentNode: sun, childNode: saturn, duration: 12.0)
+        saturn.addRings(innerRadius: 25, outerRadius: 26, height: 1, color: UIColor.darkGray)
+        saturn.addRings(innerRadius: 27, outerRadius: 28, height: 1, color: UIColor.darkGray)
+        saturn.addRings(innerRadius: 29, outerRadius: 30, height: 1, color: UIColor.darkGray)
+        
+        uranus.createANode(radius: 12, image: #imageLiteral(resourceName: "uranus"), x: 440, y: 0, z: 0, name: "uranus")
+        uranus.addChildNodeToParentNode(parentNode: sun, childNode: uranus, duration: 12.0)
+        
+        neptune.createANode(radius: 10, image: #imageLiteral(resourceName: "neptune"), x: 480, y: 0, z: 0, name: "neptune")
+        neptune.addChildNodeToParentNode(parentNode: sun, childNode: neptune, duration: 12.0)
+        
+        moon.createANode(radius:1, image: #imageLiteral(resourceName: "moon"), x: 0, y: -15, z:0, name: "moon")
+        moon.addChildNodeToParentNode(parentNode: earth, childNode: moon, duration: 1.0)
+        
+        
+//        sceneView.allowsCameraControl = false
+//        sceneView.delegate = self
+        
+        
+        scene.rootNode.addChildNode(sun)
+        sceneView.scene = scene
+        
         sceneView.autoenablesDefaultLighting = true
-        sceneView.scene.rootNode.camera?.automaticallyAdjustsZRange = true
-    }
-    
-    func createSphere(radius: CGFloat,image:UIImage) -> SCNSphere {
-        let sphere = SCNSphere(radius: radius)
-        let material = SCNMaterial()
-        material.diffuse.contents = image
-        sphere.materials = [material]
-        return sphere
-    }
-    
-    func createANode(radius:CGFloat,image:UIImage,x:Float,y:Float,z:Float,name:String) -> SCNNode {
-        let node = SCNNode()
-        node.position = SCNVector3Make(x,y,z)
-        node.geometry = createSphere(radius: radius, image: image)
-        node.name = name
-        return node
-    }
-    
-    func revolveNode(x:CGFloat,y:CGFloat,z:CGFloat,duration:Double) -> SCNAction {
-        let rotation = SCNAction .rotateBy(x: x, y: y, z: z, duration: duration)
-        let infiniteRotation = SCNAction .repeatForever(rotation)
-        return infiniteRotation
-    }
-    
-    func addPath(radius:CGFloat){
-        let torus = SCNTorus(ringRadius: radius, pipeRadius: 0.1)
-        let orbit = SCNNode(geometry: torus)
-        sun.addChildNode(orbit)
-    }
-    
-    func addChildNodeToParentNode(parentNode: SCNNode,childNode:SCNNode,duration:Double){
-        if rotating {
-            childNode.pivot = SCNMatrix4MakeRotation(Float(CGFloat(Double.pi/2)), 1, 0, 0)
-            let spin = CABasicAnimation(keyPath: "rotation")
-            spin.fromValue = NSValue(scnVector4: SCNVector4(x: 1, y: 1, z: 0, w: 0))
-            spin.toValue = NSValue(scnVector4: SCNVector4(x: 1, y: 1, z: 0, w: Float(CGFloat(2 * Double.pi))))
-            spin.duration = 3
-            spin.repeatCount = .infinity
-            childNode.addAnimation(spin, forKey: "spin around")
-        }
-        
-        let holdingNode = SCNNode()
-        holdingNode.position = SCNVector3Make(0,0,0)
-        holdingNode.addChildNode(childNode)
-        if revolving {
-            holdingNode .runAction(revolveNode(x: 0,y: -3,z: 0,duration: duration))
-        }
-        
-        parentNode.addChildNode(holdingNode)
-    }
-    
-    @IBAction func stepperChanged(_ sender: UIStepper) {
-        let value:Float = Float(100*sender.value)
-        switch sender.tag {
-        case 0:
-            SCNTransaction.begin()
-            SCNTransaction.animationDuration = 0.5
-            sceneView.scene.rootNode.childNodes[1].position.x -= value
-            SCNTransaction.commit()
-            xStepper.value = 0
-        case 1:
-            SCNTransaction.begin()
-            SCNTransaction.animationDuration = 0.5
-            sceneView.scene.rootNode.childNodes[1].position.y -= value
-            SCNTransaction.commit()
-            yStepper.value = 0
-        case 2:
-            SCNTransaction.begin()
-            SCNTransaction.animationDuration = 0.5
-            sceneView.scene.rootNode.childNodes[1].position.z += value
-            SCNTransaction.commit()
-            zStepper.value = 0
-        default:
-            break
-        }
     }
     
     // MARK: - ARSCNViewDelegate
@@ -251,7 +141,6 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
             let planetViewController:PlanetViewController = segue.destination as! PlanetViewController
             planetViewController.planetName = planetName
         }
-        
     }
     
     func resetScene(){
@@ -265,45 +154,38 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
         createPlanetView(x: xPosition, y: yPosition, z: zPosition)
     }
     
-    func animation(){
-        sceneView.makeToast("Animating Solar System",duration: 2.0, position: .top)
-        revolving = !revolving
-        resetScene()
-    }
-    
-    func takeATour(){
-        sceneView.makeToast("We will take you for a tour of Solar system...",duration: 2.0, position: .top)
-        
-        var position = mercury.position
-        let action1 = SCNAction.move(to:SCNVector3Make(-position.x, position.y, position.z - 50) , duration: 5)
-
-        position = venus.position
-        let action2 = SCNAction.move(to:SCNVector3Make(-position.x, position.y, position.z - 50) , duration: 5)
-
-        position = earth.position
-        let action3 = SCNAction.move(to:SCNVector3Make(-position.x, position.y, position.z - 50) , duration: 5)
-
-        position = mars.position
-        let action4 = SCNAction.move(to:SCNVector3Make(-position.x, position.y, position.z - 50) , duration: 5)
-
-        position = jupiter.position
-        let action5 = SCNAction.move(to:SCNVector3Make(-position.x-100, position.y-50, position.z - 300) , duration: 5)
-
-        position = saturn.position
-        let action6 = SCNAction.move(to:SCNVector3Make(-position.x, position.y, position.z - 200) , duration: 5)
-
-        position = uranus.position
-        let action7 = SCNAction.move(to:SCNVector3Make(-position.x, position.y, position.z - 100) , duration: 5)
-
-        position = neptune.position
-        let action8 = SCNAction.move(to:SCNVector3Make(-position.x, position.y, position.z - 100) , duration: 5)
-        
-        position = sun.position
-        let action9 = SCNAction.move(to:SCNVector3Make(-position.x, position.y, position.z) , duration: 5)
-
-        let sequence = SCNAction.sequence([action1,action2,action3,action4,action5,action6,action7,action8,action9])
-        sun.runAction(sequence)
-    }
+//    func takeATour(){
+//        sceneView.makeToast("We will take you for a tour of Solar system...",duration: 2.0, position: .top)
+//        var position = mercury.position
+//        let action1 = SCNAction.move(to:SCNVector3Make(-position.x, position.y, position.z - 50) , duration: 5)
+//
+//        position = venus.position
+//        let action2 = SCNAction.move(to:SCNVector3Make(-position.x, position.y, position.z - 50) , duration: 5)
+//
+//        position = earth.position
+//        let action3 = SCNAction.move(to:SCNVector3Make(-position.x, position.y, position.z - 50) , duration: 5)
+//
+//        position = mars.position
+//        let action4 = SCNAction.move(to:SCNVector3Make(-position.x, position.y, position.z - 50) , duration: 5)
+//
+//        position = jupiter.position
+//        let action5 = SCNAction.move(to:SCNVector3Make(-position.x-100, position.y-50, position.z - 300) , duration: 5)
+//
+//        position = saturn.position
+//        let action6 = SCNAction.move(to:SCNVector3Make(-position.x, position.y, position.z - 200) , duration: 5)
+//
+//        position = uranus.position
+//        let action7 = SCNAction.move(to:SCNVector3Make(-position.x, position.y, position.z - 100) , duration: 5)
+//
+//        position = neptune.position
+//        let action8 = SCNAction.move(to:SCNVector3Make(-position.x, position.y, position.z - 100) , duration: 5)
+//
+//        position = sun.position
+//        let action9 = SCNAction.move(to:SCNVector3Make(-position.x, position.y, position.z) , duration: 5)
+//
+//        let sequence = SCNAction.sequence([action1,action2,action3,action4,action5,action6,action7,action8,action9])
+//        sun.runAction(sequence)
+//    }
     
     func goToEarth(){
         sun.removeAllActions()
@@ -315,11 +197,8 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
     }
     
     func goToHome(){
-        sun.removeAllActions()
-        sun.position = SCNVector3Make(xPosition, yPosition, zPosition)
-        sceneView.makeToast("Navigating to Home",duration: 2.0, position: .top)
-        let action = SCNAction.move(to:SCNVector3Make(xPosition,yPosition,zPosition) , duration: 5)
-        sun.runAction(action)
+        sceneView.makeToast("Navigating to Home",duration: 1.0, position: .top)
+        resetScene()
     }
     
     func captureView(){
@@ -370,31 +249,29 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
             case 0:
                 performSegue(withIdentifier: "showImage", sender: self)
             case 1:
-                takeATour()
+                if isRevolving{
+                    sceneView.makeToast("Stopped Revolving Planets",duration: 1.0, position: .top)
+                    stopRevolution()
+                }else{
+                    sceneView.makeToast("Revolving Planets",duration: 1.0, position: .top)
+                    startRevolution()
+                }
+                isRevolving = !isRevolving
             case 2:
-                goToHome()
-            case 3:
-                animation()
-            case 4:
-                animation()
+                if isRotating{
+                    sceneView.makeToast("Stopped Rotating Planets",duration: 1.0, position: .top)
+                    stopRotation()
+                }else{
+                    sceneView.makeToast("Rotating Planets",duration: 1.0, position: .top)
+                    startRotation()
+                }
+                isRotating = !isRotating
             default:
                 print("default")
             }
         }else{
-            switch indexPath.row{
-            case 0:
-                performSegue(withIdentifier: "showImage", sender: self)
-            case 1:
-                takeATour()
-            case 2:
-                goToHome()
-            case 3:
-                animation()
-            case 4:
-                animation()
-            default:
-                print("default")
-            }
+            planetName = planets[indexPath.row]
+            performSegue(withIdentifier: "planetDetails", sender: self)
         }
     }
     
@@ -410,7 +287,58 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
                 self.view.layoutIfNeeded()
             })
         }
-        self.bottomButton.transform = self.bottomButton.transform.rotated(by: .pi)
+        self.button1.transform = self.button1.transform.rotated(by: .pi)
         isExpanded = !isExpanded
     }
+    
+    func startRotation(){
+        mercury.startRotation()
+        venus.startRotation()
+        earth.startRotation()
+        mars.startRotation()
+        jupiter.startRotation()
+        saturn.startRotation()
+        uranus.startRotation()
+        neptune.startRotation()
+        moon.startRotation()
+    }
+    
+    func startRevolution(){
+        //                    sun.startRotation()
+        mercury.startRevolution()
+        venus.startRevolution()
+        earth.startRevolution()
+        mars.startRevolution()
+        jupiter.startRevolution()
+        saturn.startRevolution()
+        uranus.startRevolution()
+        neptune.startRevolution()
+        moon.startRevolution()
+    }
+    
+    func stopRotation(){
+        mercury.stopRotating()
+        venus.stopRotating()
+        earth.stopRotating()
+        mars.stopRotating()
+        jupiter.stopRotating()
+        saturn.stopRotating()
+        uranus.stopRotating()
+        neptune.stopRotating()
+        moon.stopRotating()
+    }
+    
+    func stopRevolution(){
+        sun.stopRevolution()
+        mercury.stopRevolution()
+        venus.stopRevolution()
+        earth.stopRevolution()
+        mars.stopRevolution()
+        jupiter.stopRevolution()
+        saturn.stopRevolution()
+        uranus.stopRevolution()
+        neptune.stopRevolution()
+        moon.stopRevolution()
+    }
+    
 }

@@ -4,16 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>ChameleonFramework.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Floaty.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-Solar System.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -26,27 +16,6 @@
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>5C123A74CD9D6CDA27160800BA68B01A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>609741E29D4B24D0BCBCDBE61AC98601</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>76BD4592010354D6C23D6ECCA20D83A8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7D19BF5DD539427C3322546F6C47D220</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>
