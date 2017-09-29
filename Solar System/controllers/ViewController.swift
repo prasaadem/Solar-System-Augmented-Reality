@@ -364,6 +364,40 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.section == 0{
+            switch indexPath.row{
+            case 0:
+                performSegue(withIdentifier: "showImage", sender: self)
+            case 1:
+                takeATour()
+            case 2:
+                goToHome()
+            case 3:
+                animation()
+            case 4:
+                animation()
+            default:
+                print("default")
+            }
+        }else{
+            switch indexPath.row{
+            case 0:
+                performSegue(withIdentifier: "showImage", sender: self)
+            case 1:
+                takeATour()
+            case 2:
+                goToHome()
+            case 3:
+                animation()
+            case 4:
+                animation()
+            default:
+                print("default")
+            }
+        }
+    }
+    
     @IBAction func bottomViewPopUp(_ sender: Any) {
         if isExpanded {
             UIView.animate(withDuration: 0.5, animations: {
