@@ -20,6 +20,7 @@
 		C82D57E81F742DE200F3F238 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82D57E71F742DE200F3F238 /* ImageViewController.swift */; };
 		C83601701F74996800D2477D /* PlanetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C836016F1F74996800D2477D /* PlanetViewController.swift */; };
 		C89252681F7E2C1000BB0756 /* solarsystem.plist in Resources */ = {isa = PBXBuildFile; fileRef = C89252671F7E2C1000BB0756 /* solarsystem.plist */; };
+		C8EC284D1F7E7E3E004C41D6 /* BottomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EC284C1F7E7E3E004C41D6 /* BottomCollectionViewCell.swift */; };
 		C8FA14881F7B0E670052F2B8 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FA14871F7B0E660052F2B8 /* LaunchViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		C82D57E71F742DE200F3F238 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		C836016F1F74996800D2477D /* PlanetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetViewController.swift; sourceTree = "<group>"; };
 		C89252671F7E2C1000BB0756 /* solarsystem.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = solarsystem.plist; sourceTree = "<group>"; };
+		C8EC284C1F7E7E3E004C41D6 /* BottomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCollectionViewCell.swift; sourceTree = "<group>"; };
 		C8FA14871F7B0E660052F2B8 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +110,7 @@
 				C827C67B1F7C196D00F7A60A /* SettingsTableViewController.swift */,
 				C827C6851F7C217700F7A60A /* LogoTableViewCell.swift */,
 				C827C6871F7C2CC200F7A60A /* AcknowledgementsViewController.swift */,
+				C8EC284C1F7E7E3E004C41D6 /* BottomCollectionViewCell.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				C827C6861F7C217700F7A60A /* LogoTableViewCell.swift in Sources */,
 				C827C6881F7C2CC200F7A60A /* AcknowledgementsViewController.swift in Sources */,
 				C83601701F74996800D2477D /* PlanetViewController.swift in Sources */,
+				C8EC284D1F7E7E3E004C41D6 /* BottomCollectionViewCell.swift in Sources */,
 				C8FA14881F7B0E670052F2B8 /* LaunchViewController.swift in Sources */,
 				C827C67C1F7C196D00F7A60A /* SettingsTableViewController.swift in Sources */,
 				C82558EC1F732931002ABE6F /* ViewController.swift in Sources */,

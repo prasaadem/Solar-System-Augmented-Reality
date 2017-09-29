@@ -12,17 +12,21 @@ import ARKit
 import Floaty
 import Toast_Swift
 
-class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDelegate {
+class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDelegate,UICollectionViewDelegate,UICollectionViewDataSource {
+    
     @IBOutlet weak var xStepper: UIStepper!
     @IBOutlet weak var zStepper: UIStepper!
     @IBOutlet weak var yStepper: UIStepper!
     @IBOutlet var sceneView: ARSCNView!
 
-    @IBOutlet weak var collectionViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var currentXPosition: UILabel!
     @IBOutlet weak var currentZPosition: UILabel!
     @IBOutlet weak var currentYPosition: UILabel!
     @IBOutlet weak var axisView: UIStackView!
+    
+    @IBOutlet weak var collectionViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var bottomButton: UIButton!
     
     var sun:SCNNode = SCNNode()
     var mercury:SCNNode = SCNNode()
@@ -37,19 +41,20 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
     var rotating:Bool = true
     var revolving:Bool = true
     var planetName:String = ""
+    var isExpanded:Bool = false
     
     let xPosition:Float = -100.0
     let yPosition:Float = 0.0
     let zPosition:Float = -800.0
     
     let planets = Array(solarSystem.keys)
+    let functions = ["Capture","Tour","Home","Animation","Rotation"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         sceneView.delegate = self
         createPlanetView(x: xPosition, y: yPosition, z: zPosition)
-        updateCurrentPosition()
-        addButtons()
+//        addButtons()
 //        takeATour()
     }
     
@@ -197,12 +202,6 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
         parentNode.addChildNode(holdingNode)
     }
     
-    func updateCurrentPosition(){
-        currentXPosition.text = String(sceneView.scene.rootNode.childNodes[1].position.x)
-        currentYPosition.text = String(sceneView.scene.rootNode.childNodes[1].position.y)
-        currentZPosition.text = String(sceneView.scene.rootNode.childNodes[1].position.z)
-    }
-    
     @IBAction func stepperChanged(_ sender: UIStepper) {
         let value:Float = Float(100*sender.value)
         switch sender.tag {
@@ -227,7 +226,6 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
         default:
             break
         }
-        updateCurrentPosition()
     }
     
     // MARK: - ARSCNViewDelegate
@@ -265,7 +263,6 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
         let configuration = ARWorldTrackingConfiguration()
         sceneView.session.run(configuration)
         createPlanetView(x: xPosition, y: yPosition, z: zPosition)
-        updateCurrentPosition()
     }
     
     func animation(){
@@ -274,34 +271,8 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
         resetScene()
     }
     
-    //MARK: - Floaty Button Functionalities
-    
-    func addButtons(){
-        let floaty = Floaty()
-        floaty.buttonColor = UIColor(red:0.86, green:0.33, blue:0.17, alpha:1.0)
-        floaty.openAnimationType = .slideUp
-        floaty.addItem("Tour", icon: UIImage(named: "tour")!, handler: { item in
-            self.takeATour()
-        })
-        floaty.addItem("Visit Earth", icon: UIImage(named: "earthSmall")!, handler: { item in
-            self.goToEarth()
-        })
-        floaty.addItem("Home", icon: UIImage(named: "home")!, handler: { item in
-            self.goToHome()
-        })
-        floaty.addItem("Animation", icon: UIImage(named: "animation")!, handler: { item in
-            self.animation()
-        })
-        floaty.addItem("Capture", icon: UIImage(named: "camera")!, handler: { item in
-            self.captureView()
-        })
-        self.view.addSubview(floaty)
-    }
-    
     func takeATour(){
-//        axisView.isHidden = true
         sceneView.makeToast("We will take you for a tour of Solar system...",duration: 2.0, position: .top)
-//        let action0 = SCNAction.moveBy(x: 0, y: -100, z: 0, duration: 5)
         
         var position = mercury.position
         let action1 = SCNAction.move(to:SCNVector3Make(-position.x, position.y, position.z - 50) , duration: 5)
@@ -367,5 +338,45 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
                 performSegue(withIdentifier: "planetDetails", sender: self)
             }
         }
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if section == 0 {
+            return functions.count
+        }else{
+            return planets.count
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! BottomCollectionViewCell
+        if indexPath.section == 0 {
+            cell.imageView.image = UIImage(named:functions[indexPath.row])
+            cell.planetName.text = functions[indexPath.row]
+        }else{
+            cell.imageView.image = UIImage(named:planets[indexPath.row] + " small1")
+            cell.planetName.text = planets[indexPath.row]
+        }
+        return cell
+    }
+    
+    @IBAction func bottomViewPopUp(_ sender: Any) {
+        if isExpanded {
+            UIView.animate(withDuration: 0.5, animations: {
+                self.collectionViewHeightConstraint.constant = 100
+                self.view.layoutIfNeeded()
+            })
+        }else{
+            UIView.animate(withDuration: 0.5, animations: {
+                self.collectionViewHeightConstraint.constant = 0
+                self.view.layoutIfNeeded()
+            })
+        }
+        self.bottomButton.transform = self.bottomButton.transform.rotated(by: .pi)
+        isExpanded = !isExpanded
     }
 }

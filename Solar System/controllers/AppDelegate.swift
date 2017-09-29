@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        Chameleon.setGlobalThemeUsingPrimaryColor(UIColor(red:0.25, green:0.29, blue:0.41, alpha:1.0), with: .dark)
+//        Chameleon.setGlobalThemeUsingPrimaryColor(UIColor(red:0.25, green:0.29, blue:0.41, alpha:1.0), with: .dark)
         UIButton.appearance(whenContainedInInstancesOf: [ViewController.self]).backgroundColor = UIColor.clear
         if let font = UIFont(name: "AppleSDGothicNeo-Light", size: 20) {
             let navigationBarAppearace = UINavigationBar.appearance()
