@@ -13,12 +13,12 @@ import Floaty
 import Toast_Swift
 
 class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDelegate {
-
     @IBOutlet weak var xStepper: UIStepper!
     @IBOutlet weak var zStepper: UIStepper!
     @IBOutlet weak var yStepper: UIStepper!
     @IBOutlet var sceneView: ARSCNView!
 
+    @IBOutlet weak var collectionViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var currentXPosition: UILabel!
     @IBOutlet weak var currentZPosition: UILabel!
     @IBOutlet weak var currentYPosition: UILabel!
@@ -41,6 +41,8 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
     let xPosition:Float = -100.0
     let yPosition:Float = 0.0
     let zPosition:Float = -800.0
+    
+    let planets = Array(solarSystem.keys)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -159,15 +161,6 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
         node.position = SCNVector3Make(x,y,z)
         node.geometry = createSphere(radius: radius, image: image)
         node.name = name
-        
-//        let text = SCNText(string: name, extrusionDepth: 1)
-//        let textNode:SCNNode = SCNNode()
-//        textNode.geometry = text
-//        textNode.position = SCNVector3Make(0 , Float(radius), 0)
-//        node.addChildNode(textNode)
-//        text.alignmentMode = kCAAlignmentCenter
-//        text.font = UIFont(name: "Helvatica", size: 4)
-        
         return node
     }
     
