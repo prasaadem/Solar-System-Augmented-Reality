@@ -30,13 +30,14 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
     
     var moon:BasePlanetNode = BasePlanetNode()
     
-    var isRotating:Bool = false
-    var isRevolving:Bool = false
+    var isRotating:Bool = true
+    var isRevolving:Bool = true
+    
     var planetName:String = ""
     var isExpanded:Bool = false
     
-    let xPosition:Float = 0
-    let yPosition:Float = 0
+    let xPosition:Float = -1.0
+    let yPosition:Float = -1.0
     let zPosition:Float = -4.0
     
     let planets = Array(planetInfo.keys)
@@ -121,11 +122,7 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
         sceneView.scene = scene
         sceneView.delegate = self
         sceneView.autoenablesDefaultLighting = true
-    }
-    
-    func createSolarSystem(system:[String:Any]){
-            print(system)
-//            key.createANode(radius: system[key], image: #imageLiteral(resourceName: "sun"), x: x, y: y, z: z,name: "sun")
+        print(sceneView.scene.rootNode.childNodes[1].position)
     }
     
     // MARK: - ARSCNViewDelegate
@@ -140,6 +137,14 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
     
     func sessionInterruptionEnded(_ session: ARSession) {
         // Reset tracking and/or remove existing anchors if consistent tracking is required
+    }
+    
+    func renderer(_ renderer: SCNSceneRenderer,
+                           didUpdate node: SCNNode,
+                           for anchor: ARAnchor){
+        print(node)
+        print("--------------------------")
+        print(anchor)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -288,12 +293,12 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
     @IBAction func bottomViewPopUp(_ sender: Any) {
         if isExpanded {
             UIView.animate(withDuration: 0.5, animations: {
-                self.collectionViewHeightConstraint.constant = 100
+                self.collectionViewHeightConstraint.constant = 0
                 self.view.layoutIfNeeded()
             })
         }else{
             UIView.animate(withDuration: 0.5, animations: {
-                self.collectionViewHeightConstraint.constant = 0
+                self.collectionViewHeightConstraint.constant = 100
                 self.view.layoutIfNeeded()
             })
         }
