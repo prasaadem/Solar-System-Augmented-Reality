@@ -35,11 +35,11 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
     var planetName:String = ""
     var isExpanded:Bool = false
     
-    let xPosition:Float = -50
-    let yPosition:Float = -50
-    let zPosition:Float = -400.0
+    let xPosition:Float = 0
+    let yPosition:Float = 0
+    let zPosition:Float = -4.0
     
-    let planets = Array(solarSystem.keys)
+    let planets = Array(planetInfo.keys)
     let functions = ["Capture","Animation","Rotation"]
     
     override func viewDidLoad() {
@@ -62,60 +62,70 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
     // MARK: - Node Creation and Rotation
     
     func createPlanetView(x:Float,y:Float,z:Float){
-        let scene = SCNScene()
-        
-        sun.createANode(radius: 100, image: #imageLiteral(resourceName: "sun"), x: x, y: y, z: z,name: "sun")
+        sun.createANode(radius: 1, image: #imageLiteral(resourceName: "sun"), x: x, y: y, z: z,name: "sun")
         sun.addLight()
-        sun.addPath(radius: 136) //Mercury
-        sun.addPath(radius: 168) //Venus
-        sun.addPath(radius: 193) //Earth
-        sun.addPath(radius: 241) //Mars
-        sun.addPath(radius: 300) //Jupiter
-        sun.addPath(radius: 380) //Saturn
-        sun.addPath(radius: 440) //Uranus
-        sun.addPath(radius: 480) //Neptune
-        
-        
-        
-        mercury.createANode(radius: 3, image: #imageLiteral(resourceName: "mercury"), x: 136, y: 0, z: 0, name: "mercury")
-        mercury.addChildNodeToParentNode(parentNode: sun, childNode: mercury, duration: 12.0)
-        
-        venus.createANode(radius: 7, image: #imageLiteral(resourceName: "venus"), x: 168, y: 0, z: 0, name: "venus")
-        venus.addChildNodeToParentNode(parentNode: sun, childNode: venus, duration: 12.0)
-        
-        earth.createANode(radius: 8, image: #imageLiteral(resourceName: "earth"), x: 193.0, y: 0, z: 0,name: "earth")
-        earth.addChildNodeToParentNode(parentNode: sun, childNode:earth, duration: 10.0)
-        
-        mars.createANode(radius: 4, image: #imageLiteral(resourceName: "mars"), x: 241, y: 0, z: 0,name: "mars")
-        mars.addChildNodeToParentNode(parentNode: sun, childNode: mars, duration: 12.0)
-        
-        jupiter.createANode(radius: 30, image: #imageLiteral(resourceName: "jupiter"), x: 300, y: 0, z: 0, name: "jupiter")
+        //        sun.glow(duration: 5.0)
+        sun.addPath(radius: 1.36) //Mercury
+        sun.addPath(radius: 1.68) //Venus
+        sun.addPath(radius: 1.93) //Earth
+        sun.addPath(radius: 2.41) //Mars
+        sun.addPath(radius: 3.00) //Jupiter
+        sun.addPath(radius: 3.80) //Saturn
+        sun.addPath(radius: 4.40) //Uranus
+        sun.addPath(radius: 4.80) //Neptune
+
+        mercury.createANode(radius: 0.03, image: #imageLiteral(resourceName: "mercury"), x: 0, y: 0, z: 0, name: "mercury")
+        mercury.addChildNodeToParentNode(parentNode: sun, childNode: mercury, duration: 3.0)
+        mercury.animateAfterLoading(x: 1.36, y: 0, z: 0, duration: 1)
+
+        venus.createANode(radius: 0.07, image: #imageLiteral(resourceName: "venus"), x: 0, y: 0, z: 0, name: "venus")
+        venus.addChildNodeToParentNode(parentNode: sun, childNode: venus, duration: 4.0)
+        venus.animateAfterLoading(x: 1.68, y: 0, z: 0, duration: 2)
+
+        earth.createANode(radius: 0.08, image: #imageLiteral(resourceName: "earth"), x: 0, y: 0, z: 0,name: "earth")
+        earth.addChildNodeToParentNode(parentNode: sun, childNode:earth, duration: 5.0)
+        earth.animateAfterLoading(x: 1.93, y: 0, z: 0, duration: 3)
+
+        mars.createANode(radius: 0.04, image: #imageLiteral(resourceName: "mars"), x: 0, y: 0, z: 0,name: "mars")
+        mars.addChildNodeToParentNode(parentNode: sun, childNode: mars, duration: 6.0)
+        mars.animateAfterLoading(x: 2.41, y: 0, z: 0, duration: 4)
+
+        jupiter.createANode(radius: 0.30, image: #imageLiteral(resourceName: "jupiter"), x: 0, y: 0, z: 0, name: "jupiter")
         jupiter.addChildNodeToParentNode(parentNode: sun, childNode: jupiter, duration: 12.0)
+        jupiter.animateAfterLoading(x: 3.00, y: 0, z: 0, duration: 5)
+
+        saturn.createANode(radius: 0.24, image: #imageLiteral(resourceName: "saturn"), x: 0, y: 0, z: 0, name: "saturn")
+        saturn.addChildNodeToParentNode(parentNode: sun, childNode: saturn, duration: 10.0)
+        saturn.addRings(innerRadius: 0.25, outerRadius: 0.26, height: 0.01, color: UIColor.darkGray)
+        saturn.addRings(innerRadius: 0.27, outerRadius: 0.28, height: 0.01, color: UIColor.darkGray)
+        saturn.addRings(innerRadius: 0.29, outerRadius: 0.30, height: 0.01, color: UIColor.darkGray)
+        saturn.animateAfterLoading(x: 3.80, y: 0, z: 0, duration: 6)
+
+        uranus.createANode(radius: 0.12, image: #imageLiteral(resourceName: "uranus"), x: 0, y: 0, z: 0, name: "uranus")
+        uranus.addChildNodeToParentNode(parentNode: sun, childNode: uranus, duration: 11.0)
+        uranus.animateAfterLoading(x: 4.40, y: 0, z: 0, duration: 7)
+
+        neptune.createANode(radius: 0.10, image: #imageLiteral(resourceName: "neptune"), x: 0, y: 0, z: 0, name: "neptune")
+        neptune.addChildNodeToParentNode(parentNode: sun, childNode: neptune, duration: 18.0)
+        neptune.animateAfterLoading(x: 4.80, y: 0, z: 0, duration: 8)
+
+        moon.createANode(radius:0.01, image: #imageLiteral(resourceName: "moon"), x: 0, y: 0, z:0, name: "moon")
+        moon.addChildNodeToParentNode(parentNode: earth, childNode: moon, duration: 0.5)
+        moon.animateAfterLoading(x: 0, y: -0.15, z: 0, duration: 1)
+
+        startRotation()
+        startRevolution()
         
-        saturn.createANode(radius: 24, image: #imageLiteral(resourceName: "saturn"), x: 380, y: 0, z: 0, name: "saturn")
-        saturn.addChildNodeToParentNode(parentNode: sun, childNode: saturn, duration: 12.0)
-        saturn.addRings(innerRadius: 25, outerRadius: 26, height: 1, color: UIColor.darkGray)
-        saturn.addRings(innerRadius: 27, outerRadius: 28, height: 1, color: UIColor.darkGray)
-        saturn.addRings(innerRadius: 29, outerRadius: 30, height: 1, color: UIColor.darkGray)
-        
-        uranus.createANode(radius: 12, image: #imageLiteral(resourceName: "uranus"), x: 440, y: 0, z: 0, name: "uranus")
-        uranus.addChildNodeToParentNode(parentNode: sun, childNode: uranus, duration: 12.0)
-        
-        neptune.createANode(radius: 10, image: #imageLiteral(resourceName: "neptune"), x: 480, y: 0, z: 0, name: "neptune")
-        neptune.addChildNodeToParentNode(parentNode: sun, childNode: neptune, duration: 12.0)
-        
-        moon.createANode(radius:1, image: #imageLiteral(resourceName: "moon"), x: 0, y: -15, z:0, name: "moon")
-        moon.addChildNodeToParentNode(parentNode: earth, childNode: moon, duration: 1.0)
-        
-        
-//        sceneView.allowsCameraControl = false
-//        sceneView.delegate = self
-        
-        
+        let scene = SCNScene()
         scene.rootNode.addChildNode(sun)
         sceneView.scene = scene
-        
+        sceneView.delegate = self
         sceneView.autoenablesDefaultLighting = true
+    }
+    
+    func createSolarSystem(system:[String:Any]){
+            print(system)
+//            key.createANode(radius: system[key], image: #imageLiteral(resourceName: "sun"), x: x, y: y, z: z,name: "sun")
     }
     
     // MARK: - ARSCNViewDelegate

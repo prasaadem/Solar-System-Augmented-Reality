@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		558EA895771BA451586E8495 /* Pods_Solar_System.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 086F913815472F5A44E9555C /* Pods_Solar_System.framework */; };
 		C82558E81F732931002ABE6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82558E71F732931002ABE6F /* AppDelegate.swift */; };
-		C82558EA1F732931002ABE6F /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = C82558E91F732931002ABE6F /* art.scnassets */; };
 		C82558EC1F732931002ABE6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82558EB1F732931002ABE6F /* ViewController.swift */; };
 		C82558EF1F732931002ABE6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C82558ED1F732931002ABE6F /* Main.storyboard */; };
 		C82558F11F732931002ABE6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C82558F01F732931002ABE6F /* Assets.xcassets */; };
@@ -19,7 +18,8 @@
 		C827C6881F7C2CC200F7A60A /* AcknowledgementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C827C6871F7C2CC200F7A60A /* AcknowledgementsViewController.swift */; };
 		C82D57E81F742DE200F3F238 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82D57E71F742DE200F3F238 /* ImageViewController.swift */; };
 		C83601701F74996800D2477D /* PlanetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C836016F1F74996800D2477D /* PlanetViewController.swift */; };
-		C89252681F7E2C1000BB0756 /* solarsystem.plist in Resources */ = {isa = PBXBuildFile; fileRef = C89252671F7E2C1000BB0756 /* solarsystem.plist */; };
+		C89252681F7E2C1000BB0756 /* planetInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = C89252671F7E2C1000BB0756 /* planetInfo.plist */; };
+		C8DE6FC51F81B3DE00C94450 /* solarSystem.plist in Resources */ = {isa = PBXBuildFile; fileRef = C8DE6FC41F81B3DE00C94450 /* solarSystem.plist */; };
 		C8EC284D1F7E7E3E004C41D6 /* BottomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EC284C1F7E7E3E004C41D6 /* BottomCollectionViewCell.swift */; };
 		C8EC284F1F7E98E0004C41D6 /* BasePlanetNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EC284E1F7E98E0004C41D6 /* BasePlanetNode.swift */; };
 		C8FA14881F7B0E670052F2B8 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FA14871F7B0E660052F2B8 /* LaunchViewController.swift */; };
@@ -31,7 +31,6 @@
 		7A9C7636EAC7A01CC0132EA7 /* Pods-Solar System.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Solar System.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Solar System/Pods-Solar System.debug.xcconfig"; sourceTree = "<group>"; };
 		C82558E41F732931002ABE6F /* Solar System.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Solar System.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C82558E71F732931002ABE6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C82558E91F732931002ABE6F /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		C82558EB1F732931002ABE6F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C82558EE1F732931002ABE6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C82558F01F732931002ABE6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,7 +41,8 @@
 		C827C6871F7C2CC200F7A60A /* AcknowledgementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementsViewController.swift; sourceTree = "<group>"; };
 		C82D57E71F742DE200F3F238 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		C836016F1F74996800D2477D /* PlanetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetViewController.swift; sourceTree = "<group>"; };
-		C89252671F7E2C1000BB0756 /* solarsystem.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = solarsystem.plist; sourceTree = "<group>"; };
+		C89252671F7E2C1000BB0756 /* planetInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = planetInfo.plist; sourceTree = "<group>"; };
+		C8DE6FC41F81B3DE00C94450 /* solarSystem.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = solarSystem.plist; sourceTree = "<group>"; };
 		C8EC284C1F7E7E3E004C41D6 /* BottomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCollectionViewCell.swift; sourceTree = "<group>"; };
 		C8EC284E1F7E98E0004C41D6 /* BasePlanetNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePlanetNode.swift; sourceTree = "<group>"; };
 		C8FA14871F7B0E660052F2B8 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
@@ -93,7 +93,6 @@
 				C89252661F7E26F500BB0756 /* Model */,
 				C861B4611F7A1C5800402520 /* view */,
 				C861B4601F7A1C3600402520 /* controllers */,
-				C82558E91F732931002ABE6F /* art.scnassets */,
 				C82558F01F732931002ABE6F /* Assets.xcassets */,
 				C82558F51F732931002ABE6F /* Info.plist */,
 			);
@@ -128,8 +127,9 @@
 		C89252661F7E26F500BB0756 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C89252671F7E2C1000BB0756 /* solarsystem.plist */,
+				C89252671F7E2C1000BB0756 /* planetInfo.plist */,
 				C8EC284E1F7E98E0004C41D6 /* BasePlanetNode.swift */,
+				C8DE6FC41F81B3DE00C94450 /* solarSystem.plist */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -204,10 +204,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C82558EA1F732931002ABE6F /* art.scnassets in Resources */,
+				C8DE6FC51F81B3DE00C94450 /* solarSystem.plist in Resources */,
 				C82558F41F732931002ABE6F /* LaunchScreen.storyboard in Resources */,
 				C82558F11F732931002ABE6F /* Assets.xcassets in Resources */,
-				C89252681F7E2C1000BB0756 /* solarsystem.plist in Resources */,
+				C89252681F7E2C1000BB0756 /* planetInfo.plist in Resources */,
 				C82558EF1F732931002ABE6F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

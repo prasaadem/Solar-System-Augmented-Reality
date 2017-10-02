@@ -36,7 +36,7 @@ class BasePlanetNode: SCNNode {
     }
     
     func addPath(radius:CGFloat){
-        let torus = SCNTorus(ringRadius: radius, pipeRadius: 0.1)
+        let torus = SCNTorus(ringRadius: radius, pipeRadius: 0.001)
         let orbit = SCNNode(geometry: torus)
         self.addChildNode(orbit)
     }
@@ -70,10 +70,10 @@ class BasePlanetNode: SCNNode {
     }
     
     func startRotation(){
-        self.pivot = SCNMatrix4MakeRotation(Float(CGFloat(Double.pi/2)), 1, 0, 0)
+        self.pivot = SCNMatrix4MakeRotation(Float(CGFloat(Double.pi/2)), 0.01, 0, 0)
         let spin = CABasicAnimation(keyPath: "rotation")
-        spin.fromValue = NSValue(scnVector4: SCNVector4(x: 1, y: 1, z: 0, w: 0))
-        spin.toValue = NSValue(scnVector4: SCNVector4(x: 1, y: 1, z: 0, w: Float(CGFloat(2 * Double.pi))))
+        spin.fromValue = NSValue(scnVector4: SCNVector4(x: 0.01, y: 0.01, z: 0, w: 0))
+        spin.toValue = NSValue(scnVector4: SCNVector4(x: 0.01, y: 0.01, z: 0, w: Float(CGFloat(2 * Double.pi))))
         spin.duration = 3
         spin.repeatCount = .infinity
         self.addAnimation(spin, forKey: "spin around")
@@ -89,5 +89,10 @@ class BasePlanetNode: SCNNode {
     
     func stopRevolution(){
         holdingNode.removeAction(forKey: "revolve")
+    }
+    
+    func animateAfterLoading(x:Float,y:Float,z:Float,duration:Double){
+        let action1 = SCNAction.move(to:SCNVector3Make(x,y,z) , duration: 5)
+        self.runAction(action1)
     }
 }

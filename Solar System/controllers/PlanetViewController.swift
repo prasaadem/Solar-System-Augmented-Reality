@@ -25,7 +25,7 @@ class PlanetViewController: UIViewController,UITableViewDelegate,UITableViewData
         }else{
             self.title = planetName
             loadPlanetScene()
-            planet = solarSystem[planetName] as! [String : Any]
+            planet = planetInfo[planetName] as! [String : Any]
             planetKeys = Array(planet.keys)
         }
     }
