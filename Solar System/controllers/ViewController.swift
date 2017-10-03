@@ -10,6 +10,7 @@ import UIKit
 import SceneKit
 import ARKit
 import Toast_Swift
+import PMAlertController
 
 class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDelegate,UICollectionViewDelegate,UICollectionViewDataSource,ARSessionDelegate {
     
@@ -122,7 +123,6 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
         sceneView.scene = scene
         sceneView.delegate = self
         sceneView.autoenablesDefaultLighting = true
-        print(sceneView.scene.rootNode.childNodes[1].position)
     }
     
     // MARK: - ARSCNViewDelegate
@@ -137,14 +137,6 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
     
     func sessionInterruptionEnded(_ session: ARSession) {
         // Reset tracking and/or remove existing anchors if consistent tracking is required
-    }
-    
-    func renderer(_ renderer: SCNSceneRenderer,
-                           didUpdate node: SCNNode,
-                           for anchor: ARAnchor){
-        print(node)
-        print("--------------------------")
-        print(anchor)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -211,11 +203,6 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
         sun.runAction(action1)
     }
     
-    func goToHome(){
-        sceneView.makeToast("Navigating to Home",duration: 1.0, position: .top)
-        resetScene()
-    }
-    
     func captureView(){
         performSegue(withIdentifier: "showImage", sender: self)
     }
@@ -229,7 +216,7 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
             let node = result.node
             if node.name != nil{
                 planetName = node.name!
-                performSegue(withIdentifier: "planetDetails", sender: self)
+                showAlert(planetName: planetName)
             }
         }
     }
@@ -354,6 +341,19 @@ class ViewController: UIViewController, ARSCNViewDelegate,UIGestureRecognizerDel
         uranus.stopRevolution()
         neptune.stopRevolution()
         moon.stopRevolution()
+    }
+    
+    func showAlert(planetName:String){
+        let alertVC = PMAlertController(title: planetName + " is close", description: "Do you want to know more about it?", image: UIImage(named:planetName + " small1"), style: .alert)
+
+        alertVC.addAction(PMAlertAction(title: "No", style: .cancel, action: { () -> Void in
+        }))
+
+        alertVC.addAction(PMAlertAction(title: "Yes", style: .default, action: { () in
+            self.performSegue(withIdentifier: "planetDetails", sender: self)
+        }))
+
+        self.present(alertVC, animated: true, completion: nil)
     }
     
 }

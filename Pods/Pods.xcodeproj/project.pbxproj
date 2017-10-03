@@ -7,79 +7,175 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		032C5B24BB17ABEA7883027742CFF862 /* Toast-Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4BC48D47B7FA52A3DEA297512CE2C5 /* Toast-Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1C0C33EDDC44ECED67575BEF4E37FD9E /* Pods-Solar System-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E83AE7BE9679E8C8B8597BE07D7421 /* Pods-Solar System-dummy.m */; };
-		3018AB2E50C308EFF01D8F5D9FC0A4C8 /* Pods-Solar System-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 02628D8CF736AC793378CC9A77B6D85E /* Pods-Solar System-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4850465BB484EB255DA54568FA8D4971 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6068E46F837C6016823EBEE5392A58 /* Toast.swift */; };
-		94282A0F9ED3D931E64204D63409D18E /* Toast-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E05B778E1B37985EBC078D0C5BA74992 /* Toast-Swift-dummy.m */; };
-		D3B79A29407D0E65445620D0B5FD58C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */; };
-		E9852470507BD44810A203763282254E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2770B482BFE91273C8560623F1422C /* QuartzCore.framework */; };
-		EA925372BAAAA37EA30B1F9EB2CBDB56 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */; };
+		0408B84CA618413ECD07BDD07CF80723 /* PMAlertController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BC781C96866F1FA81F5050404DDA9436 /* PMAlertController-dummy.m */; };
+		15DE53148B2EDB24F053D8D7EFA3FEEB /* PMAlertController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E4B3C8A584E47A580C4998B87FC9B550 /* PMAlertController.bundle */; };
+		31BC657F8A8532AC58B3133F82268A6F /* PMAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CDDC5236FCDE1307315160222CAE25 /* PMAlertController.swift */; };
+		4134ED569B2D48593AFD0CF9058BB4CB /* PMAlertController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E9A465D10771F6EE859680AD5565FC4 /* PMAlertController.xib */; };
+		5D98A1FE804C846FE83980968CAE2AA5 /* Toast-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4603D0B71B7DBF744022DA3A9F295A31 /* Toast-Swift-dummy.m */; };
+		6453AE551DFF81A13BC6DBFB815A4FC6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */; };
+		7A14B056BA3C5F8D9660B3D9046D013C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */; };
+		82045A02CC90E9F536C0601F57C82834 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3917A50EB224EEDBC66971700D698782 /* UIKit.framework */; };
+		8CE1C3755358A7749FE348F8F2A6CE62 /* Toast-Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B2D2C80DEF05BB6B83EAE4C8770322C8 /* Toast-Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9EF83E922ECE53D178EECB4B4F5C1486 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64791F81FD42AED43360A9BD20844D89 /* Toast.swift */; };
+		AA5EEE2D7453F5439795446E9713C56A /* PMAlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DE026DABB5499AA092018B7F42D714 /* PMAlertAction.swift */; };
+		AED27CB460E0DF4D57DC93BFF60FF990 /* Pods-Solar System-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 02628D8CF736AC793378CC9A77B6D85E /* Pods-Solar System-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C1B3E96E3CB289E1B5A872D19C291A13 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */; };
+		CCA33F4AC63B2F4E21BD18D164639656 /* PMAlertController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DA3A7EE89FF1341C9ED129B8491B67AB /* PMAlertController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D3C07574AA883A36ADE39F0840840E79 /* PMAlertController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 4E9A465D10771F6EE859680AD5565FC4 /* PMAlertController.xib */; };
+		DEF7E207A035539F68DDA244A592C948 /* Pods-Solar System-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E83AE7BE9679E8C8B8597BE07D7421 /* Pods-Solar System-dummy.m */; };
+		E86F4EE94AEE6FD4B40A82BCD7D8DA9A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB7751D4D791D1183FB66D3CCA52CD8E /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FFB5F0BA7D7E9354767A816FA79D9702 /* PBXContainerItemProxy */ = {
+		34EC5792B1E6236A5C1D9AC466F2BB8A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 7D8C37A1CF5686F833D59EADD9F791C2;
+			remoteGlobalIDString = 99183593E3C04F0C7720EF0DA4A0159B;
+			remoteInfo = PMAlertController;
+		};
+		39290506174A98000A2E0A6A285AD819 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D54FDD5C741942E89778C6F1AD56A429;
+			remoteInfo = "PMAlertController-PMAlertController";
+		};
+		51D23BC83F18FEA14B1D36E232D2F762 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 31872BB2D0C43F534BCFBA1E2CAE8686;
 			remoteInfo = "Toast-Swift";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		02628D8CF736AC793378CC9A77B6D85E /* Pods-Solar System-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Solar System-umbrella.h"; sourceTree = "<group>"; };
-		15EC844F56AE6D1162860137427903BE /* Pods_Solar_System.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Solar_System.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1C351EC4595F0FF8000E8C4AE95288EE /* Toast_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Toast_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F7A6AD2E69FB50509465B251A068B43 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13AEE0A5A4AA663A2243B594CA95FEEF /* PMAlertController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PMAlertController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18DCFB1DA4C4351A9289F39D65F89C54 /* PMAlertController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PMAlertController-prefix.pch"; sourceTree = "<group>"; };
+		2478EBEC5EFEE748CE1EDB16236445DE /* ResourceBundle-PMAlertController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-PMAlertController-Info.plist"; sourceTree = "<group>"; };
+		33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3837E241C8511AD088258CEBCBEAF189 /* Pods-Solar System-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Solar System-resources.sh"; sourceTree = "<group>"; };
+		3917A50EB224EEDBC66971700D698782 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		4603D0B71B7DBF744022DA3A9F295A31 /* Toast-Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Toast-Swift-dummy.m"; sourceTree = "<group>"; };
+		4DCBED0487129105C8F37C713FA3DE06 /* PMAlertController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PMAlertController.modulemap; sourceTree = "<group>"; };
+		4E9A465D10771F6EE859680AD5565FC4 /* PMAlertController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = PMAlertController.xib; path = Library/PMAlertController.xib; sourceTree = "<group>"; };
 		52E1406E1C652E3E458044062BD8C570 /* Pods-Solar System.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Solar System.debug.xcconfig"; sourceTree = "<group>"; };
-		54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		59F74EF12F040CA11D6386A685685C98 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62A32B2CAC203B011C3A6E9BADE4BAF1 /* PMAlertController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PMAlertController.xcconfig; sourceTree = "<group>"; };
+		64791F81FD42AED43360A9BD20844D89 /* Toast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Toast.swift; path = Toast/Toast.swift; sourceTree = "<group>"; };
+		83BAFA69EC25A94113D2C296543EC88F /* Pods_Solar_System.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Solar_System.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C8B555B464FF133A6EA774580B5C5E9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92DB14DE18489195FACB5EB8422D71D6 /* Pods-Solar System-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Solar System-frameworks.sh"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9F6068E46F837C6016823EBEE5392A58 /* Toast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Toast.swift; path = Toast/Toast.swift; sourceTree = "<group>"; };
+		98DE026DABB5499AA092018B7F42D714 /* PMAlertAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PMAlertAction.swift; path = Library/PMAlertAction.swift; sourceTree = "<group>"; };
 		A130A3F222932B54400BCED379984D3C /* Pods-Solar System-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Solar System-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A24F4E0238B87E849BFBC9176092FBD6 /* Pods-Solar System-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Solar System-acknowledgements.plist"; sourceTree = "<group>"; };
-		AC21E042593269EBEF50C9C60FC9B024 /* Toast-Swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Toast-Swift.xcconfig"; sourceTree = "<group>"; };
-		CBAA452DC428152CC82DD57E67113031 /* Toast-Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toast-Swift-prefix.pch"; sourceTree = "<group>"; };
-		CE4BC48D47B7FA52A3DEA297512CE2C5 /* Toast-Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toast-Swift-umbrella.h"; sourceTree = "<group>"; };
-		D31E09673E88729EE06D49BF4000B63E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E05B778E1B37985EBC078D0C5BA74992 /* Toast-Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Toast-Swift-dummy.m"; sourceTree = "<group>"; };
+		B2D2C80DEF05BB6B83EAE4C8770322C8 /* Toast-Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toast-Swift-umbrella.h"; sourceTree = "<group>"; };
+		B44B31C80AC2D9F013608D19624CFA4D /* Toast-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Toast-Swift.modulemap"; sourceTree = "<group>"; };
+		BC781C96866F1FA81F5050404DDA9436 /* PMAlertController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PMAlertController-dummy.m"; sourceTree = "<group>"; };
+		DA3A7EE89FF1341C9ED129B8491B67AB /* PMAlertController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PMAlertController-umbrella.h"; sourceTree = "<group>"; };
+		E0D3DA056E2C2A15BD17CF75EE7CE5A5 /* Toast-Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toast-Swift-prefix.pch"; sourceTree = "<group>"; };
 		E1018BDA019005F19F0520F6CB50271E /* Pods-Solar System.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Solar System.modulemap"; sourceTree = "<group>"; };
-		EE18B53B4D5DBDC5263EE6262E2583DD /* Toast-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Toast-Swift.modulemap"; sourceTree = "<group>"; };
+		E4B3C8A584E47A580C4998B87FC9B550 /* PMAlertController.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PMAlertController.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4CDDC5236FCDE1307315160222CAE25 /* PMAlertController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PMAlertController.swift; path = Library/PMAlertController.swift; sourceTree = "<group>"; };
+		E6E6BB643EE0E582B62B3B7B4CBAB1DF /* Toast-Swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Toast-Swift.xcconfig"; sourceTree = "<group>"; };
+		F5877314D2AEED1457812933CF0AE527 /* Toast_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Toast_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5E83AE7BE9679E8C8B8597BE07D7421 /* Pods-Solar System-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Solar System-dummy.m"; sourceTree = "<group>"; };
-		FC2770B482BFE91273C8560623F1422C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		FB7751D4D791D1183FB66D3CCA52CD8E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		FDC63487FEFA24F0AD4346E6E05A8C2F /* Pods-Solar System.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Solar System.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3EDA46D9B903702BB52363970A737CFD /* Frameworks */ = {
+		817753536877A3D56FB5B6D2DE8C4794 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3B79A29407D0E65445620D0B5FD58C2 /* Foundation.framework in Frameworks */,
+				7A14B056BA3C5F8D9660B3D9046D013C /* Foundation.framework in Frameworks */,
+				82045A02CC90E9F536C0601F57C82834 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		801ED52C4A72A7460A43DE925916DA0F /* Frameworks */ = {
+		9A398B3C42A05664EA9CEAA3A94E53D6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA925372BAAAA37EA30B1F9EB2CBDB56 /* Foundation.framework in Frameworks */,
-				E9852470507BD44810A203763282254E /* QuartzCore.framework in Frameworks */,
+				C1B3E96E3CB289E1B5A872D19C291A13 /* Foundation.framework in Frameworks */,
+				E86F4EE94AEE6FD4B40A82BCD7D8DA9A /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB150949D96E1A8E0F7E3BE455894FE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6453AE551DFF81A13BC6DBFB815A4FC6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE5550B3A069BB4C003B79256BE7E576 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1CC7CB9B2C9AE97AB1B25B9DC56A545D /* Toast-Swift */ = {
+		12233153E8E76E16F2F5697FDCD34E80 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				9F6068E46F837C6016823EBEE5392A58 /* Toast.swift */,
-				91FFC9D276F2D51EC5F3FF59947B6F5A /* Support Files */,
+				8C8B555B464FF133A6EA774580B5C5E9 /* Info.plist */,
+				4DCBED0487129105C8F37C713FA3DE06 /* PMAlertController.modulemap */,
+				62A32B2CAC203B011C3A6E9BADE4BAF1 /* PMAlertController.xcconfig */,
+				BC781C96866F1FA81F5050404DDA9436 /* PMAlertController-dummy.m */,
+				18DCFB1DA4C4351A9289F39D65F89C54 /* PMAlertController-prefix.pch */,
+				DA3A7EE89FF1341C9ED129B8491B67AB /* PMAlertController-umbrella.h */,
+				2478EBEC5EFEE748CE1EDB16236445DE /* ResourceBundle-PMAlertController-Info.plist */,
 			);
-			path = "Toast-Swift";
+			name = "Support Files";
+			path = "../Target Support Files/PMAlertController";
+			sourceTree = "<group>";
+		};
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93A319F2C1969B7AA0B17444A3F8BA22 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		13A1352A498ADA1FFC9FB8E826085022 /* PMAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				98DE026DABB5499AA092018B7F42D714 /* PMAlertAction.swift */,
+				E4CDDC5236FCDE1307315160222CAE25 /* PMAlertController.swift */,
+				4E9A465D10771F6EE859680AD5565FC4 /* PMAlertController.xib */,
+				208470ECCC50F9405FCEA84A47B8C355 /* Resources */,
+				12233153E8E76E16F2F5697FDCD34E80 /* Support Files */,
+			);
+			path = PMAlertController;
+			sourceTree = "<group>";
+		};
+		208470ECCC50F9405FCEA84A47B8C355 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		39E694FBCB94A02FA6B9BD6CA7D8722D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E4B3C8A584E47A580C4998B87FC9B550 /* PMAlertController.bundle */,
+				13AEE0A5A4AA663A2243B594CA95FEEF /* PMAlertController.framework */,
+				83BAFA69EC25A94113D2C296543EC88F /* Pods_Solar_System.framework */,
+				F5877314D2AEED1457812933CF0AE527 /* Toast_Swift.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		3F870D5212157401103847DB47BF0D3C /* Pods-Solar System */ = {
@@ -100,30 +196,22 @@
 			path = "Target Support Files/Pods-Solar System";
 			sourceTree = "<group>";
 		};
-		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+		7538A9827B07A15F3DBA9A7C671C2010 /* Toast-Swift */ = {
 			isa = PBXGroup;
 			children = (
-				978007DCB56F415BE390E0F949D4D4E5 /* iOS */,
+				64791F81FD42AED43360A9BD20844D89 /* Toast.swift */,
+				F24503B6212D998FEE6432027FC19845 /* Support Files */,
 			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		55E4F22BAAB53C07E67D49CB2775E6E9 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				15EC844F56AE6D1162860137427903BE /* Pods_Solar_System.framework */,
-				1C351EC4595F0FF8000E8C4AE95288EE /* Toast_Swift.framework */,
-			);
-			name = Products;
+			path = "Toast-Swift";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				EC8D67C4274D7B80A0E45DB6A06B96F9 /* Pods */,
-				55E4F22BAAB53C07E67D49CB2775E6E9 /* Products */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
+				C46892938E2F5B316C8FFC50B71FE496 /* Pods */,
+				39E694FBCB94A02FA6B9BD6CA7D8722D /* Products */,
 				8F3EE8C1D1E7FD6F4D1C054C7015D1C8 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -136,66 +224,95 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		91FFC9D276F2D51EC5F3FF59947B6F5A /* Support Files */ = {
+		93A319F2C1969B7AA0B17444A3F8BA22 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				D31E09673E88729EE06D49BF4000B63E /* Info.plist */,
-				EE18B53B4D5DBDC5263EE6262E2583DD /* Toast-Swift.modulemap */,
-				AC21E042593269EBEF50C9C60FC9B024 /* Toast-Swift.xcconfig */,
-				E05B778E1B37985EBC078D0C5BA74992 /* Toast-Swift-dummy.m */,
-				CBAA452DC428152CC82DD57E67113031 /* Toast-Swift-prefix.pch */,
-				CE4BC48D47B7FA52A3DEA297512CE2C5 /* Toast-Swift-umbrella.h */,
+				33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */,
+				FB7751D4D791D1183FB66D3CCA52CD8E /* QuartzCore.framework */,
+				3917A50EB224EEDBC66971700D698782 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		C46892938E2F5B316C8FFC50B71FE496 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				13A1352A498ADA1FFC9FB8E826085022 /* PMAlertController */,
+				7538A9827B07A15F3DBA9A7C671C2010 /* Toast-Swift */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F24503B6212D998FEE6432027FC19845 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0F7A6AD2E69FB50509465B251A068B43 /* Info.plist */,
+				B44B31C80AC2D9F013608D19624CFA4D /* Toast-Swift.modulemap */,
+				E6E6BB643EE0E582B62B3B7B4CBAB1DF /* Toast-Swift.xcconfig */,
+				4603D0B71B7DBF744022DA3A9F295A31 /* Toast-Swift-dummy.m */,
+				E0D3DA056E2C2A15BD17CF75EE7CE5A5 /* Toast-Swift-prefix.pch */,
+				B2D2C80DEF05BB6B83EAE4C8770322C8 /* Toast-Swift-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Toast-Swift";
 			sourceTree = "<group>";
 		};
-		978007DCB56F415BE390E0F949D4D4E5 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */,
-				FC2770B482BFE91273C8560623F1422C /* QuartzCore.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		EC8D67C4274D7B80A0E45DB6A06B96F9 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				1CC7CB9B2C9AE97AB1B25B9DC56A545D /* Toast-Swift */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		40222947CCBC7907E06B389DCF41B37A /* Headers */ = {
+		1129B178022B7B94DC9F0E82DB0E592D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				032C5B24BB17ABEA7883027742CFF862 /* Toast-Swift-umbrella.h in Headers */,
+				CCA33F4AC63B2F4E21BD18D164639656 /* PMAlertController-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		99BABA224AE005489A2D43F7EE09729A /* Headers */ = {
+		38FF867656BCE4DA6FB5A404A7B99E5D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3018AB2E50C308EFF01D8F5D9FC0A4C8 /* Pods-Solar System-umbrella.h in Headers */,
+				8CE1C3755358A7749FE348F8F2A6CE62 /* Toast-Swift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C11BC500758EF63A7BF23DC945A9EA57 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AED27CB460E0DF4D57DC93BFF60FF990 /* Pods-Solar System-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		7D8C37A1CF5686F833D59EADD9F791C2 /* Toast-Swift */ = {
+		1A6A48E017948692492C0E874B902A7E /* Pods-Solar System */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 04D0768FDBA590782B845CA45DBFD88A /* Build configuration list for PBXNativeTarget "Toast-Swift" */;
+			buildConfigurationList = C32AB1234EC98654056759FC4CDB317C /* Build configuration list for PBXNativeTarget "Pods-Solar System" */;
 			buildPhases = (
-				36AFFBB513B68D7135410E046A1D4C08 /* Sources */,
-				801ED52C4A72A7460A43DE925916DA0F /* Frameworks */,
-				40222947CCBC7907E06B389DCF41B37A /* Headers */,
+				CBFDEC7A850BC6874DEE024CA145E2EC /* Sources */,
+				DB150949D96E1A8E0F7E3BE455894FE8 /* Frameworks */,
+				C11BC500758EF63A7BF23DC945A9EA57 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				60F2DEAA5C0573DF1E3ADD50A4A823EA /* PBXTargetDependency */,
+				EC34EFE17B143C7DB841A1F322059620 /* PBXTargetDependency */,
+			);
+			name = "Pods-Solar System";
+			productName = "Pods-Solar System";
+			productReference = 83BAFA69EC25A94113D2C296543EC88F /* Pods_Solar_System.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		31872BB2D0C43F534BCFBA1E2CAE8686 /* Toast-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DCD2524FC68B041053C52C2595D77FC /* Build configuration list for PBXNativeTarget "Toast-Swift" */;
+			buildPhases = (
+				A617B12046CE2915ECEECFA726E0EC8F /* Sources */,
+				9A398B3C42A05664EA9CEAA3A94E53D6 /* Frameworks */,
+				38FF867656BCE4DA6FB5A404A7B99E5D /* Headers */,
 			);
 			buildRules = (
 			);
@@ -203,26 +320,44 @@
 			);
 			name = "Toast-Swift";
 			productName = "Toast-Swift";
-			productReference = 1C351EC4595F0FF8000E8C4AE95288EE /* Toast_Swift.framework */;
+			productReference = F5877314D2AEED1457812933CF0AE527 /* Toast_Swift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		C6F9960BC7EB2DF7E6D622F54B0A9165 /* Pods-Solar System */ = {
+		99183593E3C04F0C7720EF0DA4A0159B /* PMAlertController */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8D47EA01C89D642C127E12428B35ED66 /* Build configuration list for PBXNativeTarget "Pods-Solar System" */;
+			buildConfigurationList = 45F4DA72CC994E1F5D816BCC987D002E /* Build configuration list for PBXNativeTarget "PMAlertController" */;
 			buildPhases = (
-				4135235288D8404E522F8DD1317535C9 /* Sources */,
-				3EDA46D9B903702BB52363970A737CFD /* Frameworks */,
-				99BABA224AE005489A2D43F7EE09729A /* Headers */,
+				F4F8F33D70FEF81C2EB14EF5D26C0857 /* Sources */,
+				817753536877A3D56FB5B6D2DE8C4794 /* Frameworks */,
+				A1ED80D9C6ECC273A81C889E1679BA97 /* Resources */,
+				1129B178022B7B94DC9F0E82DB0E592D /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2CF4883DDE1BF7763E6A89566DCD8745 /* PBXTargetDependency */,
+				8A480280D7E29C4E53B1D038EE5C8A6D /* PBXTargetDependency */,
 			);
-			name = "Pods-Solar System";
-			productName = "Pods-Solar System";
-			productReference = 15EC844F56AE6D1162860137427903BE /* Pods_Solar_System.framework */;
+			name = PMAlertController;
+			productName = PMAlertController;
+			productReference = 13AEE0A5A4AA663A2243B594CA95FEEF /* PMAlertController.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		D54FDD5C741942E89778C6F1AD56A429 /* PMAlertController-PMAlertController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 629A0B31F2491FAB7E6F2E4EFC16DDE5 /* Build configuration list for PBXNativeTarget "PMAlertController-PMAlertController" */;
+			buildPhases = (
+				BE4FC9CE18BCF688FF31E008D6408AA4 /* Sources */,
+				EE5550B3A069BB4C003B79256BE7E576 /* Frameworks */,
+				1CFBFF2ABDE191D87776F4DA9D0F479B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PMAlertController-PMAlertController";
+			productName = "PMAlertController-PMAlertController";
+			productReference = E4B3C8A584E47A580C4998B87FC9B550 /* PMAlertController.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -241,46 +376,167 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 55E4F22BAAB53C07E67D49CB2775E6E9 /* Products */;
+			productRefGroup = 39E694FBCB94A02FA6B9BD6CA7D8722D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C6F9960BC7EB2DF7E6D622F54B0A9165 /* Pods-Solar System */,
-				7D8C37A1CF5686F833D59EADD9F791C2 /* Toast-Swift */,
+				99183593E3C04F0C7720EF0DA4A0159B /* PMAlertController */,
+				D54FDD5C741942E89778C6F1AD56A429 /* PMAlertController-PMAlertController */,
+				1A6A48E017948692492C0E874B902A7E /* Pods-Solar System */,
+				31872BB2D0C43F534BCFBA1E2CAE8686 /* Toast-Swift */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXSourcesBuildPhase section */
-		36AFFBB513B68D7135410E046A1D4C08 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+/* Begin PBXResourcesBuildPhase section */
+		1CFBFF2ABDE191D87776F4DA9D0F479B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94282A0F9ED3D931E64204D63409D18E /* Toast-Swift-dummy.m in Sources */,
-				4850465BB484EB255DA54568FA8D4971 /* Toast.swift in Sources */,
+				4134ED569B2D48593AFD0CF9058BB4CB /* PMAlertController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4135235288D8404E522F8DD1317535C9 /* Sources */ = {
+		A1ED80D9C6ECC273A81C889E1679BA97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15DE53148B2EDB24F053D8D7EFA3FEEB /* PMAlertController.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A617B12046CE2915ECEECFA726E0EC8F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C0C33EDDC44ECED67575BEF4E37FD9E /* Pods-Solar System-dummy.m in Sources */,
+				5D98A1FE804C846FE83980968CAE2AA5 /* Toast-Swift-dummy.m in Sources */,
+				9EF83E922ECE53D178EECB4B4F5C1486 /* Toast.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE4FC9CE18BCF688FF31E008D6408AA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBFDEC7A850BC6874DEE024CA145E2EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEF7E207A035539F68DDA244A592C948 /* Pods-Solar System-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4F8F33D70FEF81C2EB14EF5D26C0857 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA5EEE2D7453F5439795446E9713C56A /* PMAlertAction.swift in Sources */,
+				0408B84CA618413ECD07BDD07CF80723 /* PMAlertController-dummy.m in Sources */,
+				31BC657F8A8532AC58B3133F82268A6F /* PMAlertController.swift in Sources */,
+				D3C07574AA883A36ADE39F0840840E79 /* PMAlertController.xib in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2CF4883DDE1BF7763E6A89566DCD8745 /* PBXTargetDependency */ = {
+		60F2DEAA5C0573DF1E3ADD50A4A823EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PMAlertController;
+			target = 99183593E3C04F0C7720EF0DA4A0159B /* PMAlertController */;
+			targetProxy = 34EC5792B1E6236A5C1D9AC466F2BB8A /* PBXContainerItemProxy */;
+		};
+		8A480280D7E29C4E53B1D038EE5C8A6D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "PMAlertController-PMAlertController";
+			target = D54FDD5C741942E89778C6F1AD56A429 /* PMAlertController-PMAlertController */;
+			targetProxy = 39290506174A98000A2E0A6A285AD819 /* PBXContainerItemProxy */;
+		};
+		EC34EFE17B143C7DB841A1F322059620 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Toast-Swift";
-			target = 7D8C37A1CF5686F833D59EADD9F791C2 /* Toast-Swift */;
-			targetProxy = FFB5F0BA7D7E9354767A816FA79D9702 /* PBXContainerItemProxy */;
+			target = 31872BB2D0C43F534BCFBA1E2CAE8686 /* Toast-Swift */;
+			targetProxy = 51D23BC83F18FEA14B1D36E232D2F762 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		1303B5BF3BFC7554A2CE3AC6E8487E48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6E6BB643EE0E582B62B3B7B4CBAB1DF /* Toast-Swift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Toast-Swift/Toast-Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Toast-Swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Toast-Swift/Toast-Swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Toast_Swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1522245DC46C00634E1B9E06A77EB958 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62A32B2CAC203B011C3A6E9BADE4BAF1 /* PMAlertController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PMAlertController/PMAlertController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PMAlertController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PMAlertController/PMAlertController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = PMAlertController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		1A41B15D3AA834993ADDD808FA9D8764 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -328,12 +584,48 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		25A0A28A13119FC02DA2E0613E397D5B /* Release */ = {
+		2B72D515276D028EF678A007F15C6DDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6E6BB643EE0E582B62B3B7B4CBAB1DF /* Toast-Swift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Toast-Swift/Toast-Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Toast-Swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Toast-Swift/Toast-Swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Toast_Swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		60CAD036BBF586CFD6A4CB15A5C5B8FF /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FDC63487FEFA24F0AD4346E6E05A8C2F /* Pods-Solar System.release.xcconfig */;
 			buildSettings = {
@@ -371,7 +663,24 @@
 			};
 			name = Release;
 		};
-		69258DCA1C7729C7B42A12DDDD02D576 /* Debug */ = {
+		8F34010D3D2C79ED18CACBE376BAFED3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62A32B2CAC203B011C3A6E9BADE4BAF1 /* PMAlertController.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PMAlertController";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/PMAlertController/ResourceBundle-PMAlertController-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = PMAlertController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		93E92F9A85ADA75D20E67E13F1DD28A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 52E1406E1C652E3E458044062BD8C570 /* Pods-Solar System.debug.xcconfig */;
 			buildSettings = {
@@ -407,6 +716,23 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B2C2C84589420700B51D089907F0F69D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62A32B2CAC203B011C3A6E9BADE4BAF1 /* PMAlertController.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PMAlertController";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/PMAlertController/ResourceBundle-PMAlertController-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = PMAlertController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
 		};
@@ -467,44 +793,9 @@
 			};
 			name = Debug;
 		};
-		F6C1D607448B98376442E6016FA867EA /* Release */ = {
+		E917C1B3B180A6BF90CC60BAAE456986 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AC21E042593269EBEF50C9C60FC9B024 /* Toast-Swift.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Toast-Swift/Toast-Swift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Toast-Swift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Toast-Swift/Toast-Swift.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Toast_Swift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		F9B202E57C7573C6354339879D0571C3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AC21E042593269EBEF50C9C60FC9B024 /* Toast-Swift.xcconfig */;
+			baseConfigurationReference = 62A32B2CAC203B011C3A6E9BADE4BAF1 /* PMAlertController.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -518,14 +809,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Toast-Swift/Toast-Swift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Toast-Swift/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/PMAlertController/PMAlertController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PMAlertController/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Toast-Swift/Toast-Swift.modulemap";
+				MODULEMAP_FILE = "Target Support Files/PMAlertController/PMAlertController.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Toast_Swift;
+				PRODUCT_NAME = PMAlertController;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -540,15 +831,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		04D0768FDBA590782B845CA45DBFD88A /* Build configuration list for PBXNativeTarget "Toast-Swift" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F9B202E57C7573C6354339879D0571C3 /* Debug */,
-				F6C1D607448B98376442E6016FA867EA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -558,11 +840,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8D47EA01C89D642C127E12428B35ED66 /* Build configuration list for PBXNativeTarget "Pods-Solar System" */ = {
+		45F4DA72CC994E1F5D816BCC987D002E /* Build configuration list for PBXNativeTarget "PMAlertController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				69258DCA1C7729C7B42A12DDDD02D576 /* Debug */,
-				25A0A28A13119FC02DA2E0613E397D5B /* Release */,
+				E917C1B3B180A6BF90CC60BAAE456986 /* Debug */,
+				1522245DC46C00634E1B9E06A77EB958 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		629A0B31F2491FAB7E6F2E4EFC16DDE5 /* Build configuration list for PBXNativeTarget "PMAlertController-PMAlertController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2C2C84589420700B51D089907F0F69D /* Debug */,
+				8F34010D3D2C79ED18CACBE376BAFED3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7DCD2524FC68B041053C52C2595D77FC /* Build configuration list for PBXNativeTarget "Toast-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1303B5BF3BFC7554A2CE3AC6E8487E48 /* Debug */,
+				2B72D515276D028EF678A007F15C6DDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C32AB1234EC98654056759FC4CDB317C /* Build configuration list for PBXNativeTarget "Pods-Solar System" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93E92F9A85ADA75D20E67E13F1DD28A9 /* Debug */,
+				60CAD036BBF586CFD6A4CB15A5C5B8FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

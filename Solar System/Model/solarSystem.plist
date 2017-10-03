@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-	<key>sun</key>
+<array>
 	<dict>
 		<key>radius</key>
 		<string>100.0</string>
@@ -60,25 +59,25 @@
 			<dict>
 				<key>planets</key>
 				<array>
-                    <dict>
-                        <key>position</key>
-                        <dict>
-                            <key>xPosition</key>
-                            <string>0</string>
-                            <key>yPosition</key>
-                            <string>-15</string>
-                            <key>zPosition</key>
-                            <string>0</string>
-                        </dict>
-                        <key>name</key>
-                        <string>moon</string>
-                        <key>radius</key>
-                        <string>1</string>
-                        <key>image</key>
-                        <string>moon</string>
-                        <key>parent</key>
-                        <string>earth</string>
-                    </dict>
+					<dict>
+						<key>position</key>
+						<dict>
+							<key>xPosition</key>
+							<string>0</string>
+							<key>yPosition</key>
+							<string>-15</string>
+							<key>zPosition</key>
+							<string>0</string>
+						</dict>
+						<key>name</key>
+						<string>moon</string>
+						<key>radius</key>
+						<string>1</string>
+						<key>image</key>
+						<string>moon</string>
+						<key>parent</key>
+						<string>earth</string>
+					</dict>
 				</array>
 				<key>position</key>
 				<dict>
@@ -199,5 +198,5 @@
 		<key>name</key>
 		<string>sun</string>
 	</dict>
-</dict>
+</array>
 </plist>

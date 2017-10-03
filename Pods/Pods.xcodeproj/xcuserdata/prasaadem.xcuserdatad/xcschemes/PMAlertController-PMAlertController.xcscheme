@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "31872BB2D0C43F534BCFBA1E2CAE8686"
-               BuildableName = "Toast_Swift.framework"
-               BlueprintName = "Toast-Swift"
+               BlueprintIdentifier = "D54FDD5C741942E89778C6F1AD56A429"
+               BuildableName = "PMAlertController.bundle"
+               BlueprintName = "PMAlertController-PMAlertController"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,9 +47,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "31872BB2D0C43F534BCFBA1E2CAE8686"
-            BuildableName = "Toast_Swift.framework"
-            BlueprintName = "Toast-Swift"
+            BlueprintIdentifier = "D54FDD5C741942E89778C6F1AD56A429"
+            BuildableName = "PMAlertController.bundle"
+            BlueprintName = "PMAlertController-PMAlertController"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

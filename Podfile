@@ -7,4 +7,5 @@ target 'Solar System' do
 
   # Pods for Solar System
   pod 'Toast-Swift', '~> 2.0.0'
+  pod 'PMAlertController'
 end

@@ -9,7 +9,7 @@
 import UIKit
 
 var planetInfo:[String:Any] = [:]
-var solarSystem:[String:Any] = [:]
+//var solarSystem:Array = []
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -53,12 +53,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
-        //solarSystem.plist for building solar system
-        if let path = Bundle.main.path(forResource: "solarSystem", ofType: "plist") {
-            if let dic = NSDictionary(contentsOfFile: path) as? [String: Any] {
-                solarSystem = dic
-            }
-        }
+//        //solarSystem.plist for building solar system
+//        if let path = Bundle.main.path(forResource: "solarSystem", ofType: "plist") {
+//            if let array = NSArray(contentsOfFile: path){
+//                solarSystem = array as! Array<Any>
+//            }
+//        }
         
     }
 

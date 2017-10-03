@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>PMAlertController-PMAlertController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>PMAlertController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Solar System.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>7D8C37A1CF5686F833D59EADD9F791C2</key>
+		<key>1A6A48E017948692492C0E874B902A7E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C6F9960BC7EB2DF7E6D622F54B0A9165</key>
+		<key>31872BB2D0C43F534BCFBA1E2CAE8686</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>99183593E3C04F0C7720EF0DA4A0159B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D54FDD5C741942E89778C6F1AD56A429</key>
 		<dict>
 			<key>primary</key>
 			<true/>
